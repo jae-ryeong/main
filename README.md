@@ -17,18 +17,18 @@
 > : 간편식, 면요리, 밥요리 등 카테고리 별로 유튜브 영상 소스코드 저장
 
 ## **4. Physical Scope**
-> ### 웹페이지
-> : HTML / CSS / JavaScript
-> ### 서버
-> ㆍ인프라 : AWS EC2
-> ㆍWeb Server & WAS : NodeJS
-> ㆍCrawling Server : Python / Django
-> ㆍDBMS : MongoDB
-> ㆍContainer : Docker
-> ### 프로젝트
-> ㆍ버전관리 : Git Hub
-> ㆍCI/CD : Git Actions
-> ㆍ협업도구 : MicrosoftTeams / Azure Boards
+> ### 웹페이지  
+> : HTML / CSS / JavaScript  
+> ### 서버  
+> ㆍ인프라 : AWS EC2  
+> ㆍWeb Server & WAS : NodeJS  
+> ㆍCrawling Server : Python / Django  
+> ㆍDBMS : MongoDB  
+> ㆍContainer : Docker  
+> ### 프로젝트  
+> ㆍ버전관리 : Git Hub  
+> ㆍCI/CD : Git Actions  
+> ㆍ협업도구 : MicrosoftTeams / Azure Boards  
 
 ## **5. Logical Scope**
 > ### 요리영상 카테고리
