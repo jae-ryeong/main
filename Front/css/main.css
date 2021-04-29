@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+.header
+{
+    min-width: 1280px;
+}
+.header .page_name
+{
+    position: relative;
+    left: 600px;
+    top: 20px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;  /*밑줄 제거*/
+    color: black;
+}
+.list
+{
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+ul
+{
+    float: left;
+    list-style-type: none; /* ul에 나오는 모양을 없애줍니다. */
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    right: 20px;
+    background-color: #f1f1f1;
+}
+ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+li a
+{
+    display: block; 
+    color: #000;
+    text-align: center;
+    padding: 8px 16px; /*간격지정*/
+    text-decoration: none;  /*밑줄 제거*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+li a.active
+{   
+    position: relative;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #4CAF50
+}
+li a:hover:not(.active) {
+    /*a 요소에 마우스를 올린 경우 
+    클래스가 active가 아니면 밑에 설정을 가짐.*/
+    position: relative;
+    background-color: #555;
+    color: white;
+}

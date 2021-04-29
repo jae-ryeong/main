@@ -1,0 +1,24 @@
+<!--input, label로 버튼을 만들기-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/slide.css">
+</head>
+<body>
+  <input type="checkbox" id = "menuicon">
+  <label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <!--div는 label태그 다음에 있기 때문에 이것을 선택하려면 인접요소 선택자인 +로 선택이 가능.-->
+  <!--인접요소 선택자를 사용하는 이유 : input을 눌렀을 때 checked되는 속성을 사용하기 위해서-->
+  <!--input + label + div{} : 인풋 체크가 되기 전(div에 스타일을 줄때)-->
+  <!--input:checked + label + div{} : 인풋이 체크가 되면 div에 변화할 스타일값을 줄때-->
+  <div class = "sidebar">
+  </div>
+</body>
+</html>
