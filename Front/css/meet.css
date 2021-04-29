@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+
+.header
+{
+    position: relative; 
+    margin: 50px auto;
+    height: 100px;
+    min-width : 1280px;
+}
+.header .title_name
+{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(179, 151, 151);
+    color: black;
+}
+.header .list
+{
+    position: relative;
+    top: 30px;
+}
+.header .list_name
+{
+    font-size: 30px;
+    height: 25px;
+}
+.header .list_menu
+{
+    width: 400px;
+    height: 30px;
+}
+.header .search_text
+{
+    float: right;
+}
+.header .search-text
+{
+    outline: none;
+    width: 400px;
+    height: 25px;
+}
+.header .search_button
+{
+    width: 45px;
+    height: 32px;
+    float: right;
+}
+.section1
+{
+    position: relative;
+    left: 100px;
+    top: 100px;
+    width: 350px;
+    height: 250px;
+    border: 1px solid black;
+}
+.section2
+{
+    position: relative;
+    left: 520px;   
+    top: -150px;
+    width: 350px;
+    height: 250px;
+    border: 1px solid black;
+}
+.section3
+{
+    position: relative;
+    left: 950px;   
+    top: -400px;
+    width: 350px;
+    height: 250px;
+    border: 1px solid black;
+}
+.section4
+{
+    position: relative;
+    left: 100px;
+    top: -300px;
+    width: 350px;
+    height: 250px;
+    border: 1px solid black;
+}
+.section5
+{
+    position: relative;
+    left: 520px;   
+    top: -550px;
+    width: 350px;
+    height: 250px;
+    border: 1px solid black;
+}
+.section6
+{
+    position: relative;
+    left: 950px;   
+    top: -800px;
+    width: 350px;
+    height: 250px;
+    border: 1px solid black;
+}

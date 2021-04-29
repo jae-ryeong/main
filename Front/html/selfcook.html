@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/selfcook.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Gugi#standard-styles">
+    <title>Self Cook Studio</title>
+    <script src="https://kit.fontawesome.com/7a9cd52613.js" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <header>
+        <!--상단 메뉴바-->
+        <nav class = "navbar">
+            <div class = "navbar_logo">
+                <i class="fas fa-cookie"></i>
+                <a href="">모해묵지?!</a>
+            </div>
+            <ul class = "navbar_menu">
+                <li><a href="">Self Cook</a></li>
+                <li><a href="VideoList.html">메뉴 1</a></li>
+                <li><a href="VideoList.html">메뉴 2</a></li>
+                <li><a href="VideoList.html">메뉴 3</a></li>
+                <li><a href="">자유 게시판</a></li>
+            </ul>
+            <div class = "navbar_icons">
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100005491660570"><i class="fab fa-facebook"></i></</a></li>
+                    <li><a href="https://www.instagram.com/jgy_98/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div style="overflow: hidden;">
+            <div class = "container">
+                <div class = "inner">
+                    <img src="image/cook1.jpeg" alt="이벤트1">                
+                </div>
+                <div class="inner">
+                    <img src="image/cook2.jpeg" alt="이벤트2">
+                </div>
+                <div class = "inner">                        
+                    <img src="image/cook3.jpeg" alt="이벤트3">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class = "slide_button">
+            <button class = "버튼1" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+            onmouseout="this.style.opacity = '0.8'"></button>
+            <button class = "버튼2" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+            onmouseout="this.style.opacity = '0.8'"></button>
+            <button class = "버튼3" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+            onmouseout="this.style.opacity = '0.8'"></button>
+        </div>
+        <!--검색 창-->
+        <div class="search-box"> <!--위로 옮기면 슬라이드 이동 시 작동이 안됨.-->
+            <input type="text" class="search-txt" name=""placeholder="search">
+            <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </header>
+    <main class = "main">
+
+            <div class = "bg_button">
+                <input class = "dark_button" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" type="button" name = "darkgray" value = "어두운 색으로 변경" onclick="colorChan(this.name, 'white')">
+        
+                <input class = "white_button" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" type="button" name = "white" value = "밝은 색으로 변경" onclick="colorChan(this.name, 'black')">
+            </div>
+        <div class="first_line">
+            <div><a href="rice.html"><img class="cook1" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" src="image/cook1.jpeg" alt="밥"></a></div>
+      
+            <div><a href="noodle.html"><img class="cook2" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" src="image/cook2.jpeg" alt="면"></a></div>
+        </div>
+        <div class = "second_line">
+            <div><a href="meet.html"><img class="cook3" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" src="image/cook3.jpeg" alt="고기"></a></div>
+            <div><img class="cook4" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" src="image/cook4.jpeg" alt="음료"></div>
+        </div>
+        <div class="three_line">
+            <div><img class="cook5" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" src="image/cook5.jpeg" alt="고기"></div>
+        
+            <div><img class="cook6" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" src="image/cook6.jpeg" alt="고기"></div>
+        </div>
+        <div> 
+            <div><img class="cook7" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" src="image/cook3.jpeg" alt="고기"></div>
+        
+            <div><img class="cook8" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                onmouseout="this.style.opacity = '0.8'" src="image/cook3.jpeg" alt="고기"></div>
+        </div>
+    </main>
+    <div class="footer">
+        <div class="footer_explanation">
+            페이지 설명
+        </div>
+        <div class = "footer_improvement">
+            <iframe src=""width="400" height="250" frameborder="10">건의사항</iframe>
+        </div>
+    </div>
+<script src="../js/selfcook.js"></script>
+</body>
+</html>

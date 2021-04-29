@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/meet.css">
+    <title>Document</title>
+    <style>
+        label{
+            font-family: 'Times New Roman', Times, serif;
+            top: 10px;
+            left: 30px;
+            outline: none;
+            width: 450;
+            height: 25;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <header class = "header">
+        <div class="title_name"><a href="main.html">Self Cook</a></div>
+        <div class = "list"><label class="list_name" for="cook_list">Meet_Cook : </label>
+        <!--메뉴 큰 틀 리스트 지정 지정하면 관련된 페이지로 이동시키기-->
+        <input class="list_menu" list="cooks" id="cook_lists" name="cook_lists"/>
+        <datalist id="cooks">
+            <option value="전체">
+            <option value="밥 요리"><a href="rice.html"/></option>
+            <option value="면 요리"><a href="noodle.html"/></option>
+            <option value="고기 요리">
+            <option value="반찬">
+            <option value="음료">
+        </datalist></div>
+        <!--검색창 만들기-->
+        <div class = "search_text">
+            <input class="search-text" type="text" placeholder="검색할 내용 입력">
+            <button class = "search_button">검색</button>
+        </div>
+        
+    </header>
+    <main>
+        <section class="section1">
+            영상1
+        </section>
+        <section class = "section2">
+            영상2
+        </section>
+        <section class = "section3">
+            영상3
+        </section>
+        <section class="section4">
+            영상4
+        </section>
+        <section class = "section5">
+            영상5
+        </section>
+        <section class = "section6">
+            영상6
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
