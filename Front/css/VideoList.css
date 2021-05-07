@@ -53,6 +53,7 @@ header a{
 }
 
 .Container{
+    
     width: 2000px; height:1400px;
     margin-top: 30px;
 }
@@ -61,8 +62,12 @@ header a{
     background-color: lightgoldenrodyellow;
     width: 350px; height:100%;
 }
-.Contents{
+#Contents{
     float: left;
     background-color: lightgreen;
     width:1650px; height:100%;
+}
+
+#video1{
+    background-color: yellow;
 }
