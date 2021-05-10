@@ -72,7 +72,7 @@ a {
 .search-box{
     padding: 10px;
     position: absolute; /*위치는 수평(위, 아래 중간)*/
-    top: 3%; /*페이지 위에서 22%*/
+    top: 2%; /*페이지 위에서 2%*/
     left: 70%; /*페이지 왼쪽 기준으로 30%*/
     transform: translate(-50%,-50%); /* 요소의 표시 위치를 이동 (x축, y축)*/
     height: 30px;
