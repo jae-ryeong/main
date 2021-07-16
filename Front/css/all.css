@@ -2,7 +2,7 @@
 body{
     line-height: 1.4;
     font-size: 16px;
-    width: 1450px;
+    width: 2000px;
 }
 header{
     height: 120px;
@@ -171,53 +171,69 @@ header .inner .menu .sub-menu li:nth-child(4)::before
 /*SECTION*/
 section{
     position: relative;
-    height: 750px;
+    width: 100%; height: 750px;
+    text-align: center;
+    display: flex;
 }
-.video .video1, .video .video2, .video .video3,
-.video .video4, .video .video5, .video .video6{
+/* #video #video1, #video #video2, #video #video3,
+#video #video4, #video #video5, #video #video6{
     position: absolute;
     background-color: rgb(117, 113, 104);
     width: 300px;
     height: 200px;
     border-radius: 10px 10px 10px 10px;
     border: 1px solid #333;
-}
+} */
 /*커서 가져다 대면 화면 약간 확대되는 거 추가하기*/ 
-.video .video1:hover, .video .video2:hover, .video .video3:hover,
-.video .video4:hover, .video .video5:hover, .video .video6:hover{
+#video #video1:hover, #video #video2:hover, #video #video3:hover,
+#video #video4:hover, #video #video5:hover, #video #video6:hover{
     opacity: .7;
     cursor: pointer;
 }
-.video .video1{
+#video {
+    float: left;
+    width: 1500px; height: 100%;
+    margin: 0 auto;
+    padding-top: 120px;
+    
+}
+.nameVideo{
+    display: inline-block;
+    margin:50px;
+    width: 350px; height:250px;
+    background-color: black;
+}
+/* #video1{
     top: 200px;
     left: 350px;
 }
-.video .video2{
+.video #video2{
     top: 200px;
     left: 700px;
 }
-.video .video3{
+.video #video3{
     top: 200px;
     left: 1050px;
 }
-.video .video4{
+.video #video4{
     top: 500px;
     left: 350px;
 }
-.video .video5{
+.video #video5{
     top: 500px;
     left: 700px;
 }
-.video .video6{
+.video #video6{
     top: 500px;
     left: 1050px;
-}
+} */
 /* FOOTER */
 footer{
     width: 100%;
     left: 1;
     right: 1;
     background-color: rgb(189, 179, 165);
+    margin-top: 100px;
 }
 footer .inner{
     height: 120px;
@@ -256,4 +272,41 @@ footer .inner >ul li a{
     float: left;
     background-color: lightgoldenrodyellow;
     width: 350px; height:100%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 1600px; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 800px; /* Could be more or less, depending on screen size */   
+    text-align: center;                     
+}
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
