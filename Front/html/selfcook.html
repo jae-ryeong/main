@@ -35,7 +35,9 @@
                 </div>
             </nav>  
         </header>
-        <aside style="position: relative; width: 40%; height: 150%;float: left;">
+        <aside style="position: relative; width: 70%; height: 150%;float: left;">
+            <!--검색 창-->
+            
             <div style="overflow: hidden;">
                 <div class = "container">
                     <div class = "inner">
@@ -57,6 +59,12 @@
                 <button class = "버튼3" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
                 onmouseout="this.style.opacity = '0.8'"></button>
             </div>
+            <div class="search-box"> <!--위로 옮기면 슬라이드 이동 시 작동이 안됨.-->
+                <input type="text" class="search-txt" name=""placeholder="search">
+                <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+                </a>
+            </div>
             <div class = "cook_menu">
                 <div><a href="rice.html"><img class="cook1" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
                         onmouseout="this.style.opacity = '0.8'" src="image/cook1.jpeg" alt="밥"></a></div>
@@ -77,15 +85,7 @@
                     onmouseout="this.style.opacity = '0.8'" src="image/cook3.jpeg" alt="고기"></div>
             </div>
         </aside>
-        <section style="position: relative; height: 150%; width: 60%; float: left;">
-            <!--검색 창-->
-            <div class="search-box"> <!--위로 옮기면 슬라이드 이동 시 작동이 안됨.-->
-                <input type="text" class="search-txt" name=""placeholder="search">
-                <a class="search-btn" href="#">
-                <i class="fas fa-search"></i>
-                </a>
-            </div>
-            
+        <section style="position: relative; height: 150%; width: 30%; float: left;">
             <div class="popular_recipe">
                 <h2><i> 인기 레시피</i></h2>
                 <ul>
@@ -99,11 +99,6 @@
                     <li><u>레시피 8</u></li>
                     <li><u>레시피 9</u></li>
                     <li><u>레시피 10</u></li>
-                    <li><u>레시피 11</u></li>
-                    <li><u>레시피 12</u></li>
-                    <li><u>레시피 13</u></li>
-                    <li><u>레시피 14</u></li>
-                    <li><u>레시피 15</u></li>
                 </ul>
             </div>
             <div class="easy_cooking">
@@ -119,11 +114,6 @@
                     <li>요리 8</li>
                     <li>요리 9</li>
                     <li>요리 10</li>
-                    <li>요리 11</li>
-                    <li>요리 12</li>
-                    <li>요리 13</li>
-                    <li>요리 14</li>
-                    <li>요리 15</li>
                 </ul>
             </div>
             <div class="popular">

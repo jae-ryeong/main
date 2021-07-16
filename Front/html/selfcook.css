@@ -68,140 +68,12 @@ a {
     padding: 8px 12px;
     list-style: none;
 }
-  /*슬라이드 Css*/
-  .container
-  {
-    width : 300vw;
-    transition: transform 0.6s;
-  }
-  .inner
-  {
-      width: 100vw;
-      float: left;
-  }
-  .inner img
-  {
-      position: relative;
-      left: 5%; /* padding을 주면 검색창 범위랑 겹쳐서 검색창 hover버튼이 실행이 안된다. */
-      top: 30px;
-      width : 380px; 
-      height: 300px;
-      border-radius: 10px;
-  }
-  .slide_button
-  {
-      cursor: pointer;
-      position: absolute;
-      width: 30%;
-      top: 270px;
-      left: 150px;
-      padding-left: 12%;
-      opacity: 0.7;
-  }
-  .버튼1, .버튼2, .버튼3
-  {
-    cursor: pointer;
-    height: 15px;
-    width: 5%;
-    margin: 0 2px;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    transition: all 0.7s ease 0s;
-  }
-.cook1
-{
-    position: relative;
-    float: left;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: all 0.7s ease 0s;
-    padding: 10px;
-    margin-top: 40;
-    left: 80px;
-}
-.cook2
-{
-    position: relative;
-    float: left;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: all 0.7s ease 0s;
-    margin-top: 45;
-    left: 100px;
-}
-.cook3
-{
-    position: relative;
-    float: left;
-    margin-top: 220;
-    left: -230px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: all 0.7s ease 0s;
-}
-.cook4
-{
-    position: relative;
-    margin-top: -150;
-    left: 270px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: all 0.7s ease 0s;
-}
-.cook5
-{
-    position: relative;
-    margin-top: 20;
-    left: 80px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: all 0.7s ease 0s;
-    float: left;
-}
-.cook6
-{
-    position: relative;
-    margin-top: 25;
-    left: 120px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: all 0.7s ease 0s;
-    float: left;
-}
-.cook7
-{
-    position: relative;
-    margin-top: 200;
-    left: -220px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: all 0.7s ease 0s;
-    float: left;
-}
-.cook8
-{
-    position: relative;
-    margin-top: -150;
-    left: 270px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: all 0.7s ease 0s;
-}
 /* 검색 창 css*/
 .search-box{
     padding: 10px;
     position: absolute; /*위치는 수평(위, 아래 중간)*/
-    top: 1.5%; /*페이지 위에서 22%*/
-    left: 30%; /*페이지 왼쪽 기준으로 30%*/
+    top: 2%; /*페이지 위에서 2%*/
+    left: 70%; /*페이지 왼쪽 기준으로 30%*/
     transform: translate(-50%,-50%); /* 요소의 표시 위치를 이동 (x축, y축)*/
     height: 30px;
     background-color: #fff;
@@ -251,34 +123,162 @@ a {
     background-color: red;
 }
   /*여기까지*/
+  /*슬라이드 Css*/
+  .container
+  {
+    width : 300vw;
+    transition: transform 0.6s;
+  }
+  .inner
+  {
+      width: 100vw;
+      float: left;
+  }
+  .inner img
+  {
+      position: relative;
+      left: 430px; /* padding을 주면 검색창 범위랑 겹쳐서 검색창 hover버튼이 실행이 안된다. */
+      top: 80px;
+      width : 400px; 
+      height: 320px;
+      border-radius: 10px;
+  }
+  .slide_button
+  {
+      cursor: pointer;
+      position: absolute;
+      width: 30%;
+      top: 270px;
+      left: 47%;
+      padding-left: 12%;
+      opacity: 0.7;
+  }
+  .버튼1, .버튼2, .버튼3
+  {
+    cursor: pointer;
+    height: 15px;
+    width: 5%;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    transition: all 0.7s ease 0s;
+  }
+.cook1
+{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+    padding: 10px;
+    margin-top: 100px;
+    left: 80px;
+}
+.cook2
+{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+    margin-top: 100px;
+    left: 100px;
+}
+.cook3
+{
+    position: relative;
+    float: left;
+    margin-top: 100;
+    left: 120px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+}
+.cook4
+{
+    position: relative;
+    margin-top: 100px;
+    left: 150px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+}
+.cook5
+{
+    position: relative;
+    margin-top: 70;
+    left: -130px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+    float: left;
+}
+.cook6
+{
+    position: relative;
+    margin-top: 60;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+    float: left;
+}
+.cook7
+{
+    position: relative;
+    margin-top: 50px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+    float: left;
+}
+.cook8
+{
+    position: relative;
+    margin-top: -200px;
+    left: 160px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+}
 
 .popular_recipe
 {
     position: relative;
     padding: 10;
-    top: 100px;
-    left: 50px;
+    top: 80px;
+    left: 60px;
     width: 300px;
-    height: 400px;
+    height: 300px;
     border:1px solid darkkhaki;
 }
 .easy_cooking
 {
     position: relative;
     padding: 10;
-    top: 150px;
-    left: 50px;
+    top: 130px;
+    left: 60px;
     width: 300px;
-    height: 400px;
+    height: 300px;
     border:1px solid darkkhaki;
 }
 .popular
 {
     position: relative;
     font-size: 10px;
-    top: -70px;
+    top: 150px;
     padding: 10;
-    left: 500px;
+    left: 60px;
     width: 180px;
     border:1px solid darkkhaki;
 }
