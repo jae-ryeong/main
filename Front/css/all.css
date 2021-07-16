@@ -1,0 +1,259 @@
+/*COMMON*/
+body{
+    line-height: 1.4;
+    font-size: 16px;
+    width: 1450px;
+}
+header{
+    height: 120px;
+    left: 1px;
+    top: 1px;
+    width: 100%;
+    border-bottom: 1px solid #bcdcbc;
+    background-color: blanchedalmond;
+    position: fixed;
+    z-index: 2;
+}
+.inner{
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+.btn{
+    width: 8%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing:  block;
+    transition: .4s;
+}
+.choice .btn.btnChoice{
+    background-color: rgb(235, 217, 217);
+    border-radius: 10px 10px 10px 10px;
+}
+.choice .btn.btnChoice:hover{
+    background-color: #333;
+    color: rgb(235, 217, 217);
+}
+.choice .btn.btnChoice a{
+    color: rgb(85, 81, 81);
+    list-style: none;
+    cursor: pointer;
+}
+
+/* HEADER */
+
+/* HEADER-LOGO */
+header .inner .menu .logo{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-image: url('https://avatars.githubusercontent.com/u/83266629?s=200&v=4');
+    background-size: contain;
+    cursor: pointer;
+    display: flex;
+    bottom: 0;
+    top: 15px;
+    margin: auto 10px;
+}
+header .inner .menu .logo > a{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 30px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/* HEADER SUB-MENU*/
+.inner .menu .sub-menu{
+    position: absolute;
+    display: flex;
+    margin: 10px -40px;
+    right: 0;
+    top: 0;
+}
+.inner .menu .sub-menu li{
+    padding: 10px 10px;
+    font-size: 12px;
+}
+.inner .menu .sub-menu > li::before{
+    content: "";
+    position: absolute;
+    margin : 0 -10px;
+    width: 1px;
+    height: 12px;
+    background-color: #bcdcbc;
+}
+header .inner .menu .sub-menu li:first-child::before,
+header .inner .menu .sub-menu li:nth-child(4)::before
+{
+    display: none;
+}
+.inner .menu .sub-menu .search li input{
+    height: 15px;
+    position: relative;
+    width: 0px;
+    transition: width .4s, input .4s;
+    opacity: 0;
+}
+.inner .menu .sub-menu .search.focused li input{
+    opacity: 1;
+    transition: width .4s, input .4s;
+    width: 150px;
+}
+.inner .menu .sub-menu .search li .material-icons{
+    position: absolute;
+    cursor: pointer;
+}
+.inner .menu .sub-menu li a{
+    color: rgb(44, 51, 46);
+    margin: 10px;
+    padding: 10px 10px;
+}
+
+/*HEADER MAIN-MENU*/
+.inner .menu .main-menu{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: -17px 80px;
+    
+}
+.inner .menu .main-menu .menu-list{
+    position: relative;
+    padding: 20px 30px;
+    margin: auto;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    min-width: 70px;
+    max-width: 70px;
+}
+.inner .menu .main-menu .menu-list:hover{
+    background-color: rgb(218, 238, 222);
+}
+.inner .menu .main-menu .menu-list > ul{
+    position: fixed;
+    margin: 20px -30px;
+    background-color: rgb(233, 243, 238);
+    top: 1;
+    padding: 10px 10px;
+    min-width: 110px;
+    max-width: 110px;
+    z-index: 1;
+    display: none;
+}
+.inner .menu .main-menu .menu-list:hover > ul{
+    display: block;
+}
+.inner .menu .main-menu .menu-list > ul li.inner-menu{
+    padding: 20px 20px;
+}
+.inner .menu .main-menu .menu-list > ul li.inner-menu a{
+    color: rgb(136, 130, 130);
+}
+/*SECTION*/
+section{
+    position: relative;
+    height: 750px;
+}
+.video .video1, .video .video2, .video .video3,
+.video .video4, .video .video5, .video .video6{
+    position: absolute;
+    background-color: rgb(117, 113, 104);
+    width: 300px;
+    height: 200px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #333;
+}
+/*커서 가져다 대면 화면 약간 확대되는 거 추가하기*/ 
+.video .video1:hover, .video .video2:hover, .video .video3:hover,
+.video .video4:hover, .video .video5:hover, .video .video6:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.video .video1{
+    top: 200px;
+    left: 350px;
+}
+.video .video2{
+    top: 200px;
+    left: 700px;
+}
+.video .video3{
+    top: 200px;
+    left: 1050px;
+}
+.video .video4{
+    top: 500px;
+    left: 350px;
+}
+.video .video5{
+    top: 500px;
+    left: 700px;
+}
+.video .video6{
+    top: 500px;
+    left: 1050px;
+}
+/* FOOTER */
+footer{
+    width: 100%;
+    left: 1;
+    right: 1;
+    background-color: rgb(189, 179, 165);
+}
+footer .inner{
+    height: 120px;
+    background-color: rgb(189, 179, 165);
+}
+footer .inner >ul{
+    display: flex;
+    position: absolute;
+}
+footer .inner >ul li{
+    padding: 20px;
+}
+footer .inner >ul li::before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 20px;
+    margin-left: -20px;
+    background-color: rgb(82, 87, 83);
+}
+footer .inner >ul li:first-child::before{
+    display: none;
+}
+footer .inner >ul li:first-child a{
+    font-size: 18px;
+    font-weight: 700px;
+}
+footer .inner >ul li a{
+    color : rgb(66, 61, 61);
+}
+.Container{
+    width: 2000px; height:1400px;
+    margin-top: 30px;
+}
+.SideBar{
+    float: left;
+    background-color: lightgoldenrodyellow;
+    width: 350px; height:100%;
+}
