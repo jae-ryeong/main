@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모해묵지</title>
-    <link rel="stylesheet" href="../css/VideoList.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../css/VideoList.css">    
     
 </head>
 <body>
-    
     <header>
         <nav class = "navbar">
             <div class = "navbar_logo">
@@ -39,13 +37,136 @@
         </div>
 
         <div id="Contents">
+
+            <div class="Video">
+                <div id="Video1" class="thumbnail">
+
+                </div>
+                <p>1번 요리</p>
+            </div>
             
+            <div class="Video">
+                <div id="Video2" class="thumbnail">
+                </div>
+                <p>2번 요리</p>
+            </div>
+
+            <div class="Video">
+                <div id="Video3" class="thumbnail">
+
+                </div>
+                <p>3번 요리</p>
+            </div>
+
+            <div class="Video">
+                <div id="Video4" class="thumbnail">
+
+                </div>
+                <p>4번 요리</p>
+            </div>
+
+            <div class="Video">
+                <div id="Video5" class="thumbnail">
+
+                </div>
+                <p>5번 요리</p>
+            </div>
+
+            <div class="Video">
+                <div id="Video6" class="thumbnail">
+
+                </div>
+                <p>6번 요리</p>
+            </div>
+
+            <div class="Video">
+                <div id="Video7" class="thumbnail">
+
+                </div>
+                <p>7번 요리</p>
+            </div>
+
+            <div class="Video">
+                <div id="Video8" class="thumbnail">
+
+                </div>
+                <p>8번 요리</p>
+            </div>
+
+            <div class="Video">
+                <div id="Video9" class="thumbnail">
+
+                </div>
+                <p>9번 요리</p>
+            </div>
         </div>
     </div>
     
+    <!-- 썸네일 클릭 시 나타나는 화면 (이거 하나 뿐) -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
 </body>
 </html>
 
-<script src="..\js\VideoList.js"></script>
-<script src="../js/jquery.bpopup-0.10.0.min.js"></script>
-<!-- https://m.blog.naver.com/PostView.nhn?blogId=pyoungj1003&logNo=220230248694&proxyReferer=https:%2F%2Fwww.google.com%2F -->
+<script>
+        // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("Video1");
+var btn2 = document.getElementById("Video2");
+var btn3 = document.getElementById("Video3");
+var btn4 = document.getElementById("Video4");
+var btn5 = document.getElementById("Video5");
+var btn6 = document.getElementById("Video6");
+var btn7 = document.getElementById("Video7");
+var btn8 = document.getElementById("Video8");
+var btn9 = document.getElementById("Video9");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];                                          
+
+// When the user clicks on the button, open the modal 
+btn1.onclick = function() {
+    modal.style.display = "block";
+}
+btn2.onclick = function() {
+    modal.style.display = "block";
+}
+btn3.onclick = function() {
+    modal.style.display = "block";
+}
+btn4.onclick = function() {
+    modal.style.display = "block";
+}
+btn5.onclick = function() {
+    modal.style.display = "block";
+}
+btn6.onclick = function() {
+    modal.style.display = "block";
+}
+btn7.onclick = function() {
+    modal.style.display = "block";
+}
+btn8.onclick = function() {
+    modal.style.display = "block";
+}
+btn9.onclick = function() {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
