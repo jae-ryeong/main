@@ -20,5 +20,5 @@ app.get('/VideoList.html', function(req, res){
 });
 
 app.listen(8000, function(){
-    console.log(`Server Running at ${8000}`)
+    console.log(`Server Running`)
 })
