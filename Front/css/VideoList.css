@@ -90,27 +90,24 @@ header .inner .menu .logo > a{
 section{
     position: relative;
 }
-/* .SideBar{
-    float: left;
-    background-color: lightgoldenrodyellow;
-    width: 350px; height:100%;
-} */
 
 /* 음식 타이틀 */
 section .foods{
-    margin-top: 100px;
-    height: 100px;
-    margin: auto;
-    width: 1250px;
+    text-align: center;
+    height: 130px;
+    width: 100%;
     z-index: 3;
 }
 section .foods ul {
     position: absolute;
     top: 20px;
+    width: 100%;
+    padding-left: 0px;
     display: flex;
 }
 section .foods ul .food{
-    margin-left: 20px;
+    display: inline-block;
+    margin: auto;
     width: 90px;
     height: 90px;
     cursor: pointer;
@@ -264,24 +261,22 @@ section .foods ul .food:nth-child(6):hover,section .foods ul .food:nth-child(7):
 /* 썸네일 div */
 section .Container{
     position: relative;
-    width: 1200px;
-    height: 1200px;
-    margin: auto;
+    width: auto; height: 1200px; margin-top: 100px;
+    padding-right: 100px; padding-left: 100px;
+    justify-content: center;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
 }
 .Video{
     text-align: center;
-    margin-left: 30px;
+    margin-left: 60px; margin-right: 60px;
     width: 360px; height: 250px;
-    margin-top:100px;
     box-sizing:border-box;
 }
 .thumbnail{
-    display: flex;
     margin-top: 100;
-    width: 350px; height:250px;
+
 }
 .thumbnail img{
     border-radius: 10px 10px;
