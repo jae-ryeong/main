@@ -1,6 +1,5 @@
 // mongoose module init
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 ///testDB setting & using testDB
 mongoose.connect('mongodb://localhost:27017/testDB', {useNewUrlParser: true});
@@ -15,21 +14,29 @@ db.once('open', () => {
 });
 
 // Schema create
-const Structor = new Schema({
-    'title' : String,
-    'thumbnail' : String,
-    'link' : String
+const Data_Schema = new mongoose.Schema({
+    title : String,
+    thumbnail : String,
+    link : String
 });
 
 // defined Schema compile
-Structor.set('collection', 'noodle');
-const Noodle = mongoose.model('noodle', Structor);
+const Noodle_Model = mongoose.model('noodle', Data_Schema);
 
-// find data
+// find all data
 exports.find = () => {
-    Noodle.find((error, datas) => {
+    Noodle_Model.find((err, datas) => {
     console.log('Read all');
-    if (error) { console.log(error); }
-    else { console.log(datas); }
+    
+    if (err) { console.log(err); }
+    else { console.log(datas);}
     });
 }
+
+exports.create = (title_lnk, thumbnail_lnk, link_lnk) => {
+    const add_link = new Noodle_Model({title: title_lnk, thumbnail: thumbnail_lnk, link: link_lnk});
+    add_link.save();
+}
+
+exports.delete
+
