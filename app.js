@@ -16,6 +16,7 @@ app.get('/', function(req, res){
 
 app.get('/VideoList.html', function(req, res){
     console.log('DB : ',db);
+    db.find();
 });
 
 app.listen(8000, function(){

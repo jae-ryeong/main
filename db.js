@@ -7,11 +7,11 @@ mongoose.connect('mongodb://localhost:27017/testDB', {useNewUrlParser: true});
 const db = mongoose.connection;
 
 db.on('error', () => {
-    console.log('Connection failed');
+    console.log('Database Connection failed');
 });
 
 db.once('open', () => {
-    console.log('Connected!');
+    console.log('Database Connected!');
 });
 
 // Schema create
@@ -26,8 +26,10 @@ Structor.set('collection', 'noodle');
 const Noodle = mongoose.model('noodle', Structor);
 
 // find data
-Noodle.find(function(error, datas){
+exports.find = () => {
+    Noodle.find((error, datas) => {
     console.log('Read all');
     if (error) { console.log(error); }
     else { console.log(datas); }
-});
+    });
+}
