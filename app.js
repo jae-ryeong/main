@@ -20,17 +20,25 @@ app.get('/VideoList.html', (req, res) => {
 });
 
 app.get('/add_data', (req, res) => {
-    const title_lnk = '김빵상의 레전드 요리';
-    const thumbnail_lnk = 'https://i.ytimg.com/an_webp/JJ-MTRj_HDk/mqdefault_6s.webp?du=3000&sqp=CK2A6ocG&rs=AOn4CLAVO9PJ2eks0r90BvwLufHmxefkyQ';
-    const link_lnk = 'https://www.youtube.com/watch?v=JJ-MTRj_HDk'
+    for (var i=0; i<8; i++){
+        const title_lnk = Math.random().toString(36).slice(2);
+        const thumbnail_lnk = Math.random().toString(36).slice(2);
+        const link_lnk = Math.random().toString(36).slice(2);
 
-    db.create(title_lnk, thumbnail_lnk, link_lnk);
-    console.log('add_data');
+        db.create(title_lnk, thumbnail_lnk, link_lnk);
+        console.log(`add_data ${i}`);
+    }
 });
 
-app.get('delete_data', (req, res) => {
-    
-})
+app.get('/delete_data', (req, res) => {
+    console.log("remove");
+    db.delete_all();
+});
+
+// app.get('/read_one', (req, res) => {
+//     console.log("read_one");
+//     db.read_one(0);
+// });
 
 app.listen(8000, () => {
     console.log(`Server Running`);

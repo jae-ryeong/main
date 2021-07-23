@@ -1,7 +1,7 @@
 // mongoose module init
 const mongoose = require('mongoose');
 
-///testDB setting & using testDB
+// testDB setting & using testDB
 mongoose.connect('mongodb://localhost:27017/testDB', {useNewUrlParser: true});
 const db = mongoose.connection;
 
@@ -15,9 +15,9 @@ db.once('open', () => {
 
 // Schema create
 const Data_Schema = new mongoose.Schema({
-    title : String,
-    thumbnail : String,
-    link : String
+    title : {type : String},
+    thumbnail : {type : String},
+    link : {type : String, unique: true},
 });
 
 // defined Schema compile
@@ -33,10 +33,22 @@ exports.find = () => {
     });
 }
 
+// data insert
 exports.create = (title_lnk, thumbnail_lnk, link_lnk) => {
     const add_link = new Noodle_Model({title: title_lnk, thumbnail: thumbnail_lnk, link: link_lnk});
     add_link.save();
 }
 
-exports.delete
+// exports.read_one = (no) => {
+//     const num = Noodle_Model.findOne({no});
+//     console.log(num);
+// }
 
+// data remove all
+exports.delete_all = () => {
+    console.log("delete!!");
+    Noodle_Model.deleteMany({}, (err) => {
+        if (err) {console.log(err);}
+        else {console.log('delete success');}
+    });
+}
