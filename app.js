@@ -15,6 +15,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/VideoList.html', (req, res) => {
+    fs.readFile('./Front/html/VideoList.html', (err, data)=>{
+    if (err) throw err;
+    res.end(data,'utf-8');
+    });
+});
+
+app.get('/find_all_data', (req, res) => {
     console.log('DB : ',db);
     db.find();
 });
