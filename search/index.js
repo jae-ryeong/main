@@ -6,19 +6,20 @@ const service = google.youtube('v3');
 optionParams = {
   key: process.env.YOUTUBE_TOKEN,
   part: 'snippet',
-  q: '김치찌개',
+  q: '스프링 입문',
   maxResults: 3 // 검색 결과 수
 }
 
-service.search.list(optionParams).then(response => {
-
-  const { data, result } = response;
-  data.items.forEach((item) => {
+service.search.list(optionParams, (err, response) => {
+  const { items } = response.data;
+  
+  items.forEach(item => {
     let url;
-    
-    let { publishedAt, channelId, title, description, thumbnails, channelTitle, liveBroadcastContent, publishTime } = item.snippet;
 
-    switch (item.id.kind) {
+    const { kind } = item.id;
+
+    console.log(item);
+    switch (kind) {
       case 'youtube#playlist':
         url = 'https://www.youtube.com/playlist?list=' + item.id.playlistId;
         break;
@@ -29,15 +30,13 @@ service.search.list(optionParams).then(response => {
         url = 'https://www.youtube.com/watch?v=' + item.id.videoId;
         break;
     }
-    console.log(
-      `This is ${item.id.kind}` +
-      '\nTitle: ' + title +
-      '\nDescription: ' + description +
-      '\nThumbnails: ' + thumbnails.default.url +
-      '\nPublishTime: ' + publishTime + 
-      '\nLiveBroadcastContent: ' + liveBroadcastContent +
-      '\n' + url + '\n\n'
-    );
-  });
-  
-}).catch(err => console.log(err.message));
+
+    /**
+     * Control fields option.
+     * 
+     */
+    console.log(item.snippet);
+    const docs = new Model(item.snippet);
+    docs.save(err => console.log(err.message));
+  })
+})

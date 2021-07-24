@@ -6,6 +6,11 @@ const mongoose = require('mongoose');
  * Properties to be added: viewCount, likeCount, commentCount
  */
 const VideoSchema = mongoose.Schema({
+  link: {
+    type: String,
+    required: true,
+    unique: true
+  },
   title: {
     type: String,
     required: true
@@ -16,16 +21,11 @@ const VideoSchema = mongoose.Schema({
   thumbnail: {
     type: String
   },
-  publishTime: {
-    type: String,
-    requierd: true
-  },
-  live: {
+  liveBroadcastContent: {
     type: String
   },
-  url: {
-    type: String,
-    required: true
+  publishTime: {
+    type: String
   }
 });
 
