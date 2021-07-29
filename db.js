@@ -17,7 +17,7 @@ db.once('open', () => {
 const Data_Schema = new mongoose.Schema({
     title : {type : String},
     thumbnail : {type : String},
-    link : {type : String, unique: true},
+    link : {type : String},
 });
 
 // defined Schema compile
@@ -39,10 +39,9 @@ exports.create = (title_lnk, thumbnail_lnk, link_lnk) => {
     add_link.save();
 }
 
-// exports.read_one = (no) => {
-//     const num = Noodle_Model.findOne({no});
-//     console.log(num);
-// }
+exports.random_select = (no) => {
+    console.log(no);
+}
 
 // data remove all
 exports.delete_all = () => {

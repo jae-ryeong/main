@@ -21,11 +21,6 @@ app.get('/VideoList.html', (req, res) => {
     });
 });
 
-app.get('/find_all_data', (req, res) => {
-    console.log('DB : ',db);
-    db.find();
-});
-
 app.get('/add_data', (req, res) => {
     for (var i=0; i<8; i++){
         const title_lnk = Math.random().toString(36).slice(2);
@@ -33,19 +28,24 @@ app.get('/add_data', (req, res) => {
         const link_lnk = Math.random().toString(36).slice(2);
 
         db.create(title_lnk, thumbnail_lnk, link_lnk);
-        console.log(`add_data ${i}`);
+        res.end(`add_data ${i}`);
     }
 });
 
 app.get('/delete_data', (req, res) => {
-    console.log("remove");
+    res.end('delete');
     db.delete_all();
 });
 
-// app.get('/read_one', (req, res) => {
-//     console.log("read_one");
-//     db.read_one(0);
-// });
+app.get('/find_all_data', (req, res) => {
+    res.end(`DB : ${db}`);
+    db.find();
+});
+
+app.get('/random_select', (req, res) => {
+    res.end('random_select');
+    db.random_select(0);
+});
 
 app.listen(8000, () => {
     console.log(`Server Running`);
