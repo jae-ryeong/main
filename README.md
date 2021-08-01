@@ -8,8 +8,9 @@
 
 ## **TODO**
 ### 0724
-Write models  
-: Video
+데이터 베이스(Mongo) 연결.
+데이터 베이스의 스키마 및 모델 작성.
 
-Connect to Mongo
+### 0801
+Search의 Properties를 기반으로 Video, Channel, Playlist의 Properties를 불러오도록 함수를 작성.
 

@@ -1,9 +1,9 @@
 require('dotenv').config();
 const { google } = require('googleapis');
 
-const db = require('../db');
+// const db = require('../db');
 // const Video = require('../models/Video');
-const Video = require('../models/Tempvideo');
+// const Video = require('../models/Tempvideo');
 
 const service = google.youtube('v3');
 
@@ -26,7 +26,7 @@ optionParams = {
   key: process.env.YOUTUBE_TOKEN,
   part: 'snippet',
   q: '스프링 입문',
-  maxResults: 10 // 검색 결과 수
+  maxResults: 1 // 검색 결과 수
 }
 
 service.search.list(optionParams, (err, response) => {
@@ -54,7 +54,9 @@ service.search.list(optionParams, (err, response) => {
       "\nlink: " + url + "\n\n"
     );
 
-    const temp_video = new Video({ title: title, thumbnail: thumbnails.default.url, link: url })
-    temp_video.save(err => console.log(err.message));
+    // const temp_video = new Video({ title: title, thumbnail: thumbnails.default.url, link: url })
+    // temp_video.save(err => console.log(err.message));
+
+    console.log(item.snippet);
   })
 })
