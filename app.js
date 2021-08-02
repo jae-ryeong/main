@@ -40,8 +40,13 @@ app.get('/find_all_data', (req, res) => {
 });
 
 app.get('/random_select', (req, res) => {
+<<<<<<< HEAD
     console.log('Random_Select');
     db.random_select();
+=======
+    console.log('random_select');
+    db.random_select(0);
+>>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
 });
 
 app.listen(8000, () => {

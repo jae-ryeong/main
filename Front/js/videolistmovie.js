@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
 // Get the modal
 
 var modal= []; var btn = []; var span = [];
@@ -39,6 +43,10 @@ var span9 = document.getElementsByClassName("close")[8];
 
 btn1.onclick = function() {
     modal[0].style.display = "block";
+<<<<<<< HEAD
+=======
+    modal[0].style.position = "fixed"
+>>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     console.log("열림");
 }
 btn2.onclick = function() {
@@ -118,4 +126,145 @@ window.onclick = function(event) {
     } else if (event.target == modal[8]){
         modal[8].style.display = "none";
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+// // 카테고리 별로 나오는 동영상 다르게 하기
+window.onload = function(){
+    Containers[0].classList.add('event');
+}
+
+const foods = document.querySelectorAll('.food_v');
+var Containers = document.querySelectorAll('.Container');
+for(var i = 0; i <= foods.length; i++){
+    foods[0].addEventListener('click', function(){
+        Containers[0].classList.add('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[1].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.add('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[2].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.add('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[3].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.add('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[4].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.add('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[5].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.add('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[6].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.add('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[7].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.add('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[8].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.add('event');
+        Containers[9].classList.remove('event');
+    })
+    foods[9].addEventListener('click', function(){
+        Containers[0].classList.remove('event');
+        Containers[1].classList.remove('event');
+        Containers[2].classList.remove('event');
+        Containers[3].classList.remove('event');
+        Containers[4].classList.remove('event');
+        Containers[5].classList.remove('event');
+        Containers[6].classList.remove('event');
+        Containers[7].classList.remove('event');
+        Containers[8].classList.remove('event');
+        Containers[9].classList.add('event');
+    })
+}
+// [...document.querySelectorAll('.food').forEach(function(item){
+//     item.addEventListener('click',function(){
+//         for(var i = 0; i < Containers.length; i++){
+            
+//         }
+//     })
+// })]
+>>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e

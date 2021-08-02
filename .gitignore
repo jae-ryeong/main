@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 mh-db/
 node_modules/
 .json
+=======
+.node_modules
+>>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
