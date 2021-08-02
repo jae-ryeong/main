@@ -15,15 +15,9 @@ db.once('open', () => {
 
 // Schema create
 const Data_Schema = new mongoose.Schema({
-<<<<<<< HEAD
     title : {type : String, required: true},
     thumbnail : {type : String, required: true},
     link : {type : String, required: true},
-=======
-    title : {type : String},
-    thumbnail : {type : String},
-    link : {type : String},
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
 });
 
 // defined Schema compile
@@ -45,7 +39,6 @@ exports.create = (title_lnk, thumbnail_lnk, link_lnk) => {
     add_link.save();
 }
 
-<<<<<<< HEAD
 exports.random_select = () => {
     const Schema_Keys = []
 
@@ -55,10 +48,6 @@ exports.random_select = () => {
     };
 
     const key = get_random_video();
-=======
-exports.random_select = (no) => {
-    console.log(no);
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
 }
 
 // data remove all

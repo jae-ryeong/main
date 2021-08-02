@@ -2,11 +2,8 @@
 body{
     line-height: 1.4;
     font-size: 16px;
-<<<<<<< HEAD
-=======
     margin: 0;
     padding: 0;
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
 }
 /* .inner{
     width: 1100px;
@@ -199,11 +196,7 @@ section .choice{
     justify-content: center;
     align-items: center;
 }
-<<<<<<< HEAD
-.foods .inner .food1 a{
-=======
 .foods .inner .food:nth-child(1) a{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Republic_Of_Korea_Broadcasting-TV_Rating_System%28ALL%29.svg/250px-Republic_Of_Korea_Broadcasting-TV_Rating_System%28ALL%29.svg.png');
     background-size: cover;
@@ -214,17 +207,10 @@ section .choice{
     top: 50px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food1 a:hover{
-    opacity: .7;
-}
-.foods .inner .food1 a:hover::before{
-=======
 .foods .inner .food:nth-child(1) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(1) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "전체";
     color: black;
@@ -232,11 +218,7 @@ section .choice{
     top: 125px;
     left: 36%;
 }
-<<<<<<< HEAD
-.foods .inner .food2 a {
-=======
 .foods .inner .food:nth-child(2) a {
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://img-cf.kurly.com/shop/data/goodsview/20190920/gv00000062418_1.jpg');
     background-size:cover;
@@ -247,17 +229,10 @@ section .choice{
     top: 50px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food2 a:hover{
-    opacity: .7;
-}
-.foods .inner .food2 a:hover::before{
-=======
 .foods .inner .food:nth-child(2) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(2) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "반찬";
     color: black;
@@ -265,11 +240,7 @@ section .choice{
     top: 125px;
     left: 36%;
 }
-<<<<<<< HEAD
-.foods .inner .food3 a {
-=======
 .foods .inner .food:nth-child(3) a {
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/TRE/image/46kLQFw8QiQYJMksUkgEf8-dC1k');
     background-size: cover;
@@ -280,17 +251,10 @@ section .choice{
     top: 50px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food3 a:hover{
-    opacity: .7;
-}
-.foods .inner .food3 a:hover::before{
-=======
 .foods .inner .food:nth-child(3) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(3) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "찌개";
     color: black;
@@ -298,11 +262,7 @@ section .choice{
     top: 125px;
     left: 36%;
 }
-<<<<<<< HEAD
-.foods .inner .food4 a{
-=======
 .foods .inner .food:nth-child(4) a{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://www.chungjungone.com/knowhow/images/blog/recipe/r193_20160513/1.jpg');
     background-size: cover;
@@ -313,17 +273,10 @@ section .choice{
     top: 50px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food4 a:hover{
-    opacity: .7;
-}
-.foods .inner .food4 a:hover::before{
-=======
 .foods .inner .food:nth-child(4) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(4) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "밥";
     color: black;
@@ -331,11 +284,7 @@ section .choice{
     top: 125px;
     left: 45%;
 }
-<<<<<<< HEAD
-.foods .inner .food5 a{
-=======
 .foods .inner .food:nth-child(5) a{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://post-phinf.pstatic.net/MjAxNzA4MzFfMTM0/MDAxNTA0MTU3MTU2NTE4.ZW_czoTixiIP7vuuB95I1-7BJdbjzOqbqr1ijbozh-8g.49b0T8N0Nl4VKyPkwSkQusla34pP_rZmo2i-_GUoRR0g.JPEG/9.jpg?type=w1200');
     background-size: cover;
@@ -346,17 +295,10 @@ section .choice{
     top: 50px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food5 a:hover{
-    opacity: .7;
-}
-.foods .inner .food5 a:hover::before{
-=======
 .foods .inner .food:nth-child(5) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(5) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "면";
     color: black;
@@ -364,11 +306,7 @@ section .choice{
     top: 125px;
     left: 45%;
 }
-<<<<<<< HEAD
-.foods .inner .food6 a{
-=======
 .foods .inner .food:nth-child(6) a{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('http://www.suwonilbo.kr/news/photo/201806/125094_67440_4130.png');
     background-size:cover;
@@ -379,17 +317,10 @@ section .choice{
     top: 210px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food6 a:hover{
-    opacity: .7;
-}
-.foods .inner .food6 a:hover::before{
-=======
 .foods .inner .food:nth-child(6) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(6) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "해물";
     color: black;
@@ -397,11 +328,7 @@ section .choice{
     top: 125px;
     left: 36%;
 }
-<<<<<<< HEAD
-.foods .inner .food7 a{
-=======
 .foods .inner .food:nth-child(7) a{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/2jRL/image/SoZUjE4bSXJzK4VRSzBkchK0tKM.jpg');
     background-size: contain;
@@ -412,17 +339,10 @@ section .choice{
     top: 210px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food7 a:hover{
-    opacity: .7;
-}
-.foods .inner .food7 a:hover::before{
-=======
 .foods .inner .food:nth-child(7) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(7) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     font-size: 15px;
     content: "다이어트";
@@ -431,11 +351,7 @@ section .choice{
     top: 125px;
     left: 25%;
 }
-<<<<<<< HEAD
-.foods .inner .food8 a{
-=======
 .foods .inner .food:nth-child(8) a{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://ppss.kr/wp-content/uploads/2018/01/3-31.jpg');
     background-repeat: no-repeat;
@@ -447,17 +363,10 @@ section .choice{
     top: 210px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food8 a:hover{
-    opacity: .7;
-}
-.foods .inner .food8 a:hover::before{
-=======
 .foods .inner .food:nth-child(8) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(8) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "소스";
     color: black;
@@ -465,11 +374,7 @@ section .choice{
     top: 125px;
     left: 36%;
 }
-<<<<<<< HEAD
-.foods .inner .food9 a{
-=======
 .foods .inner .food:nth-child(9) a{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator.com/article/2020/04/22/coronavirus-and-obesity-doctors-take-aim-at-food-industry-over-poor-diets/10933380-3-eng-GB/Coronavirus-and-obesity-Doctors-take-aim-at-food-industry-over-poor-diets_wrbm_large.jpg');
     background-size: contain;
@@ -480,17 +385,10 @@ section .choice{
     top: 210px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food9 a:hover{
-    opacity: .7;
-}
-.foods .inner .food9 a:hover::before{
-=======
 .foods .inner .food:nth-child(9) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(9) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "간식/야식";
     color: black;
@@ -498,11 +396,7 @@ section .choice{
     top: 125px;
     left: 25%;
 }
-<<<<<<< HEAD
-.foods .inner .food10 a{
-=======
 .foods .inner .food:nth-child(10) a{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Common_alcoholic_beverages.jpg/400px-Common_alcoholic_beverages.jpg');
     background-repeat: no-repeat;
@@ -514,17 +408,10 @@ section .choice{
     top: 210px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.foods .inner .food10 a:hover{
-    opacity: .7;
-}
-.foods .inner .food10 a:hover::before{
-=======
 .foods .inner .food:nth-child(10) a:hover{
     opacity: .7;
 }
 .foods .inner .food:nth-child(10) a:hover::before{
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     position: absolute;
     content: "음료/술";
     color: black;

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
 // Get the modal
 
 var modal= []; var btn = []; var span = [];
@@ -43,10 +40,7 @@ var span9 = document.getElementsByClassName("close")[8];
 
 btn1.onclick = function() {
     modal[0].style.display = "block";
-<<<<<<< HEAD
-=======
     modal[0].style.position = "fixed"
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
     console.log("열림");
 }
 btn2.onclick = function() {
@@ -126,9 +120,6 @@ window.onclick = function(event) {
     } else if (event.target == modal[8]){
         modal[8].style.display = "none";
     }
-<<<<<<< HEAD
-}
-=======
 }
 
 // // 카테고리 별로 나오는 동영상 다르게 하기
@@ -267,4 +258,3 @@ for(var i = 0; i <= foods.length; i++){
 //         }
 //     })
 // })]
->>>>>>> 7bed2618165b2c2e7b5386524f19c03c7fccae0e
