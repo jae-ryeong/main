@@ -1,0 +1,152 @@
+/*COMMON*/
+body{
+    line-height: 1.6;
+    font-size: 16px;
+    color: rgb(143, 140, 140);
+    padding: 0;
+    margin: 0;
+}
+/* .inner{
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+} */
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5{
+    color: #333;
+}
+ul{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+img{
+    width: 500px;
+    margin: auto;
+    height: 300px;
+}
+hr{
+    width: 1000px;
+    float: left;
+}
+.btn{
+    width: 8%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing:  block;
+    transition: .4s;
+}
+.choice .btn.btnChoice{
+    background-color: rgb(235, 217, 217);
+    border-radius: 10px 10px 10px 10px;
+}
+.choice .btn.btnChoice:hover{
+    background-color: #333;
+    color: rgb(235, 217, 217);
+}
+.choice .btn.btnChoice a{
+    color: rgb(85, 81, 81);
+    list-style: none;
+    cursor: pointer;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 120px;
+    top: 1px;
+    border-bottom: 1px solid #bcdcbc;
+    background-color: blanchedalmond;
+    z-index: 2;
+}
+header .menu{
+    width: 1080px;
+    background-color: blanchedalmond;
+    margin: auto;
+    height: 120px;
+}
+/* HEADER-LOGO */
+    header .inner .menu .logo{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-image: url('https://avatars.githubusercontent.com/u/83266629?s=200&v=4');
+    background-size: contain;
+    cursor: pointer;
+    display: flex;
+    bottom: 0;
+    top: 15px;
+    margin: auto;
+    /* margin: auto 10px; */
+}
+header .inner .menu .logo > a{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 30px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/*SECTION*/
+section{
+    width: 1080px;
+    margin: auto;
+    min-height: 700px;
+}
+section .inner{
+    width: 100%;
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 179, 165);
+}
+footer .inner{
+    margin: auto;
+    height: 120px;
+    width: 1080px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 179, 165);
+}
+footer .inner >ul{
+    display: flex;
+}
+footer .inner >ul li{
+    padding: 20px;
+}
+footer .inner >ul li::before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 20px;
+    margin-left: -20px;
+    background-color: rgb(82, 87, 83);
+}
+footer .inner >ul li:first-child::before{
+    display: none;
+}
+footer .inner >ul li:first-child a{
+    font-size: 18px;
+    font-weight: 700px;
+}
+footer .inner >ul li a{
+    color : rgb(66, 61, 61);
+}
