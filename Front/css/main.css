@@ -46,6 +46,8 @@ header .material-icons{
 
 /*SECTION*/
 section{
+    width: 100%;
+    margin: auto;
     position: relative;
     opacity: .7;
 }
@@ -53,7 +55,6 @@ section{
     background-image: url("https://user-images.githubusercontent.com/76980526/127947926-96572de8-6f09-4680-9e87-c55a03d6e61f.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
     height: 100vh;
 }
 .backImg .text{
@@ -333,7 +334,7 @@ footer{
 }
 footer .inner{
     height: 120px;
-    width: 1250px;
+    width: auto; /*쏠림 현상 제거*/
     flex: 1;
     display: flex;
     justify-content: center;
