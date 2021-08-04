@@ -1,540 +1,340 @@
 /*COMMON*/
 body{
-    line-height: 1.4;
-    font-size: 16px;
     margin: 0;
     padding: 0;
 }
-/* .inner{
-    width: 1100px;
-    margin: 0 auto;
-    position: relative;
-} */
 a{
     text-decoration: none;
 }
-ul{
-    list-style: none;
-}
-input{
-    outline: none;
-}
-.btn{
-    width: 8%;
-    padding: 10px;
-    border: 2px solid #333;
-    border-radius: 4px;
-    color: #333;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    cursor: pointer;
-    box-sizing:  block;
-    transition: .4s;
-}
-.choice .btn.btnChoice{
-    background-color: rgb(235, 217, 217);
-    border-radius: 10px 10px 10px 10px;
-}
-.choice .btn.btnChoice:hover{
-    background-color: #333;
-    color: rgb(235, 217, 217);
-}
-.choice .btn.btnChoice a{
-    color: rgb(85, 81, 81);
-    list-style: none;
-    cursor: pointer;
-}
-
-/* HEADER */
-header{
-    width: 100%;
-    height: 120px;
-    top: 1px;
-    border-bottom: 1px solid #bcdcbc;
-    background-color: blanchedalmond;
-    z-index: 2;
-}
-header .inner .menu{
+.inner{
     width: 1200px;
     margin: auto;
-    height: 120px;
-    background-color: blanchedalmond;
 }
-/* HEADER-LOGO */
-    header .inner .menu .logo{
+ul li{
+    list-style: none;
+}
+/*HEADER*/
+header{
     position: relative;
+}
+header .logo_menu{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+header .logo_menu .logo{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+    border-radius: 50%;
+    left: 0;
     width: 75px;
     height: 75px;
-    border-radius: 50%;
-    background-image: url('https://avatars.githubusercontent.com/u/83266629?s=200&v=4');
     background-size: contain;
     cursor: pointer;
+}
+header .material-icons{
+    margin-top: 20px;
+    margin-right: 20px;
+    color: #ac9595;
+    position: absolute;
+    font-size: 40px;
+    font-weight: 700;
+    right: 0;
+    cursor: pointer;
+}
+
+/*SECTION*/
+section{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    opacity: .7;
+}
+.backImg{
+    background-image: url("https://user-images.githubusercontent.com/76980526/127947926-96572de8-6f09-4680-9e87-c55a03d6e61f.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.backImg .text{
+    position: absolute;
+    margin: 500px 0px;
+    color: rgb(231, 235, 238);
+    z-index: 1;
+    font-size: 150px;
+    font-weight: 700;
+    transition: 1s;
+}
+.backImg .text.event{
+    transform: translateY(-100px);
+}
+.videoList_section{
+    background-color: antiquewhite;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+.point_img_small{
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    margin: 150px 200px;
+    width: 250px;
+    height: 250px;
+    box-shadow: 5px 5px 5px #333;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url("https://user-images.githubusercontent.com/76980526/127959158-4c0530ec-1873-403c-9221-4fc310be5669.jpeg");
+    transition: 1s;
+    transform: translate(0px);
+}
+.point_img_small.event{
+    transition: 1s;
+    transform: translateY(50px);
+}
+.point_img_big{
+    background-image: url("https://user-images.githubusercontent.com/76980526/127960267-25f47a80-4acf-4afd-91ee-4e853f57e1ba.jpeg");
+    position: absolute;
+    box-shadow: 5px 5px 5px #333;
+    margin: 250px 200px;
+    width: 200px;
+    height: 200px;
+    margin: 300px 500px; 
+    background-size: cover;
+    border-radius: 50%;
+    transition: 1s;
+    transform: translate(0px);
+}
+.point_img_big.event{
+    transition: 1s;
+    transform: translateY(20px);
+}
+.videoList_section .inner{
+}
+.videoList_section .text{
+    position: absolute;
+    margin: 100px 0px;
+    color: rgb(84, 87, 78);
+    z-index: 10;
+    font-size: 70px;
+    font-weight: 700;
+    transform: translateX(-100px);
+    transition: 1s;
+}
+.videoList_section .text.event{
+    transform: translateX(100px);
+}
+/* 음식 타이틀 */
+/* .foods{
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    height: 150px;
+    margin: auto;
+    width: 1250px;
+    overflow-x: scroll;
+}
+.foods ul {
+    position: absolute;
+    opacity: 1;
     display: flex;
     bottom: 0;
-    top: 15px;
-    margin: auto;
-    /* margin: auto 10px; */
 }
-header .inner .menu .logo > a{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    padding: 30px;
-    box-sizing: content-box;
-    border-radius: 50%;
-    opacity: 0;
-}
-
-/* HEADER SUB-MENU*/
-/* .inner .menu .sub-menu{
-    position: absolute;
-    display: flex;
-    margin: 10px -40px;
-    right: 0;
-    top: 0;
-}
-.inner .menu .sub-menu li{
-    padding: 10px 10px;
-    font-size: 12px;
-}
-.inner .menu .sub-menu > li::before{
-    content: "";
-    position: absolute;
-    margin : 0 -10px;
-    width: 1px;
-    height: 12px;
-    background-color: #bcdcbc;
-}
-header .inner .menu .sub-menu li:first-child::before,
-header .inner .menu .sub-menu li:nth-child(4)::before
-{
-    display: none;
-}
-.inner .menu .sub-menu .search li input{
-    height: 15px;
-    position: relative;
-    width: 0px;
-    transition: width .4s, input .4s;
-    opacity: 0;
-}
-.inner .menu .sub-menu .search.focused li input{
-    opacity: 1;
-    transition: width .4s, input .4s;
-    width: 150px;
-}
-.inner .menu .sub-menu .search li .material-icons{
-    position: absolute;
+.foods ul .food{
+    margin-left: 20px;
+    margin-top: -120px;
+    width: 90px;
+    height: 90px;
     cursor: pointer;
 }
-.inner .menu .sub-menu li a{
-    color: rgb(44, 51, 46);
-    margin: 10px;
-    padding: 10px 10px;
-}
-
-/*HEADER MAIN-MENU*/
-/*.inner .menu .main-menu{
-    position: relative;
-    width: 100%;
-    display: flex;
-    margin: -17px 80px;
-    
-}
-.inner .menu .main-menu .menu-list{
-    position: relative;
-    padding: 20px 30px;
-    margin: auto;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-    min-width: 70px;
-    max-width: 70px;
-}
-.inner .menu .main-menu .menu-list:hover{
-    background-color: rgb(218, 238, 222);
-}
-.inner .menu .main-menu .menu-list > ul{
-    position: fixed;
-    margin: 20px -30px;
-    background-color: rgb(233, 243, 238);
-    top: 1;
-    padding: 10px 10px;
-    min-width: 110px;
-    max-width: 110px;
-    z-index: 1;
-    display: none;
-}
-.inner .menu .main-menu .menu-list:hover > ul{
-    display: block;
-}
-.inner .menu .main-menu .menu-list > ul li.inner-menu{
-    padding: 20px 20px;
-}
-.inner .menu .main-menu .menu-list > ul li.inner-menu a{
-    color: rgb(136, 130, 130);
-} */
-
-/*SEACTION*/
-/* CHOICE */
-section{
-    margin: auto;
-    width: 1080px;
-    min-height: 700px;
-    position: relative;
-    overflow: hidden;
-}
-section .choice{
-    height: 100px;
-}
-/* 이렇게 겹치게 지정하면 같은 위치에 지정된다. */
-
-/* FOOD */
-.foods .inner{
-    height: 400px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.foods .inner .food:nth-child(1) a{
-    position: absolute;
+section .foods ul .food:nth-child(1){
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Republic_Of_Korea_Broadcasting-TV_Rating_System%28ALL%29.svg/250px-Republic_Of_Korea_Broadcasting-TV_Rating_System%28ALL%29.svg.png');
     background-size: cover;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 10%;
-    top: 50px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(1) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(1) a:hover::before{
-    position: absolute;
+section .foods ul .food:nth-child(1):hover::before{
     content: "전체";
+    position: absolute;
+    width: 28px;
     color: black;
+    left: 8%;
     opacity: 1;
-    top: 125px;
-    left: 36%;
+    margin-top: 9%;
 }
-.foods .inner .food:nth-child(2) a {
-    position: absolute;
-    background-image: url('https://img-cf.kurly.com/shop/data/goodsview/20190920/gv00000062418_1.jpg');
+section .foods ul .food:nth-child(2){
     background-size:cover;
-    width: 120px;
-    height: 120px;
+    background-image: url('https://img-cf.kurly.com/shop/data/goodsview/20190920/gv00000062418_1.jpg');
     border-radius: 50%;
-    left: 27%;
-    top: 50px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(2) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(2) a:hover::before{
+section .foods ul .food:nth-child(2):hover::before{
     position: absolute;
+    margin-top: 9%;
+    left: 17.5%;
     content: "반찬";
     color: black;
+    width: 28px;
     opacity: 1;
-    top: 125px;
-    left: 36%;
 }
-.foods .inner .food:nth-child(3) a {
-    position: absolute;
+section .foods ul .food:nth-child(3){
     background-image: url('https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/TRE/image/46kLQFw8QiQYJMksUkgEf8-dC1k');
     background-size: cover;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 45%;
-    top: 50px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(3) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(3) a:hover::before{
+section .foods ul .food:nth-child(3):hover::before{
     position: absolute;
     content: "찌개";
+    width: 28px;
     color: black;
     opacity: 1;
-    top: 125px;
-    left: 36%;
+    margin-top: 9%;
+    left: 27.5%;
 }
-.foods .inner .food:nth-child(4) a{
-    position: absolute;
+section .foods ul .food:nth-child(4){
     background-image: url('https://www.chungjungone.com/knowhow/images/blog/recipe/r193_20160513/1.jpg');
     background-size: cover;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 63%;
-    top: 50px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(4) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(4) a:hover::before{
+section .foods ul .food:nth-child(4):hover::before{
     position: absolute;
     content: "밥";
+    width: 15px;
     color: black;
     opacity: 1;
-    top: 125px;
-    left: 45%;
+    margin-top: 9%;
+    left: 37.5%;
 }
-.foods .inner .food:nth-child(5) a{
-    position: absolute;
+section .foods ul .food:nth-child(5){
     background-image: url('https://post-phinf.pstatic.net/MjAxNzA4MzFfMTM0/MDAxNTA0MTU3MTU2NTE4.ZW_czoTixiIP7vuuB95I1-7BJdbjzOqbqr1ijbozh-8g.49b0T8N0Nl4VKyPkwSkQusla34pP_rZmo2i-_GUoRR0g.JPEG/9.jpg?type=w1200');
     background-size: cover;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 81%;
-    top: 50px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(5) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(5) a:hover::before{
+section .foods ul .food:nth-child(5):hover::before{
     position: absolute;
     content: "면";
+    width: 15px;
     color: black;
     opacity: 1;
-    top: 125px;
-    left: 45%;
+    margin-top: 9%;
+    left: 47.5%;
 }
-.foods .inner .food:nth-child(6) a{
-    position: absolute;
+section .foods ul .food:nth-child(6){
     background-image: url('http://www.suwonilbo.kr/news/photo/201806/125094_67440_4130.png');
     background-size:cover;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 10%;
-    top: 210px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(6) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(6) a:hover::before{
+section .foods ul .food:nth-child(6):hover::before{
     position: absolute;
     content: "해물";
+    width: 28px;
     color: black;
     opacity: 1;
-    top: 125px;
-    left: 36%;
+    margin-top: 9%;
+    left: 56.5%;
 }
-.foods .inner .food:nth-child(7) a{
-    position: absolute;
+section .foods ul .food:nth-child(7){
     background-image: url('https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/2jRL/image/SoZUjE4bSXJzK4VRSzBkchK0tKM.jpg');
     background-size: contain;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 27%;
-    top: 210px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(7) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(7) a:hover::before{
+section .foods ul .food:nth-child(7):hover::before{
     position: absolute;
-    font-size: 15px;
     content: "다이어트";
+    width: 57px;
     color: black;
     opacity: 1;
-    top: 125px;
-    left: 25%;
+    margin-top: 9%;
+    left: 65%;
 }
-.foods .inner .food:nth-child(8) a{
-    position: absolute;
+section .foods ul .food:nth-child(8){
     background-image: url('https://ppss.kr/wp-content/uploads/2018/01/3-31.jpg');
     background-repeat: no-repeat;
     background-size:cover;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 45%;
-    top: 210px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(8) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(8) a:hover::before{
+section .foods ul .food:nth-child(8):hover::before{
     position: absolute;
     content: "소스";
+    width: 28px;
     color: black;
     opacity: 1;
-    top: 125px;
-    left: 36%;
+    margin-top: 9%;
+    left: 76%;
 }
-.foods .inner .food:nth-child(9) a{
-    position: absolute;
+section .foods ul .food:nth-child(9){
     background-image: url('https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator.com/article/2020/04/22/coronavirus-and-obesity-doctors-take-aim-at-food-industry-over-poor-diets/10933380-3-eng-GB/Coronavirus-and-obesity-Doctors-take-aim-at-food-industry-over-poor-diets_wrbm_large.jpg');
     background-size: contain;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 63%;
-    top: 210px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(9) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(9) a:hover::before{
+section .foods ul .food:nth-child(9):hover::before{
     position: absolute;
+    width: 61px;
     content: "간식/야식";
     color: black;
     opacity: 1;
-    top: 125px;
-    left: 25%;
+    margin-top: 9%;
+    left: 84%;
 }
-.foods .inner .food:nth-child(10) a{
-    position: absolute;
+section .foods ul .food:nth-child(10){
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Common_alcoholic_beverages.jpg/400px-Common_alcoholic_beverages.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
-    left: 81%;
-    top: 210px;
-    cursor: pointer;
 }
-.foods .inner .food:nth-child(10) a:hover{
-    opacity: .7;
-}
-.foods .inner .food:nth-child(10) a:hover::before{
+section .foods ul .food:nth-child(10):hover::before{
     position: absolute;
+    width: 50px;
     content: "음료/술";
     color: black;
     opacity: 1;
-    top: 125px;
-    left: 28%;
+    margin-top: 9%;
+    left: 94%;
 }
-/* .choice .btn:nth-child(1),
-.choice .btn:nth-child(2){
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    top: 130px;
-    left: 200px;
-    width: 60px;
-    height: 30px;
-    font-size: 16px;
-    border: 1px solid #333;
-    background-color: rgb(227, 224, 219);
+section .foods ul .food:nth-child(1):hover, section .foods ul .food:nth-child(2):hover,section .foods ul .food:nth-child(3):hover,section .foods ul .food:nth-child(4):hover,section .foods ul .food:nth-child(5):hover,
+section .foods ul .food:nth-child(6):hover,section .foods ul .food:nth-child(7):hover,section .foods ul .food:nth-child(8):hover,section .foods ul .food:nth-child(9):hover,section .foods ul .food:nth-child(10):hover{
+    opacity: .7;
 } */
-/* .choice .btn:nth-child(1) a,
-.choice .btn:nth-child(2) a{
+.videoList_button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 100px 100px;
+    border-radius: 10px 10px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 200px;
+    height: 80px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #333;
+    background-color: #D5A481
+}
+.videoList_button a{
+    padding: 20px;
+    color: #2A1D0E;
+    box-sizing: border-box;
+}
+.videoList_button:active{
+    background-image: url("https://user-images.githubusercontent.com/76980526/127965207-4b308b6a-6709-4a85-805a-d2431b342275.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .7;
+}
+.videoList_button:active a{
     color: #333;
 }
-.choice .btn:hover{
-    background-color: rgb(194, 191, 194);
-}
-.choice .btn:nth-child(2){
-    left: 300px;
-} */
-/* SLIDE (event, best) */
-.promotion{
-    overflow: auto;
-    height: 430px;
-}
-.promotion .swiper-container{
-    /*가로 너비가 각각 819px인 슬라이드 3개의 안쪽 여백이 20px*/
-    width: calc(819px * 3 + 20px);
-    left: 50%;
-    margin-left: -1238.5px;
-    position: absolute;
-}
-/*고치기*/
-/* .promotion .swiper-containe
-{
-    opacity: 1;
-    z-index: 1;
-}
-.best-food .swiper-container{
-    opacity: 0;
-    z-index: 0;
-} */
-/* 나중에 .best-food .swiper-slide ... 추가*/
-.promotion .swiper-slide{
-    opacity: 0;
-}
-.notice .promotion .swiper-slide-active{
-    opacity: 1;
-}
-.promotion .swiper-slide img{
-    height: 300px;
-    width: 800px;
-    margin: auto;
-}
-/* Notice-text 공지사항 */
-/* .notice-text{
-    width: 100%;
-    position: relative;
-}
-.notice-text .swiper-container{
-    position: absolute;
-    top: 5px;
-    height: 70px;
-    background-color: rgb(75, 65, 48);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-} */
-/* .notice-text .swiper-container .notice-main-text,
-.notice-text .swiper-container .notice-main-text h4{
-    color: #fff;
-    width: 70px;
-    left: 50%;
-    margin-left: 100px;
-}
-.notice-text .swiper-container .swiper-wrapper{
-    position: relative;
-}
-.notice-text .swiper-container .material-icons{
-    font-size: 30px;
-    display: inline;
-    border-radius: 50%;
-    position: absolute;
-    color: #000;
-    background-color: #fff;
-    margin: auto;
-    right: 15%;
-    cursor: pointer;
-} */
-/* .notice-text .swiper-container .swiper-wrapper .swiper-slide{
-    top: 3px;
-    right: 50px;
-}
-.notice-text .swiper-container .swiper-wrapper .swiper-slide a{
-    color: #fff;
-    position: absolute;
-    top: 30%;
-} */
 
 /* FOOTER */
 footer{
+    margin: auto;
     width: 100%;
     justify-content: center;
     align-items: center;
     background-color: rgb(189, 179, 165);
 }
 footer .inner{
-    margin: auto;
     height: 120px;
-    width: 1080px;
+    width: auto; /*쏠림 현상 제거*/
     flex: 1;
     display: flex;
     justify-content: center;
@@ -543,6 +343,7 @@ footer .inner{
 }
 footer .inner >ul{
     display: flex;
+    position: absolute;
 }
 footer .inner >ul li{
     padding: 20px;

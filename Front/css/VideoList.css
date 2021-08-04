@@ -265,11 +265,8 @@ section .Container{
     padding-right: 100px; padding-left: 100px;
     justify-content: center;
     overflow: hidden;
-    display: none;
-    flex-wrap: wrap;
-}
-section .Container.event{
     display: flex;
+    flex-wrap: wrap;
 }
 .Video{
     text-align: center;
