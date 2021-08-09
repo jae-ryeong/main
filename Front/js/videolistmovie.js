@@ -1,3 +1,4 @@
+
 // Get the modal
 
 var modal= []; var btn = []; var span = [];
@@ -39,6 +40,7 @@ var span9 = document.getElementsByClassName("close")[8];
 
 btn1.onclick = function() {
     modal[0].style.display = "block";
+    modal[0].style.position = "fixed"
     console.log("열림");
 }
 btn2.onclick = function() {
@@ -119,3 +121,10 @@ window.onclick = function(event) {
         modal[8].style.display = "none";
     }
 }
+// [...document.querySelectorAll('.food').forEach(function(item){
+//     item.addEventListener('click',function(){
+//         for(var i = 0; i < Containers.length; i++){
+            
+//         }
+//     })
+// })]
