@@ -7,9 +7,9 @@ p{
     font-size: 12px;
 }
 .inner{
-    width: 1100px;
+    width: 1200px;
+    height: 100%;
     margin: 0 auto;
-    position: relative;
 }
 a{
     text-decoration: none;
@@ -58,14 +58,14 @@ header{
     z-index: 2;
 }
 header .inner .menu{
-    width: 1250px;
     margin: auto;
-    height: 120px;
+    height: 100%;
     background-color: blanchedalmond;
 }
 /* HEADER-LOGO */
-    header .inner .menu .logo{
+header .inner .menu .logo{
     position: relative;
+    top: 15px;
     width: 75px;
     height: 75px;
     border-radius: 50%;
@@ -73,9 +73,6 @@ header .inner .menu{
     background-size: contain;
     cursor: pointer;
     display: flex;
-    bottom: 0;
-    right: 75px;
-    top: 15px;
     margin: auto;
     /* margin: auto 10px; */
 }
@@ -261,28 +258,56 @@ section .foods ul .food_v:nth-child(6):hover,section .foods ul .food:nth-child(7
 /* 썸네일 div */
 section .Container{
     position: relative;
-    width: auto; height: 1200px; margin-top: 100px;
+    width : 1050px;height: 1200px; margin-top: 100px;
+    margin: auto;
     padding-right: 100px; padding-left: 100px;
     justify-content: center;
+    text-align: center;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
 }
 .Video{
     text-align: center;
-    margin-left: 60px; margin-right: 60px;
-    width: 360px; height: 250px;
+    margin-right: 150px;
+    margin-top: 70px;
+    width: 200px; height: 100px;
     box-sizing:border-box;
 }
 .thumbnail{
-    margin-top: 100;
+    position: relative;
 }
 .thumbnail img{
+    position: relative;
+    z-index: 1;
+    width: 300px;
     border-radius: 10px 10px;
     cursor:pointer;
 }
-.thumbnail img:hover{
-    opacity: .7;
+.Title{
+    width: 150%;
+    text-align: center;
+}
+/* 영상 정보 */
+.backImg{
+    position: absolute;
+    border-radius: 10px 10px;
+    cursor: pointer;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    width: 150%;
+    height: 200px;
+    transition: .3s;
+}
+.backImg .text{
+    position: absolute;
+    margin: 30px;
+    font-size: 25px;
+    color: #fff;
+}
+.backImg:hover{
+    opacity: 1;
 }
 /* The Modal (background) */
 .modal {
@@ -292,14 +317,12 @@ section .Container{
     left: 0;
     top: 0;
     width: 100%; height: 100%;
-    overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: rgba(0,0,0,0); /* Black w/ opacity */
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     width: 800px; height: 400px;
@@ -324,9 +347,9 @@ section .Container{
     cursor: pointer;
 }
 
+
 /* FOOTER */
 footer{
-    position: relative;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -344,7 +367,6 @@ footer .inner{
 }
 footer .inner >ul{
     display: flex;
-    position: absolute;
 }
 footer .inner >ul li{
     padding: 20px;

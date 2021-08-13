@@ -2,12 +2,13 @@
 body{
     margin: 0;
     padding: 0;
+    position: fixed;
 }
 a{
     text-decoration: none;
 }
 .inner{
-    width: 1200px;
+    width: 1400px;
     margin: auto;
 }
 ul li{
@@ -43,17 +44,38 @@ header .material-icons{
     right: 0;
     cursor: pointer;
 }
+header .menu{
+    position: absolute;
+    z-index: 10;
+    opacity: .7;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color:rgb(0, 0, 0);
+    transition: .7s;
+    transform: translateX(300px);
+}
+header .menu.event{
+    transform: translateX(0px);
+}
+header .menu .menu_inner a{
+    font-size: 25px;
+    line-height: 2;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
 
 /*SECTION*/
 section{
     width: 100%;
     margin: auto;
     position: relative;
-    opacity: .7;
+    opacity: .8;
 }
 .backImg{
     background-image: url("https://user-images.githubusercontent.com/76980526/127947926-96572de8-6f09-4680-9e87-c55a03d6e61f.jpeg");
     background-size: cover;
+    opacity: .8;
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -79,8 +101,8 @@ section{
 .point_img_small{
     position: absolute;
     z-index: 100;
-    right: 0;
-    margin: 150px 200px;
+    margin: 160px 100px;
+    bottom: 0;
     width: 250px;
     height: 250px;
     box-shadow: 5px 5px 5px #333;
@@ -307,20 +329,34 @@ section .foods ul .food:nth-child(6):hover,section .foods ul .food:nth-child(7):
     height: 80px;
     cursor: pointer;
     box-shadow: 5px 5px 5px #333;
-    background-color: #D5A481
+    background-color: #D5A481;
 }
-.videoList_button a{
+.main_button{
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    margin: 100px 100px;
+    border-radius: 10px 10px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 200px;
+    height: 80px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #333;
+    background-color: #D5A481;
+}
+.videoList_button a, .main_button a{
     padding: 20px;
     color: #2A1D0E;
     box-sizing: border-box;
 }
-.videoList_button:active{
+.videoList_button:active, .main_button:active{
     background-image: url("https://user-images.githubusercontent.com/76980526/127965207-4b308b6a-6709-4a85-805a-d2431b342275.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: .7;
 }
-.videoList_button:active a{
+.videoList_button:active a, .main_button:active a{
     color: #333;
 }
 

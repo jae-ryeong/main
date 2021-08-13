@@ -1,3 +1,10 @@
+# ~08/13
+## 1. 메인 페이지 스크롤 시 위, 아래 변화하도록 설정.
+## 2. footer 부분 제거하고 메뉴 부분 생성 햄버거 바 누르면 오른쪽에서 나오게 설정했습니다.
+![image](https://user-images.githubusercontent.com/76980526/129288541-7bc06e78-404a-42c1-af14-e94c3f3cc83b.png)
+## 3. videoList에서 영상 부분에 마우스 hover 하면 유튜버나 영상 정보 뜨도록 하고 싶은데 ㅠ
+![image](https://user-images.githubusercontent.com/76980526/129288724-52321098-7b93-4d99-a493-677b81d995a2.png)
+
 # 08/03 작업
 
 ### 메인 페이지를 변경했습니다. 디자인이 괜찮다면 이렇게 갈 예정입니다!
