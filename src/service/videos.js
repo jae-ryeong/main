@@ -1,18 +1,15 @@
+// const { videos: options } = require('../config/options');
 const Video = require('../models/Video');
 
-module.exports = (youtube, options) => {
-
-  youtube.videos.list(options, (err, response) => {
-    if (err) {
-      return console.error('Error in videos api:\n', err.message);
-    }
-
+module.exports = async (youtube, options) => {
+  try {
+    const response = await youtube.videos.list(options);
     const { items } = response.data;
 
-    if (items == null || items.length === 0) {
-      return console.log('Not found.')
-    }
+    if (items == null || items.length === 0) return console.log('Not found.');
 
     return items;
-  });
+  } catch (err) {
+    console.error('Error in videos:\n', err.message);
+  }
 }
