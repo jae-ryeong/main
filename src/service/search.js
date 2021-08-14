@@ -1,7 +1,7 @@
-// const { search: options } = require('../config/options');
+const { search: options } = require('../config/options');
 const Search = require('../models/Search');
 
-module.exports = async (youtube, options) => {
+module.exports = async youtube => {
   try {
     const response = await youtube.search.list(options);
     const { items } = response.data;

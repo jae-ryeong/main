@@ -1,8 +1,9 @@
-// const { videos: options } = require('../config/options');
+const { videos: options } = require('../config/options');
 const Video = require('../models/Video');
 
-module.exports = async (youtube, options) => {
+module.exports = async (youtube, videoId) => {
   try {
+    options.id = videoId;
     const response = await youtube.videos.list(options);
     const { items } = response.data;
 
