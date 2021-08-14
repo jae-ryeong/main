@@ -6,6 +6,8 @@ const options = require('../config/options');
 const search = require('./search');
 const videos = require('./videos');
 
+const Video = require('../models/Video');
+
 const init = async () => {
 
 }
@@ -27,6 +29,9 @@ search(youtube).then(items => {
         const { viewCount, likeCount, commentCount } = statistics;
         
         console.log({ title, thumbnail, url, channelId });
+
+        let videoDoc = new Video({ title: title, thumbnail: thumbnail, url: url, channelId: channelId });
+        videoDoc.save(err => console.log(err.message));
       })
     }
   }

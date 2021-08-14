@@ -3,7 +3,7 @@ module.exports = {
     key: process.env.YOUTUBE_TOKEN,
     part: 'snippet',
     q: '알파고 햇규',
-    maxResults: 3,
+    maxResults: 5,
     fields: 'items(id)',
   },
   

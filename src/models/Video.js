@@ -6,27 +6,10 @@ const mongoose = require('mongoose');
  * Properties to be added: viewCount, likeCount, commentCount
  */
 const VideoSchema = mongoose.Schema({
-  link: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  title: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String
-  },
-  thumbnail: {
-    type: String
-  },
-  liveBroadcastContent: {
-    type: String
-  },
-  publishTime: {
-    type: String
-  }
+  title: { type: String },
+  thumbnail: { type: String },
+  url: { type: String, unique: true },
+  channelId: {type: String },
 });
 
 module.exports = mongoose.model('Video', VideoSchema);
