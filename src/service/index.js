@@ -30,8 +30,8 @@ search(youtube).then(items => {
         
         console.log({ title, thumbnail, url, channelId });
 
-        let videoDoc = new Video({ title: title, thumbnail: thumbnail, url: url, channelId: channelId });
-        videoDoc.save(err => console.log(err.message));
+        const videoDoc = new Video({ title: title, thumbnail: thumbnail, url: url, channelId: channelId });
+        videoDoc.save(err => err ? console.error(err.message) : console.log('Saved in DB.'));
       })
     }
   }
