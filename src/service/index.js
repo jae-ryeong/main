@@ -16,11 +16,11 @@ search(youtube).then(items => {
 
   for (const item of items) {
     const { id } = item;
-    const { kind, videoId } = id;
+    const { kind, videoId, channelId, playlistId } = id;
 
     if (videoId) {
-      videos(youtube, videoId).then(items => {
-
+      videos(youtube, videoId).then(item => {
+        
       })
     }
   }

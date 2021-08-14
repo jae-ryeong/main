@@ -9,7 +9,7 @@ module.exports = async (youtube, videoId) => {
 
     if (items == null || items.length === 0) return console.log('Not found.');
 
-    return items;
+    return items[0];
   } catch (err) {
     console.error('Error in videos:\n', err.message);
   }
