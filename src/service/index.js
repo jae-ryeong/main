@@ -14,7 +14,10 @@ const init = async () => {
 
 const youtube = google.youtube('v3');
 
-search(youtube).then(items => {
+const q = '';
+const topicId = '';
+
+search(youtube, q, topicId).then(items => {
 
   for (const item of items) {
     const id = item.id;
