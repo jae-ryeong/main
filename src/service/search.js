@@ -1,5 +1,4 @@
 const { search: options } = require('../config/options');
-const Search = require('../models/Search');
 
 module.exports = async youtube => {
   try {
