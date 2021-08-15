@@ -12,9 +12,27 @@ const init = async () => {
 
 }
 
+const getCooking = () => {
+  const cookingList = [[],
+                       [],
+                       [],
+                       [],
+                       [],
+                       [],
+                       []];
+  return cookingList[getDayOfWeek()];
+}
+
+const getDayOfWeek = () => {
+  const date = new Date(),
+        dayOfWeek = date.getDay();
+        
+  return dayOfWeek;
+}
+
 const youtube = google.youtube('v3');
 
-const q = '';
+const q = '라면 요리';
 const topicId = '';
 
 search(youtube, q, topicId).then(items => {
