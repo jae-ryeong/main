@@ -8,7 +8,7 @@ a{
     text-decoration: none;
 }
 .inner{
-    width: 1400px;
+    width: 1200px;
     margin: auto;
 }
 ul li{
@@ -148,175 +148,6 @@ section{
 .videoList_section .text.event{
     transform: translateX(100px);
 }
-/* 음식 타이틀 */
-/* .foods{
-    position: absolute;
-    bottom: 0;
-    z-index: 10;
-    height: 150px;
-    margin: auto;
-    width: 1250px;
-    overflow-x: scroll;
-}
-.foods ul {
-    position: absolute;
-    opacity: 1;
-    display: flex;
-    bottom: 0;
-}
-.foods ul .food{
-    margin-left: 20px;
-    margin-top: -120px;
-    width: 90px;
-    height: 90px;
-    cursor: pointer;
-}
-section .foods ul .food:nth-child(1){
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Republic_Of_Korea_Broadcasting-TV_Rating_System%28ALL%29.svg/250px-Republic_Of_Korea_Broadcasting-TV_Rating_System%28ALL%29.svg.png');
-    background-size: cover;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(1):hover::before{
-    content: "전체";
-    position: absolute;
-    width: 28px;
-    color: black;
-    left: 8%;
-    opacity: 1;
-    margin-top: 9%;
-}
-section .foods ul .food:nth-child(2){
-    background-size:cover;
-    background-image: url('https://img-cf.kurly.com/shop/data/goodsview/20190920/gv00000062418_1.jpg');
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(2):hover::before{
-    position: absolute;
-    margin-top: 9%;
-    left: 17.5%;
-    content: "반찬";
-    color: black;
-    width: 28px;
-    opacity: 1;
-}
-section .foods ul .food:nth-child(3){
-    background-image: url('https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/TRE/image/46kLQFw8QiQYJMksUkgEf8-dC1k');
-    background-size: cover;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(3):hover::before{
-    position: absolute;
-    content: "찌개";
-    width: 28px;
-    color: black;
-    opacity: 1;
-    margin-top: 9%;
-    left: 27.5%;
-}
-section .foods ul .food:nth-child(4){
-    background-image: url('https://www.chungjungone.com/knowhow/images/blog/recipe/r193_20160513/1.jpg');
-    background-size: cover;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(4):hover::before{
-    position: absolute;
-    content: "밥";
-    width: 15px;
-    color: black;
-    opacity: 1;
-    margin-top: 9%;
-    left: 37.5%;
-}
-section .foods ul .food:nth-child(5){
-    background-image: url('https://post-phinf.pstatic.net/MjAxNzA4MzFfMTM0/MDAxNTA0MTU3MTU2NTE4.ZW_czoTixiIP7vuuB95I1-7BJdbjzOqbqr1ijbozh-8g.49b0T8N0Nl4VKyPkwSkQusla34pP_rZmo2i-_GUoRR0g.JPEG/9.jpg?type=w1200');
-    background-size: cover;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(5):hover::before{
-    position: absolute;
-    content: "면";
-    width: 15px;
-    color: black;
-    opacity: 1;
-    margin-top: 9%;
-    left: 47.5%;
-}
-section .foods ul .food:nth-child(6){
-    background-image: url('http://www.suwonilbo.kr/news/photo/201806/125094_67440_4130.png');
-    background-size:cover;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(6):hover::before{
-    position: absolute;
-    content: "해물";
-    width: 28px;
-    color: black;
-    opacity: 1;
-    margin-top: 9%;
-    left: 56.5%;
-}
-section .foods ul .food:nth-child(7){
-    background-image: url('https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/2jRL/image/SoZUjE4bSXJzK4VRSzBkchK0tKM.jpg');
-    background-size: contain;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(7):hover::before{
-    position: absolute;
-    content: "다이어트";
-    width: 57px;
-    color: black;
-    opacity: 1;
-    margin-top: 9%;
-    left: 65%;
-}
-section .foods ul .food:nth-child(8){
-    background-image: url('https://ppss.kr/wp-content/uploads/2018/01/3-31.jpg');
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(8):hover::before{
-    position: absolute;
-    content: "소스";
-    width: 28px;
-    color: black;
-    opacity: 1;
-    margin-top: 9%;
-    left: 76%;
-}
-section .foods ul .food:nth-child(9){
-    background-image: url('https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator.com/article/2020/04/22/coronavirus-and-obesity-doctors-take-aim-at-food-industry-over-poor-diets/10933380-3-eng-GB/Coronavirus-and-obesity-Doctors-take-aim-at-food-industry-over-poor-diets_wrbm_large.jpg');
-    background-size: contain;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(9):hover::before{
-    position: absolute;
-    width: 61px;
-    content: "간식/야식";
-    color: black;
-    opacity: 1;
-    margin-top: 9%;
-    left: 84%;
-}
-section .foods ul .food:nth-child(10){
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Common_alcoholic_beverages.jpg/400px-Common_alcoholic_beverages.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-}
-section .foods ul .food:nth-child(10):hover::before{
-    position: absolute;
-    width: 50px;
-    content: "음료/술";
-    color: black;
-    opacity: 1;
-    margin-top: 9%;
-    left: 94%;
-}
-section .foods ul .food:nth-child(1):hover, section .foods ul .food:nth-child(2):hover,section .foods ul .food:nth-child(3):hover,section .foods ul .food:nth-child(4):hover,section .foods ul .food:nth-child(5):hover,
-section .foods ul .food:nth-child(6):hover,section .foods ul .food:nth-child(7):hover,section .foods ul .food:nth-child(8):hover,section .foods ul .food:nth-child(9):hover,section .foods ul .food:nth-child(10):hover{
-    opacity: .7;
-} */
 .videoList_button{
     position: absolute;
     bottom: 0;
@@ -401,4 +232,44 @@ footer .inner >ul li:first-child a{
 }
 footer .inner >ul li a{
     color : rgb(66, 61, 61);
+}
+@media (max-width : 1000px){
+    /*COMMON*/
+    .inner{
+        width : 800px;
+    }
+    /* Header */
+
+    .backImg .inner .text{
+        position: absolute;
+        margin: 600px 0px;
+        color: rgb(231, 235, 238);
+        z-index: 1;
+        font-size: 100px;
+        font-weight: 500;
+        transition: 1s; 
+    }
+    .menu li.menu_inner a{
+        font-size: 20px;
+        line-height: 2;
+        color: rgb(255, 255, 255);
+        opacity: 1;
+    }
+    /* SECTION */
+    .videoList_section .text{
+        font-size: 50px;
+    }
+    .videoList_section .point_img_small{
+        width: 150px;
+        height: 150px;
+    }
+    .videoList_section .point_img_big{
+        width: 200px;
+        height: 200px;
+    }
+    .videoList_button{
+        width: 180px;
+        height: 70px;  
+        font-size: 18px; 
+    }
 }
