@@ -1,5 +1,6 @@
 /*COMMON*/
 body{
+<<<<<<< HEAD
     line-height: 1.4;
     font-size: 16px;
     margin: 0;
@@ -526,15 +527,216 @@ section .choice{
 
 /* FOOTER */
 footer{
+=======
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+a{
+    text-decoration: none;
+}
+.inner{
+    width: 1200px;
+    margin: auto;
+}
+ul li{
+    list-style: none;
+}
+/*HEADER*/
+header{
+    position: relative;
+}
+header .logo_menu{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+header .logo_menu .logo{
+    position: absolute;    
+    margin-top: 20px;
+    margin-left: 30px;
+    border-radius: 50%;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background-size: contain;
+    cursor: pointer;
+}
+header .material-icons{
+    margin-top: 20px;
+    margin-right: 20px;
+    color: #ac9595;
+    position: absolute;
+    font-size: 40px;
+    font-weight: 700;
+    right: 0;
+    cursor: pointer;
+}
+header .menu{
+    position: absolute;
+    z-index: 10;
+    opacity: .7;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background-color:rgb(0, 0, 0);
+    transition: .7s;
+    transform: translateX(300px);
+}
+header .menu.event{
+    transform: translateX(0px);
+}
+header .menu .menu_inner a{
+    font-size: 25px;
+    line-height: 2;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+/*SECTION*/
+section{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    opacity: .8;
+}
+.backImg{
+    background-image: url("https://user-images.githubusercontent.com/76980526/127947926-96572de8-6f09-4680-9e87-c55a03d6e61f.jpeg");
+    background-size: cover;
+    opacity: .8;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.backImg .text{
+    position: absolute;
+    margin: 500px 0px;
+    color: rgb(231, 235, 238);
+    z-index: 1;
+    font-size: 150px;
+    font-weight: 700;
+    transition: 1s;
+}
+.backImg .text.event{
+    transform: translateY(-100px);
+}
+.videoList_section{
+    background-color: antiquewhite;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+.point_img_small{
+    position: absolute;
+    z-index: 100;
+    margin: 160px 100px;
+    bottom: 0;
+    width: 250px;
+    height: 250px;
+    box-shadow: 5px 5px 5px #333;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url("https://user-images.githubusercontent.com/76980526/127959158-4c0530ec-1873-403c-9221-4fc310be5669.jpeg");
+    transition: 1s;
+    transform: translate(0px);
+}
+.point_img_small.event{
+    transition: 1s;
+    transform: translateY(50px);
+}
+.point_img_big{
+    background-image: url("https://user-images.githubusercontent.com/76980526/127960267-25f47a80-4acf-4afd-91ee-4e853f57e1ba.jpeg");
+    position: absolute;
+    box-shadow: 5px 5px 5px #333;
+    margin: 250px 200px;
+    width: 200px;
+    height: 200px;
+    margin: 300px 500px; 
+    background-size: cover;
+    border-radius: 50%;
+    transition: 1s;
+    transform: translate(0px);
+}
+.point_img_big.event{
+    transition: 1s;
+    transform: translateY(20px);
+}
+.videoList_section .inner{
+}
+.videoList_section .text{
+    position: absolute;
+    margin: 100px 0px;
+    color: rgb(84, 87, 78);
+    z-index: 10;
+    font-size: 70px;
+    font-weight: 700;
+    transform: translateX(-100px);
+    transition: 1s;
+}
+.videoList_section .text.event{
+    transform: translateX(100px);
+}
+.videoList_button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 100px 100px;
+    border-radius: 10px 10px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 200px;
+    height: 80px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #333;
+    background-color: #D5A481;
+}
+.main_button{
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    margin: 100px 100px;
+    border-radius: 10px 10px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 200px;
+    height: 80px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #333;
+    background-color: #D5A481;
+}
+.videoList_button a, .main_button a{
+    padding: 20px;
+    color: #2A1D0E;
+    box-sizing: border-box;
+}
+.videoList_button:active, .main_button:active{
+    background-image: url("https://user-images.githubusercontent.com/76980526/127965207-4b308b6a-6709-4a85-805a-d2431b342275.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .7;
+}
+.videoList_button:active a, .main_button:active a{
+    color: #333;
+}
+
+/* FOOTER */
+footer{
+    margin: auto;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     width: 100%;
     justify-content: center;
     align-items: center;
     background-color: rgb(189, 179, 165);
 }
 footer .inner{
+<<<<<<< HEAD
     margin: auto;
     height: 120px;
     width: 1080px;
+=======
+    height: 120px;
+    width: auto; /*쏠림 현상 제거*/
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     flex: 1;
     display: flex;
     justify-content: center;
@@ -543,6 +745,10 @@ footer .inner{
 }
 footer .inner >ul{
     display: flex;
+<<<<<<< HEAD
+=======
+    position: absolute;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
 }
 footer .inner >ul li{
     padding: 20px;
@@ -564,4 +770,47 @@ footer .inner >ul li:first-child a{
 }
 footer .inner >ul li a{
     color : rgb(66, 61, 61);
+<<<<<<< HEAD
+=======
+}
+@media (max-width : 1000px){
+    /*COMMON*/
+    .inner{
+        width : 800px;
+    }
+    /* Header */
+
+    .backImg .inner .text{
+        position: absolute;
+        margin: 600px 0px;
+        color: rgb(231, 235, 238);
+        z-index: 1;
+        font-size: 100px;
+        font-weight: 500;
+        transition: 1s; 
+    }
+    .menu li.menu_inner a{
+        font-size: 20px;
+        line-height: 2;
+        color: rgb(255, 255, 255);
+        opacity: 1;
+    }
+    /* SECTION */
+    .videoList_section .text{
+        font-size: 50px;
+    }
+    .videoList_section .point_img_small{
+        width: 150px;
+        height: 150px;
+    }
+    .videoList_section .point_img_big{
+        width: 200px;
+        height: 200px;
+    }
+    .videoList_button{
+        width: 180px;
+        height: 70px;  
+        font-size: 18px; 
+    }
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
 }

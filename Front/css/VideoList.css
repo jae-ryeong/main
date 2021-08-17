@@ -7,9 +7,15 @@ p{
     font-size: 12px;
 }
 .inner{
+<<<<<<< HEAD
     width: 1100px;
     margin: 0 auto;
     position: relative;
+=======
+    width: 1250px;
+    height: 100%;
+    margin: 0 auto;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
 }
 a{
     text-decoration: none;
@@ -58,6 +64,7 @@ header{
     z-index: 2;
 }
 header .inner .menu{
+<<<<<<< HEAD
     width: 1250px;
     margin: auto;
     height: 120px;
@@ -66,6 +73,16 @@ header .inner .menu{
 /* HEADER-LOGO */
     header .inner .menu .logo{
     position: relative;
+=======
+    margin: auto;
+    height: 100%;
+    background-color: blanchedalmond;
+}
+/* HEADER-LOGO */
+header .inner .menu .logo{
+    position: relative;
+    top: 15px;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     width: 75px;
     height: 75px;
     border-radius: 50%;
@@ -73,9 +90,12 @@ header .inner .menu{
     background-size: contain;
     cursor: pointer;
     display: flex;
+<<<<<<< HEAD
     bottom: 0;
     right: 75px;
     top: 15px;
+=======
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     margin: auto;
     /* margin: auto 10px; */
 }
@@ -95,10 +115,15 @@ section{
 
 /* 음식 타이틀 */
 section .foods{
+<<<<<<< HEAD
     margin-top: 100px;
     height: 100px;
     margin: auto;
     width: 1250px;
+=======
+    height: 100px;
+    margin: auto;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     z-index: 3;
 }
 section .foods ul {
@@ -255,12 +280,17 @@ section .foods ul .food_v:nth-child(10):hover::before{
     left: 94%;
 }
 section .foods ul .food_v:nth-child(1):hover, section .foods ul .food_v:nth-child(2):hover,section .foods ul .food_v:nth-child(3):hover,section .foods ul .food_v:nth-child(4):hover,section .foods ul .food_v:nth-child(5):hover,
+<<<<<<< HEAD
 section .foods ul .food_v:nth-child(6):hover,section .foods ul .food:nth-child(7):hover,section .foods ul .food_v:nth-child(8):hover,section .foods ul .food_v:nth-child(9):hover,section .foods ul .food_v:nth-child(10):hover{
+=======
+section .foods ul .food_v:nth-child(6):hover, section .foods ul .food_v:nth-child(7):hover,section .foods ul .food_v:nth-child(8):hover,section .foods ul .food_v:nth-child(9):hover,section .foods ul .food_v:nth-child(10):hover{
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     opacity: .7;
 }
 /* 썸네일 div */
 section .Container{
     position: relative;
+<<<<<<< HEAD
     width: auto; height: 1200px; margin-top: 100px;
     padding-right: 100px; padding-left: 100px;
     justify-content: center;
@@ -286,6 +316,58 @@ section .Container.event{
 }
 .thumbnail img:hover{
     opacity: .7;
+=======
+    height: 1200px; margin-top: 100px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Video{
+    text-align: center;
+    margin-right: 150px;
+    margin-top: 70px;
+    width: 200px; height: 100px;
+    box-sizing:border-box;
+}
+.thumbnail{
+    position: relative;
+}
+.thumbnail img{
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    border-radius: 10px 10px;
+    cursor:pointer;
+}
+.Title{
+    width: 150%;
+    font-size: 15px;
+    text-align: center;
+}
+/* 영상 정보 */
+.backImg{
+    position: absolute;
+    border-radius: 10px 10px;
+    cursor: pointer;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    width: 150%;
+    height: 200px;
+    transition: .3s;
+}
+.backImg .text{
+    position: absolute;
+    margin: 30px;
+    font-size: 25px;
+    color: #fff;
+}
+.backImg:hover{
+    opacity: 1;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
 }
 /* The Modal (background) */
 .modal {
@@ -294,18 +376,28 @@ section .Container.event{
     z-index: 3; /* Sit on top */
     left: 0;
     top: 0;
+<<<<<<< HEAD
     width: 100%; height: 100%;
     overflow: auto; /* Enable scroll if needed */
+=======
+    width: 100%;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
+<<<<<<< HEAD
     background-color: rgba(0,0,0,0); /* Black w/ opacity */
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     width: 800px; height: 400px;
+=======
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 750px; height: 450px;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     /* border: 1px solid #888; */
     text-align: center;                     
 }
@@ -327,18 +419,29 @@ section .Container.event{
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* FOOTER */
 footer{
     position: relative;
     width: 100%;
+=======
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 120px;
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     justify-content: center;
     align-items: center;
     background-color: rgb(189, 179, 165);
 }
 footer .inner{
     margin-top: 20px;
+<<<<<<< HEAD
     height: 120px;
     width: 1250px;
+=======
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
     flex: 1;
     display: flex;
     justify-content: center;
@@ -347,7 +450,10 @@ footer .inner{
 }
 footer .inner >ul{
     display: flex;
+<<<<<<< HEAD
     position: absolute;
+=======
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
 }
 footer .inner >ul li{
     padding: 20px;
@@ -368,5 +474,187 @@ footer .inner >ul li:first-child a{
     font-weight: 700px;
 }
 footer .inner >ul li a{
+<<<<<<< HEAD
     color : rgb(66, 61, 61);
+=======
+    color : rgb(66, 61, 61); 
+}
+
+@media (max-width : 750px){
+    /* COMMON */
+    .inner{
+        width: 750px;
+    }
+    /* HEADER */
+    header{
+        height: 90px;
+    }
+    header .inner .menu .logo{
+        height: 50px;
+        width: 50px;
+    }
+    /* SECTION */
+    section .Container{
+        width: 750px;
+        height: 600px;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+    section .Container .Video{
+        margin-right :20px;
+    }
+    section .inner .foods{
+        margin-left: -30px;
+
+    }
+    .foods ul li.food_v{
+        display: block;
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+    .Video{
+        margin-top: 70px;
+        width: 200px;
+    }
+    .thumbnail img{
+        width: 150px;
+        height: 100px;
+    }
+    .backImg{
+        width: 100%;
+    }
+    .Title{
+        font-size: 5px;
+        width: 100%;
+        text-align: center;
+    }
+    .backImg{
+        left: 23px;
+        width: 76%;
+        height: 100px;         
+    }
+    .backImg .text{
+        font-size: 20px;
+    }
+    .iframeClass {
+        width: 550px; height: 350px;
+        border: 0px; 
+    }
+    /* 요리 Text */
+    section .foods ul .food_v:nth-child(1):hover::before{
+        content: "전체";
+        position: absolute;
+        width: 28px;
+        color: black;
+        left: 10%;
+        opacity: 1;
+        top: 60px;
+    }
+    section .foods ul .food_v:nth-child(2):hover::before{
+        position: absolute;
+        top: 60px;
+        left: 19.5%;
+        content: "반찬";
+        color: black;
+        width: 28px;
+        opacity: 1;
+    }
+    section .foods ul .food_v:nth-child(3):hover::before{
+        position: absolute;
+        content: "찌개";
+        width: 28px;
+        color: black;
+        opacity: 1;
+        top: 60px;
+        left: 29%;
+    }
+    section .foods ul .food_v:nth-child(4):hover::before{
+        position: absolute;
+        content: "밥";
+        width: 15px;
+        color: black;
+        opacity: 1;
+        top: 60px;
+        left: 39.5%;
+    }
+    section .foods ul .food_v:nth-child(5):hover::before{
+        position: absolute;
+        content: "면";
+        width: 15px;
+        color: black;
+        opacity: 1;
+        top: 60px;
+        left: 48.5%;
+    }
+    section .foods ul .food_v:nth-child(6):hover::before{
+        position: absolute;
+        content: "해물";
+        width: 28px;
+        color: black;
+        opacity: 1;
+        top: 60px;
+        left: 57.5%;
+    }
+    section .foods ul .food_v:nth-child(7):hover::before{
+        position: absolute;
+        content: "다이어트";
+        width: 57px;
+        color: black;
+        opacity: 1;
+        top: 60px;
+        left: 66%;
+    }
+    section .foods ul .food_v:nth-child(8):hover::before{
+        position: absolute;
+        content: "소스";
+        width: 28px;
+        color: black;
+        opacity: 1;
+        top: 60px;
+        left: 77%;
+    }
+    section .foods ul .food_v:nth-child(9):hover::before{
+        position: absolute;
+        width: 61px;
+        content: "간식/야식";
+        color: black;
+        opacity: 1;
+        top: 60px;
+        left: 84%;
+    }
+    section .foods ul .food_v:nth-child(10):hover::before{
+        position: absolute;
+        width: 50px;
+        content: "음료/술";
+        color: black;
+        opacity: 1;
+        top: 60px;
+        left: 94%;
+    }
+    /* Footer */
+    footer{
+        height: 100px;
+    }
+    footer .inner >ul li:first-child a{
+        font-size: 18px;
+        font-weight: 700px;
+    }
+    footer .inner >ul li a{
+        font-size: 15px;
+    }
+    /* 양싱부분 */
+    .modal-content{
+        width: 500px;
+        height: 300px;
+    }
+    .iframeClass{
+        margin-left: -30px;
+    }
+    .modal{
+        width: 100%;
+        height: 100%;
+    }
+>>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
 }
