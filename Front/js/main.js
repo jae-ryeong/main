@@ -13,7 +13,11 @@ setInterval(() => {
 setInterval(() => {
     big_img.classList.toggle('event');
 }, 1500);
+<<<<<<< HEAD
 // 스크롤 이벤트
+=======
+//스크롤 이벤트
+>>>>>>> ryeong
 window.addEventListener('scroll', function(){
     let scrollLocation = document.documentElement.scrollTop;
     console.log(scrollLocation);
