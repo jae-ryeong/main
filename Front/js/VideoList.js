@@ -1,37 +1,4 @@
-function addContainer(){
-    if(document.getElementsByClassName("Video")){   // 카테고리 클릭스 썸네일 갱신
-        var removeDiv = document.getElementById("Container"); 
-        while ( removeDiv.hasChildNodes() ) 
-        { 
-            removeDiv.removeChild( removeDiv.firstChild ); 
-        }
-    }
-
-    for(var i=1; i<10; i++){
-        var video = document.createElement("div");
-        video.classList.add('Video');
-        document.getElementById("Container").append(video);
-
-        var video2 = document.createElement("div");
-        video2.id = "Video" + i;
-        video2.classList.add('thumbnail');
-        video.append(video2);
-
-        var img = document.createElement("img");
-        img.classList.add("img");
-        img.src = "https://i.ytimg.com/vi/K9jWk6e9K6c/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLAF6jSpamHNM8a7IuSbfD-g07Js4g";
-        video2.append(img);
-
-        var text = document.createElement("p");
-        text.classList.add("Title");
-        text.innerText = i + "번째 요리";
-        video.append(text);
-    }    
-}
-
-addContainer();
-
-function addModal(){
+function addDiv(){
     for (var i=1; i<10; i++){
         var modal = document.createElement("div");
         modal.id = 'myModal' + i;
@@ -57,8 +24,6 @@ function addModal(){
         // http://www.youtube.com/embed/pPb2lIap6Es?rel=0
     }
 }
-
-addModal();
 var number, src_address;    // number: 썸네일 순서, src_address: iframe의 src주소
 function change_src(number, src_address){   // iframe 변경
     if(number == 1){
@@ -127,6 +92,8 @@ function change_Title(number, Title){   // 썸네일 제목 변경
         document.getElementsByClassName("Title")[8].innerText = Title;
     }
 }
+
+addDiv();
 
 change_img(3,"https://i.ytimg.com/vi/kfGi3rTct8c/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLA5dN_PMPz7icl72CJSeo4GI8mpBQ");
 change_src(3,"https://www.youtube.com/embed/kfGi3rTct8c");

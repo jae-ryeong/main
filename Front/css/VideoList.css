@@ -1,5 +1,4 @@
 body{
-    min-width: 1650px;
     position: static;
     margin: 0 auto;
     z-index: 1; 
@@ -255,7 +254,7 @@ section .foods ul .food_v:nth-child(6):hover, section .foods ul .food_v:nth-chil
     opacity: .7;
 }
 /* 썸네일 div */
-section #Container{
+section .Container{
     position: relative;
     height: 1200px; margin-top: 100px;
     margin: auto;
@@ -307,9 +306,6 @@ section #Container{
 }
 .backImg:hover{
     opacity: 1;
-}
-.Title{
-    font-size: 16px;
 }
 /* The Modal (background) */
 .modal {
