@@ -121,148 +121,12 @@ window.onclick = function(event) {
         modal[8].style.display = "none";
     }
 }
-<<<<<<< HEAD
-
-// // 카테고리 별로 나오는 동영상 다르게 하기
-window.onload = function(){
-    Containers[0].classList.add('event');
-}
-
-const foods = document.querySelectorAll('.food_v');
-var Containers = document.querySelectorAll('.Container');
-for(var i = 0; i <= foods.length; i++){
-    foods[0].addEventListener('click', function(){
-        Containers[0].classList.add('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[1].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.add('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[2].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.add('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[3].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.add('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[4].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.add('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[5].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.add('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[6].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.add('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[7].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.add('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[8].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.add('event');
-        Containers[9].classList.remove('event');
-    })
-    foods[9].addEventListener('click', function(){
-        Containers[0].classList.remove('event');
-        Containers[1].classList.remove('event');
-        Containers[2].classList.remove('event');
-        Containers[3].classList.remove('event');
-        Containers[4].classList.remove('event');
-        Containers[5].classList.remove('event');
-        Containers[6].classList.remove('event');
-        Containers[7].classList.remove('event');
-        Containers[8].classList.remove('event');
-        Containers[9].classList.add('event');
-    })
-}
-=======
->>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
 // [...document.querySelectorAll('.food').forEach(function(item){
 //     item.addEventListener('click',function(){
 //         for(var i = 0; i < Containers.length; i++){
             
 //         }
 //     })
-<<<<<<< HEAD
-// })]
-=======
 // })]
 
 // VideoList.js
@@ -367,4 +231,3 @@ change_img(3,"https://i.ytimg.com/vi/kfGi3rTct8c/hq720.jpg?sqp=-…AFwAcABBg==&r
 change_src(3,"https://www.youtube.com/embed/kfGi3rTct8c");
 change_Title(3, "참~쉬운 찜닭! 집에서 이건 꼭 한번 해보세요. ㅣ 백종원의 백종원레시피");
 
->>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8

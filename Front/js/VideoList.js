@@ -99,8 +99,5 @@ change_img(3,"https://i.ytimg.com/vi/kfGi3rTct8c/hq720.jpg?sqp=-…AFwAcABBg==&r
 change_src(3,"https://www.youtube.com/embed/kfGi3rTct8c");
 change_Title(3, "참~쉬운 찜닭! 집에서 이건 꼭 한번 해보세요. ㅣ 백종원의 백종원레시피");
 
-<<<<<<< HEAD
-=======
 // 규영작업
 
->>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8

@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-
-new Swiper('.promotion .swiper-container', {
-    // direction: 'horizontal'기본 값이라서 따로 지정하지 않아도 된다.  
-            slidesPerView: 3, // 한번에 보옂루 슬라이드 개수
-            spaceBetween: 10, // 슬라이드 사이 여백
-            centeredSlides: true, // 처음에 보여질 슬라이드가 왼쪽이 아니라 가운데에 보여지도록 하기.
-            loop: true, // 슬라이드가 반복적으로 보여지도록 해줌.
-            // autoplay: true 슬라이드가 자동으로 널어가짐.
-            autoplay: {
-                delay: 5000
-            },
-            pagination: {
-                el: ".swiper-pagination", // el(HEML 안의 클래스 지정)
-                clickable: true // 원 모양 클릭하면 해당 순서로 이동
-            }
-        })
-
-
-// 잘 안되네,,
-// const food_main = document.querySelectorAll('.food');
-// for(var i = 0; i <= food_main.length; i++){
-//     food_main[0].addEventListener('click',function(){
-//         Containers[0].classList.add('event');
-//     })
-//     food_main[1].addEventListener('click',function(){
-//         Containers[1].classList.add('event');
-//     })
-//     food_main[2].addEventListener('click',function(){
-//         Containers[2].classList.add('event');
-//     })
-// }
-=======
 const text = document.querySelector('.backImg .text');
 
 window.onload = function(){
@@ -99,4 +66,3 @@ function mouseWheeling(e) {
 //         video_text.classList.add('event');
 //     }
 // })
->>>>>>> 2cadaa146b56baa7b57e5fc00659fd70d53629b8
