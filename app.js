@@ -4,6 +4,7 @@ const fs = require('fs')
 const db = require('./db')
 
 app.use(express.static('Front'))
+
 app.get('/', (req, res) => {
     fs.readFile('./Front/html/main.html', (err, data)=>{
     if (err) throw err
@@ -30,7 +31,6 @@ app.get('/add_data', (req, res) => {
 })
 
 app.get('/delete_data', (req, res) => {
-    console.log('delete')
     db.delete_all()
 })
 
