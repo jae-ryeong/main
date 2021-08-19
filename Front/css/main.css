@@ -2,7 +2,7 @@
 body{
     margin: 0;
     padding: 0;
-    position: fixed;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -45,7 +45,7 @@ header .material-icons{
     cursor: pointer;
 }
 header .menu{
-    position: absolute;
+    position: fixed;
     z-index: 10;
     opacity: .7;
     right: 0;
@@ -72,26 +72,53 @@ section{
     position: relative;
     opacity: .8;
 }
-.backImg{
+.backImg1{
     background-image: url("https://user-images.githubusercontent.com/76980526/127947926-96572de8-6f09-4680-9e87-c55a03d6e61f.jpeg");
     background-size: cover;
     opacity: .8;
     background-repeat: no-repeat;
     height: 100vh;
 }
-.backImg .text{
+/* Content 선택부분 */
+.selectContent{
+    position: absolute;
+    z-index: 1;
+    width: 1px;
+    height: 100px;
+    margin: 25% 30px;
+    right: 0;
+}
+.selectContent .Content_buttons{
+    position: fixed;
+}
+.selectContent .Content_buttons .Content_button{
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid rgb(102, 101, 101);
+    border-radius: 50%;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+}
+.selectContent .Content_buttons .Content_button:hover{
+    opacity: .7;
+}
+.backImg1 .text{
     position: absolute;
     margin: 500px 0px;
     color: rgb(231, 235, 238);
     z-index: 1;
-    font-size: 150px;
+    font-size: 100px;
     font-weight: 700;
     transition: 1s;
 }
-.backImg .text.event{
+.backImg1 .text.event{
     transform: translateY(-100px);
 }
-.videoList_section{
+.text_secondLine{
+    font-size: 150px
+}
+.backImg2{
     background-color: antiquewhite;
     position: relative;
     width: 100vw;
@@ -133,20 +160,16 @@ section{
     transition: 1s;
     transform: translateY(20px);
 }
-.videoList_section .inner{
+.backImg2 .inner{
 }
-.videoList_section .text{
+.backImg2 .text{
     position: absolute;
     margin: 100px 0px;
     color: rgb(84, 87, 78);
     z-index: 10;
     font-size: 70px;
     font-weight: 700;
-    transform: translateX(-100px);
     transition: 1s;
-}
-.videoList_section .text.event{
-    transform: translateX(100px);
 }
 .videoList_button{
     position: absolute;
@@ -239,15 +262,20 @@ footer .inner >ul li a{
         width : 800px;
     }
     /* Header */
-
-    .backImg .inner .text{
+    .backImg1 .inner .text{
         position: absolute;
         margin: 600px 0px;
         color: rgb(231, 235, 238);
         z-index: 1;
-        font-size: 100px;
+        font-size: 80px;
         font-weight: 500;
         transition: 1s; 
+    }
+    header .menu{
+        width: 300px;
+    }
+    .text_secondLine{
+        font-size: 100px;
     }
     .menu li.menu_inner a{
         font-size: 20px;
@@ -255,17 +283,21 @@ footer .inner >ul li a{
         color: rgb(255, 255, 255);
         opacity: 1;
     }
+    .selectContent .Content_buttons .Content_button{
+        width: 15px;
+        height: 15px;
+    }
     /* SECTION */
-    .videoList_section .text{
+    .backImg2 .text{
         font-size: 50px;
     }
-    .videoList_section .point_img_small{
+    .backImg2 .point_img_small{
+        width: 180px;
+        height: 180px;
+    }
+    .backImg2 .point_img_big{
         width: 150px;
         height: 150px;
-    }
-    .videoList_section .point_img_big{
-        width: 200px;
-        height: 200px;
     }
     .videoList_button{
         width: 180px;
