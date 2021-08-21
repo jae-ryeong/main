@@ -303,16 +303,19 @@ section .foods ul .food:nth-child(6):hover,section .foods ul .food:nth-child(7):
     border-radius: 10px 10px;
     font-size: 25px;
     font-weight: 700;
-    width: 200px;
+    width: 220px;
     height: 80px;
     cursor: pointer;
     box-shadow: 5px 5px 5px #333;
-    background-color: #D5A481
+    background-color: #D5A481;
+    
 }
 .videoList_button a{
     padding: 20px;
     color: #2A1D0E;
     box-sizing: border-box;
+    -webkit-animation: fade .7s ease both;
+	animation: fade .7s ease both;
 }
 .videoList_button:active{
     background-image: url("https://user-images.githubusercontent.com/76980526/127965207-4b308b6a-6709-4a85-805a-d2431b342275.jpeg");
