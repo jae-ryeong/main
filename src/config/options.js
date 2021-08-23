@@ -16,16 +16,16 @@ module.exports = {
   videos: {
     key: process.env.YOUTUBE_TOKEN,
     part: 'snippet, statistics',
-    id: 'GqxqRe6gPio, M5fDS__v1Z8', // 테스트를 위한 기본 query
-    maxResults: 5,
+    // id: 'GqxqRe6gPio, M5fDS__v1Z8', // 테스트를 위한 기본 query
+    // maxResults: 5,
     fields: 'items(id, snippet(channelId, title, description, thumbnails), statistics(viewCount, likeCount, commentCount))',
   },
 
   channels: {
     key: process.env.YOUTUBE_TOKEN,
     part: 'snippet, statistics',
-    id: 'UCC9pQY_uaBSa0WOpMNJHbEQ, UCyn-K7rZLXjGl7VXGweIlcA', // 테스트를 위한 기본 query
-    maxResults: 5,
+    // id: 'UCC9pQY_uaBSa0WOpMNJHbEQ, UCyn-K7rZLXjGl7VXGweIlcA', // 테스트를 위한 기본 query
+    // maxResults: 5,
     fields: 'items(id, snippet(title, thumbnails), statistics(viewCount, commentCount, subscriberCount, videoCount))',
   },
 
