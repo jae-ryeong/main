@@ -31,8 +31,8 @@ const Channel = require('../models/Channel');
 
               channelData(service, obj.channelId)
                 .then(obj => {
-                  const channelDoc = new Channel(obj);
-                  channelDoc.save(err => err ? console.error(err.message) : console.log(`Channel's info was successfully added to the array.`));
+                  _channels.push(obj);
+                  console.log(`Channel's info was successfully added to the array.`);
                 })
             });
         }
