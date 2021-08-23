@@ -1,7 +1,7 @@
 module.exports = {
   search: {
     key: process.env.YOUTUBE_TOKEN,
-    part: 'snippet',
+    part: 'id',
     order: 'date',
     maxResults: 5,
     q: '된장국',
@@ -13,10 +13,25 @@ module.exports = {
     fields: 'items(id)',
   },
   
-  videos: {
+  video: {
     key: process.env.YOUTUBE_TOKEN,
     part: 'snippet, statistics',
     id: '',
     fields: 'items(id, snippet(channelId, title, description, thumbnails), statistics(viewCount, likeCount, commentCount))',
+  },
+
+  channel: {
+    key: process.env.YOUTUBE_TOKEN,
+    part: 'snippet, statistics',
+    id: '',
+    fields: 'items(id, snippet(title, thumbnails), statistics(viewCount, commentCount, subscriberCount, videoCount))',
+  },
+
+  searchChannels: {
+    key: process.env.YOUTUBE_TOKEN,
+    part: 'id',
+    categoryId: '',
+    maxResults: 3,
+    fields: 'items(id)',
   },
 }
