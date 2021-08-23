@@ -4,7 +4,7 @@ const Video = require('../models/Video');
 
 const responseHandle = response => {
   try {
-    const { items } = response.data;
+    const items = response.data.items || [];
 
     if (items == null || items.length === 0) {
       return console.log('Not found.');
@@ -17,56 +17,73 @@ const responseHandle = response => {
 }
 
 module.exports = {
-  searchQuery: async (youtube, q, topicId) => {
+  getQueries: () => {
+    
+  },
+
+  searchQuery: async (youtube, q, topicId=null) => {
     options.search.q = q;
     options.search.topicId = topicId;
 
     try {
       const response = await youtube.search.list(options.search);
       const items = responseHandle(response);
+      console.log(items.length);
       return items;
     } catch (err) {
       console.error(`Error in searchQuery:\n${err.message}`);
     }
   },
 
-  videoData: async (youtube, videoId) => {
-    options.videos.id = videoId;
+  videoData: async (youtube, _ids) => {
+    options.videos.id = _ids;
 
     try {
-      const response = await youtube.videos.list(options.video);
+      const response = await youtube.videos.list(options.videos);
       const items = responseHandle(response);
 
-      const { id, snippet, statistics } = items[0];
-      const url = `https://www.youtube.com/watch?v=${id}`;
+      const objs = [];
 
-      const { channelId, title, description, thumbnails } = snippet;
-      const thumbnail = thumbnails.default.url;
-
-      const { viewCount, likeCount, commentCount } = statistics; 
-
-      return { title, thumbnail, url, channelId };
+      items.map(item => {
+        const { id, snippet, statistics } = item;
+        const url = `https://www.youtube.com/watch?v=${id}`;
+  
+        const { channelId, title, description, thumbnails } = snippet;
+        const thumbnail = thumbnails.default.url;
+  
+        const { viewCount, likeCount, commentCount } = statistics;
+  
+        objs.push({ url, channelId, title, thumbnail });
+      })
+      console.log(objs.length);
+      return objs;
     } catch (err) {
       console.error(`Error in videoData:\n${err.message}`);
     }
   },
 
-  channelData: async (youtube, channeId) => {
-    options.channel.id = channeId;
+  channelData: async (youtube, _ids) => {
+    options.channels.id = _ids
 
     try {
-      const response = await youtube.channels.list(options.channel);
+      const response = await youtube.channels.list(options.channels);
       const items = responseHandle(response);
 
-      const { id, snippet, statistics } = items[0];
-      const url = `https://www.youtube.com/channel/${id}`;
+      const objs = [];
 
-      const { title, thumbnails } = snippet;
-      const thumbnail = thumbnails.default.url;
-
-      const { viewCount, commentCount, subscriberCount, videoCount } = statistics;
-
-      return { url, title, thumbnail };
+      items.map(item => {
+        const { id, snippet, statistics } = item;
+        const url = `https://www.youtube.com/channel/${id}`;
+  
+        const { title, thumbnails } = snippet;
+        const thumbnail = thumbnails.default.url;
+  
+        const { viewCount, commentCount, subscriberCount, videoCount } = statistics;
+  
+        objs.push({url, title, thumbnail});
+      })
+      console.log(objs.length);
+      return objs;
     } catch (err) {
       console.error(`Error in channels:\n${err.message}`)
     }

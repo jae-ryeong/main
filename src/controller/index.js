@@ -3,42 +3,57 @@ const { google } = require('googleapis');
 
 const db = require('../../db');
 
-const { getQueries, searchQuery, videoData, channelData } = require('./apiController');
+const { channelData, searchQuery, videoData } = require('./apiController');
 const Video = require('../models/Video');
 const Channel = require('../models/Channel');
 
 (async () => {
-  const service = google.youtube('v3');
+  // const queries = getQueries();
+  const queries = ['떡볶이'];
 
-  const queries = getQueries();
+  let _videos = [], _channels = [];
 
-  const _videos = [], _channels = [];
+  const youtube = google.youtube('v3');
 
   await Promise.all(queries.map(q => {
-    searchQuery(service, q).then(items => {
+    searchQuery(youtube, q).then(items => {
+      const videoIds = [], channelIds = [];
+
       items.map(el => {
-        const { kind, videoId, channelId, playlistId } = el.id;
+        const { kind, videoId, channelId } = el.id;
 
-        if (kind === 'youtube#video'&& videoId) {
-          videoData(service, videoId)
-            .then(async obj => {
-              _videos.push(obj);
-              console.log(`Video's info was successfully added to the array.`);
-
-              if (await Channel.find({ id: channelId })) {
-                return console.log(`Already exists for this channel's info.`);
-              }
-
-              channelData(service, obj.channelId)
-                .then(obj => {
-                  _channels.push(obj);
-                  console.log(`Channel's info was successfully added to the array.`);
-                })
-            });
-        }
+        if (kind === 'youtube#video' && videoId) videoIds.push(videoId);
+        if (kind === 'youtube#channel' && channelId) channelIds.push(channelIds);
       })
+
+      const _videoIds = videoIds.join(',');
+      const _channelIds = channelIds.join(',');
+
+      videoData(youtube, _videoIds)
+        .then(async objs => {
+          _videos = objs;
+          console.log('Successfully added all video information to the array.');
+
+          const channelIds = [];
+          objs.map(async obj => {
+            const isChannel = await Channel.findOne({ id: obj.channelId });
+            if (isChannel) return;
+            channelIds.push(obj.channelId);
+          });
+          const _channelIds = channelIds.join(',');
+
+          if (_channelIds === '') return;
+
+          console.log(1);
+
+          channelData(youtube, _channelIds)
+            .then(objs => {
+              _channels = objs;
+              console.log('Successfully added all channel information to the array.');
+            });
+        });
     });
-  })).catch(err => console.error(`Error:\n${err.message}`));
+  })).catch(err => console.err(`Error in promise array:\n${err.message}`));
 
   _videos.map(el => {
     const videoDoc = new Video(el);
@@ -50,21 +65,3 @@ const Channel = require('../models/Channel');
     channelDoc.save(err => err ? console.error(err.message) : console.log(`Channel's info saved in DB.`));
   })
 })();
-
-// const getCooking = () => {
-//   const cookingList = [[],
-//                        [],
-//                        [],
-//                        [],
-//                        [],
-//                        [],
-//                        []];
-//   return cookingList[getDayOfWeek()];
-// }
-
-// const getDayOfWeek = () => {
-//   const date = new Date(),
-//         dayOfWeek = date.getDay();
-        
-//   return dayOfWeek;
-// }
