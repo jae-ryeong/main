@@ -1,6 +1,6 @@
 const { google } = require('googleapis');
 require('dotenv').config();
-// const db = require('./db');
+const db = require('./db');
 const { channelData, getQueries, searchChannels, searchQuery, videoData } = require('./src/controller/apiController');
 const Video = require('./src/models/Video');
 const Channel = require('./src/models/Channel');
@@ -56,22 +56,35 @@ const testController = {
 
       const { viewCount, commentCount, subscriberCount, videoCount } = statistics;
 
-      _channels.push({url, title, thumbnail});
+      _channels.push({id, url, title, thumbnail});
     })
     
     console.log(_channels);
 
 
-    // _channels.map(el => {
-    //   const channelDoc = new Channel(el);
-    //   channelDoc.save(err => err ? console.error(err.message) : console.log(`Channel's info saved in DB.`));
-    // });
-  }
+    _channels.map(el => {
+      const channelDoc = new Channel(el);
+      channelDoc.save(err => err ? console.error(err.message) : console.log(`Channel's info saved in DB.`));
+    });
+  },
+
+  retreiveChannel: () => {
+    const ids = ['UCC9pQY_uaBSa0WOpMNJHbEQ', 'UCyn-K7rZLXjGl7VXGweIlcA', 'UCy2WX3w5UyYFHBDHyWFKNUQ', 'UCKA_6r3CWC76x_EaFO6jsPA', 'UCNdERLUICkazXRMp0_ZSKMw', 'UCzYiW6Gf00MMf6IEByG9gCg'];
+    const _ids = ids.join(',');
+
+    ids.map(async id => {
+      const isChannelId = await Channel.find({ id: id });
+      if (isChannelId) {
+        console.log(`${id} is existed. code:${isChannelId}`);
+      }
+    });
+  },
 };
 
 (async () => {
   const service = google.youtube('v3');
 
   // await testController.saveVideo(service);
-  await testController.saveChannel(service);
+  // await testController.saveChannel(service);
+  await testController.retreiveChannel();
 })();
