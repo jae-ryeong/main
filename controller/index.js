@@ -1,11 +1,10 @@
 require('dotenv').config()
 const { google } = require('googleapis');
 
-const db = require('../../db');
+const db = require('../db');
 
 const { channelData, searchQuery, videoData } = require('./apiController');
-const Video = require('../models/Video');
-const Channel = require('../models/Channel');
+const { Video, Channel } = require('../models');
 
 (async () => {
   // 임시로 배열 작성
