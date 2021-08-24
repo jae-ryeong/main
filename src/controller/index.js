@@ -7,56 +7,57 @@ const { channelData, searchQuery, videoData } = require('./apiController');
 const Video = require('../models/Video');
 const Channel = require('../models/Channel');
 
-
 (async () => {
   // const queries = getQueries();
-  const queries = ['떡볶이'];
+  const queries = ['떡볶이'],
+        queries_len = queries.length;
 
   let _videos = [], _channels = [];
 
   const youtube = google.youtube('v3');
 
-  for (const q of queries) {
-    searchQuery(youtube, q).then(items => {
-      const videoIds = [], channelIds = [];
+  for (let i=0; i<queries_len; i+=1) {
+    await searchQuery(youtube, queries[i])
+            .then(async items => {
+              const videoIds = [],
+                    channelIds = [];
 
-      items.map(el => {
-        const { kind, videoId, channelId } = el.id;
+              for (const item of items) {
+                const { kind, videoId, channelId } = item.id;
+                if (kind === 'youtube#video' && videoId) videoIds.push(videoId);
+                if (kind === 'youtube#channel' && channelId) channelIds.push(channelId);
+              }
 
-        if (kind === 'youtube#video' && videoId) videoIds.push(videoId);
-        if (kind === 'youtube#channel' && channelId) channelIds.push(channelIds);
-      })
+              const _videoIds = videoIds.join(','),
+                    _channelIds = channelIds.join(',');
+              console.log(`videoIds: ${_videoIds}`);
+              
+              await videoData(youtube, _videoIds)
+                      .then(async objs => {
+                        _videos = objs;
+                        console.log('Successfully added all video information to the array.');
 
-      const _videoIds = videoIds.join(',');
-      const _channelIds = channelIds.join(',');
+                        const channelIds = await Promise.all(objs.map(obj => obj.channelId)
+                                                                 .filter(async id => {
+                                                                   const isChannel = await Channel.findOne({ id: id });
+                                                                   return isChannel ? false : true;
+                                                                 }));
+                        const _channelIds = channelIds.join(',');
+                        console.log(`channelIds: ${_channelIds}`);
 
-      videoData(youtube, _videoIds)
-        .then(async objs => {
-          _videos = objs;
-          console.log('Successfully added all video information to the array.');
+                        if (_channelIds === '') return;
 
-          const channelIds = [];
-          await Promise.all(objs.map(async obj => {
-            const isChannel = await Channel.findOne({ id: obj.id });
-            if (isChannel) return;
-            channelIds.push(obj.channelId);
-          }));
-          const _channelIds = channelIds.join(',');
+                        await channelData(youtube, _channelIds)
+                                .then(objs => {
+                                  _channels = objs;
+                                  console.log('Successfully added all channel information to the array.');
+                                });
 
-          if (_channelIds === '') return;
 
-          console.log(1);
+                      });
 
-          channelData(youtube, _channelIds)
-            .then(objs => {
-              _channels = objs;
-              console.log('Successfully added all channel information to the array.');
             });
-        });
-    });
   }
-
-  console.log(10);
 
   _videos.map(el => {
     const videoDoc = new Video(el);
