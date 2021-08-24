@@ -80,7 +80,7 @@ module.exports = {
   
         const { viewCount, commentCount, subscriberCount, videoCount } = statistics;
   
-        objs.push({url, title, thumbnail});
+        objs.push({id, url, title, thumbnail});
       })
       console.log(objs.length);
       return objs;
