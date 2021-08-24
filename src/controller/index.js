@@ -7,6 +7,7 @@ const { channelData, searchQuery, videoData } = require('./apiController');
 const Video = require('../models/Video');
 const Channel = require('../models/Channel');
 
+
 (async () => {
   // const queries = getQueries();
   const queries = ['떡볶이'];
@@ -15,7 +16,7 @@ const Channel = require('../models/Channel');
 
   const youtube = google.youtube('v3');
 
-  await Promise.all(queries.map(q => {
+  for (const q of queries) {
     searchQuery(youtube, q).then(items => {
       const videoIds = [], channelIds = [];
 
@@ -35,11 +36,11 @@ const Channel = require('../models/Channel');
           console.log('Successfully added all video information to the array.');
 
           const channelIds = [];
-          objs.map(async obj => {
-            const isChannel = await Channel.findOne({ id: obj.channelId });
+          await Promise.all(objs.map(async obj => {
+            const isChannel = await Channel.findOne({ id: obj.id });
             if (isChannel) return;
             channelIds.push(obj.channelId);
-          });
+          }));
           const _channelIds = channelIds.join(',');
 
           if (_channelIds === '') return;
@@ -53,7 +54,9 @@ const Channel = require('../models/Channel');
             });
         });
     });
-  })).catch(err => console.err(`Error in promise array:\n${err.message}`));
+  }
+
+  console.log(10);
 
   _videos.map(el => {
     const videoDoc = new Video(el);

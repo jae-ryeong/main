@@ -73,12 +73,40 @@ const testController = {
     const _ids = ids.join(',');
 
     ids.map(async id => {
-      const isChannelId = await Channel.find({ id: id });
+      const isChannelId = await Channel.findOne({ id: id });
+
+      console.log(typeof isChannelId)
+      console.log(isChannelId);
+
       if (isChannelId) {
         console.log(`${id} is existed. code:${isChannelId}`);
+      } else {
+        console.log(`${id} is not existed. code:${isChannelId}`);
       }
     });
   },
+
+  getChannelIds: async () => {
+    try {
+      const objs = ['UCC9pQY_uaBSa0WOpMNJHbEQ', '4UCyn-K7rZLXjGl7VXGweIlcA', '5UCy2WX3w5UyYFHBDHyWFKNUQ', '6UCKA_6r3CWC76x_EaFO6jsPA', 'UCNdERLUICkazXRMp0_ZSKMw', 'UCzYiW6Gf00MMf6IEByG9gCg']
+      const channelIds = [];
+      await Promise.all(objs.map(async obj => {
+        const isChannel = await Channel.findOne({ id: obj });
+        if (isChannel) return
+        channelIds.push(obj);
+      }));
+      // for (const obj of objs) {
+      //   const isChannel = await Channel.findOne({ id: obj });
+      //   if (isChannel) continue;
+      //   channelIds.push(obj);
+      // }
+      console.log(3);
+      const _channelIds = channelIds.join(',');
+      console.log(2, _channelIds);
+    } catch (err) {
+      console.error(err.message);
+    }
+  }
 };
 
 (async () => {
@@ -86,5 +114,5 @@ const testController = {
 
   // await testController.saveVideo(service);
   // await testController.saveChannel(service);
-  await testController.retreiveChannel();
+  await testController.getChannelIds();
 })();
