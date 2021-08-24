@@ -6,6 +6,10 @@ const mongoose = require('mongoose');
  * Properties to be added: viewCount, likeCount, commentCount
  */
 module.exports = mongoose.model('Video', new mongoose.Schema({
+  query: {
+    type: String,
+    required: true,
+  },
   url: {
     type: String,
     required: true,

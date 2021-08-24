@@ -6,6 +6,11 @@ const mongoose = require('mongoose');
  * Properties to be added: viewCount, likeCount, commentCount
  */
 module.exports = mongoose.model('Channel', new mongoose.Schema({
+  id: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   url: {
     type: String,
     required: true,

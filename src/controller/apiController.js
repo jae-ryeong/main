@@ -35,7 +35,7 @@ module.exports = {
     }
   },
 
-  videoData: async (youtube, _ids) => {
+  videoData: async (youtube, query, _ids) => {
     options.videos.id = _ids;
 
     try {
@@ -53,7 +53,7 @@ module.exports = {
   
         const { viewCount, likeCount, commentCount } = statistics;
   
-        objs.push({ url, channelId, title, thumbnail });
+        objs.push({ query, url, channelId, title, thumbnail });
       })
       console.log(objs.length);
       return objs;
