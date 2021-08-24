@@ -5,7 +5,7 @@ module.exports = {
     order: 'date',
     maxResults: 5,
     q: '된장국',
-    topicId: '호박잎요리',
+    // topicId: '호박잎요리',
     type: 'video',
     // videoCategoryId: '',
     videoEmbeddable: 'true', // 웹페이지로 퍼갈 수 있는 동영상만 포함하도록 검색을 제한

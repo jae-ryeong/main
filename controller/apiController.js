@@ -1,7 +1,5 @@
 const options = require("../config/options");
 
-const Video = require('../models/Video');
-
 const responseHandle = response => {
   try {
     const items = response.data.items || [];
