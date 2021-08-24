@@ -1,6 +1,5 @@
 const { google } = require('googleapis');
 require('dotenv').config();
-const db = require('./db');
 const { channelData, getQueries, searchChannels, searchQuery, videoData } = require('./src/controller/apiController');
 const Video = require('./src/models/Video');
 const Channel = require('./src/models/Channel');
@@ -106,13 +105,43 @@ const testController = {
     } catch (err) {
       console.error(err.message);
     }
+  },
+
+  testPromise: async () => {
+    console.log(2);
+    return 3;
+  },
+
+  testPromise2: async () => {
+
   }
 };
 
-(async () => {
-  const service = google.youtube('v3');
+// const db = require('./db');
 
-  // await testController.saveVideo(service);
-  // await testController.saveChannel(service);
-  await testController.getChannelIds();
+// (async () => {
+//   // const service = google.youtube('v3');
+
+//   // await testController.saveVideo(service);
+//   // await testController.saveChannel(service);
+//   // await testController.getChannelIds();
+
+//   console.log(1);
+
+//   testController.testPromise().then(result => console.log(result));
+
+//   console.log(4);
+// })();
+
+const testPromise = async () => {
+  console.log(2);
+  return 3;
+}
+
+(async () => {
+  console.log(1);
+
+  await testPromise().then(async x => console.log(x));
+
+  console.log(4);
 })();
