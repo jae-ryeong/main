@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const options = require("../config/options");
 
 const responseHandle = response => {
@@ -15,8 +17,25 @@ const responseHandle = response => {
 }
 
 module.exports = {
-  getQueries: () => {
-    
+  getQueries: list => {
+    // 각 프로퍼티(a, b, c, d, e) 통합
+    const dic = Object.values(list).reduce((obj, t) => {
+      Object.keys(t).forEach(key => {
+        if (obj[key]) obj[key].push(...t[key]);
+        else obj[key] = [...t[key]];
+      })
+      return obj;
+    }, {});
+
+    // 키 별로 중복 제거
+    Object.keys(dic).forEach(key => {
+      const set = new Set(dic[key]);
+      dic[key] = [...set];
+    });
+
+    fs.writeFileSync('cookingList.json', JSON.stringify(dic));
+
+    return dic;
   },
 
   searchQuery: async (youtube, q, topicId=null) => {
