@@ -1,32 +1,26 @@
-const models = require('../models');
 
-
-console.log('prop', models.prototype);
-
-console.log('prot', models.__proto__);
-
-function _fn_ok () {
-  console.log(this);
+async function _fn_ok (name) {
+  this.name = name;
+  return this;
 }
 
-const _fn_ok2 = () => {
-  console.log(this);
+const _fn_ok2 = async () => {
+  return this;
 }
-
-console.log('momo', _fn_ok());
-console.log('momo1', _fn_ok2());
 
 const obj = {
-  name: 1,
-  age: 2,
+  a: 1,
+  b: 2,
+  c: 3,
 }
 
-const _fn_ok3 = _fn_ok.bind(obj);
+// const tmp_fn_ok = _fn_ok.bind(obj);
 
-_fn_ok3();
-console.log(_fn_ok3.__proto__);
-// _fn_ok();
+// tmp_fn_ok().then(result => console.log(result));
 
-const obj2 = new _fn_ok();
+const tmp_fn_ok2 = _fn_ok2.bind(obj);
 
-console.log(obj2.__proto__);
+tmp_fn_ok2().then(result => console.log(result));
+
+
+_fn_ok.call(obj).then(result => console.log(result));
