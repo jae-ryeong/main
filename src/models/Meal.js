@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-module.exports = mongoose.model('Video', new mongoose.Schema({
+module.exports = mongoose.model('Meal', new mongoose.Schema({
   query: {
     type: String,
     required: true,
