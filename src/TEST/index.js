@@ -1,9 +1,9 @@
 const { google } = require('googleapis');
 require('dotenv').config();
-const { channelData, getQueries, searchChannels, searchQuery, videoData } = require('./controller/apiController');
-const Video = require('./models/Video');
-const Channel = require('./models/Channel');
-const options = require('./config/options');
+const { channelData, getQueries, searchChannels, searchQuery, videoData } = require('../controller/apiController');
+const Video = require('../models/Video');
+const Channel = require('../models/Channel');
+const options = require('../config/options');
 
 const testController = {
   saveVideo: async youtube => {

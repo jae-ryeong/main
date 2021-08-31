@@ -1,10 +1,14 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/testDB', {useNewUrlParser: true})
+
+// 데이터 베이스 연결
+mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://localhost:27017/testDB', {useNewUrlParser: true})
+
+// 이벤트 이미터 생성
 const db = mongoose.connection
 
-db.on('error', () => { console.log('Database Connection failed')})
-
-db.once('open', () => { console.log('Database Connected!')})
+// 에러, 연결 시 처리
+db.on('error', err => console.error(`Error on connection:\n${err.message}`));
+db.once('open', () => console.log('Database connected.'));
 
 const Data_Schema = new mongoose.Schema({
     title : {type : String, required: true},

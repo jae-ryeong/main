@@ -33,7 +33,7 @@ module.exports = {
       dic[key] = [...set];
     });
 
-    fs.writeFileSync('cookingList.json', JSON.stringify(dic));
+    fs.writeFileSync('./src/TEST/cookingList.json', JSON.stringify(dic));
 
     return dic;
   },
