@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 // 데이터 베이스 연결
-mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://localhost:27017/testDB', {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://localhost:27017/mohaemookji', { useNewUrlParser: true })
 
 // 이벤트 이미터 생성
 const db = mongoose.connection
@@ -71,4 +71,4 @@ random_select = () => {
 
 }
 
-module.exports = {find, create, delete_all, random_select}
+module.exports = {db, find, create, delete_all, random_select}
