@@ -1,18 +1,18 @@
 const express = require('express')
 const app = express()
 const fs = require('fs')
-const db = require('./db')
+const db = require('../(TEST)db/db')
 
-app.use(express.static('Front'))
+app.use(express.static('Pages'))
 app.get('/', (req, res) => {
-    fs.readFile('./Front/html/main.html', (err, data)=>{
+    fs.readFile('./Pages/html/main.html', (err, data)=>{
     if (err) throw err
     res.end(data,'utf-8')
     })
 })
 
 app.get('/VideoList.html', (req, res) => {
-    fs.readFile('./Front/html/VideoList.html', (err, data)=>{
+    fs.readFile('./Pages/html/VideoList.html', (err, data)=>{
     if (err) throw err
     res.end(data,'utf-8')
     })
@@ -43,4 +43,5 @@ app.get('/random_select', (req, res) => {
 
 app.listen(8000, () => {
     console.log(`Server Running`)
+
 })
