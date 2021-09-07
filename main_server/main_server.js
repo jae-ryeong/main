@@ -41,6 +41,6 @@ app.get('/random_select', (req, res) => {
     db.random_select()
 })
 
-app.listen(80, () => {
+app.listen(17260, () => {
     console.log(`Server Running`)
 })
