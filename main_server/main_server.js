@@ -4,8 +4,8 @@ const app = express()
 const fs = require('fs')
 const db = require('../(TEST)db/db')
 const serverOption = {
-    key: fs.readFileSync('\usr\mohaemookji\ssl-certi\private.key'),
-    cert: fs.readFileSync('\usr\mohaemookji\ssl-certi\certificate.crt'),
+    key: fs.readFileSync('/usr/mohaemookji/ssl-certi/private.key'),
+    cert: fs.readFileSync('/usr/mohaemookji/ssl-certi/certificate.crt'),
 }
 
 https.createServer(serverOption, app).listen(17260, () => {
