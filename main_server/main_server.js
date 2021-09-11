@@ -2,7 +2,7 @@ const https = require('https')
 const express = require('express')
 const app = express()
 const fs = require('fs')
-const db = require('../(TEST)db/db')
+const db = require('./db_connection')
 const serverOption = {
     key: fs.readFileSync('/usr/mohaemookji/private.key'),
     cert: fs.readFileSync('/usr/mohaemookji/certificate.crt'),
