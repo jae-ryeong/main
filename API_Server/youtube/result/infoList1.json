@@ -1,0 +1,84 @@
+{
+  "videos": [
+    {
+      "query": "그릭복숭아",
+      "url": "https://www.youtube.com/watch?v=iuTE5Az-gpk",
+      "channelId": "UCzEgofl9GaOW66DJmEvgIXQ",
+      "title": "[1분컷] 무화과가 제철일 땐 그릭무화과 만들기!👍 Greek yogurt in Fig #shorts",
+      "thumbnail": "https://i.ytimg.com/vi/iuTE5Az-gpk/default.jpg"
+    },
+    {
+      "query": "그릭복숭아",
+      "url": "https://www.youtube.com/watch?v=QB3uJ80qEM0",
+      "channelId": "UCjpBR0M-AadSsnBUZZkaXkA",
+      "title": "VLOG 자취일상  | 혼자 카페, 맛집가기🍹 신발 밑창 수리하고 그릭복숭아 만들기. 두부 수술 후 근황",
+      "thumbnail": "https://i.ytimg.com/vi/QB3uJ80qEM0/default.jpg"
+    },
+    {
+      "query": "그릭복숭아",
+      "url": "https://www.youtube.com/watch?v=300eS6IRMuo",
+      "channelId": "UCyBPhN3yi2t1EdmDVlrRUDg",
+      "title": "개강하고 열심히 사는 브이로그 :: 편의점 알바, 꿀젤리, 그릭복숭아어쩌고, 라이스 페이퍼 떡볶이, 삼색 칼국수, 동물병원",
+      "thumbnail": "https://i.ytimg.com/vi/300eS6IRMuo/default.jpg"
+    },
+    {
+      "query": "케이크",
+      "url": "https://www.youtube.com/watch?v=CP8a0815XuM",
+      "channelId": "UC_4Dx2XX_Ufwv-6mHt310-Q",
+      "title": "[방탄/남준] 케이크 의자 팔걸이에 올려놓고 시작부터 좀 불안한 남준이의 생일파티....",
+      "thumbnail": "https://i.ytimg.com/vi/CP8a0815XuM/default.jpg"
+    },
+    {
+      "query": "케이크",
+      "url": "https://www.youtube.com/watch?v=gJ6DyNFjCZ8",
+      "channelId": "UCYo5wuzNmJ3wrAvWSkYex_w",
+      "title": "(ENG) CAFE VLOG / 케이크와 한 몸이 되어버린 카페 일상..🙉🎂일하며 바프 준비하기, 새 안경 맞춘 일상 🪴",
+      "thumbnail": "https://i.ytimg.com/vi/gJ6DyNFjCZ8/default.jpg"
+    },
+    {
+      "query": "케이크",
+      "url": "https://www.youtube.com/watch?v=Z5nVAjxIqiY",
+      "channelId": "UC4Dq5HS5W2twgQTFEHvyX6w",
+      "title": "[더보이즈/현재] 생일 청문회 케이크 만들기 요약 zip 🎂💙",
+      "thumbnail": "https://i.ytimg.com/vi/Z5nVAjxIqiY/default.jpg"
+    }
+  ],
+  "channels": [
+    {
+      "id": "UCyBPhN3yi2t1EdmDVlrRUDg",
+      "url": "https://www.youtube.com/channel/UCyBPhN3yi2t1EdmDVlrRUDg",
+      "title": "설모 Seolmo",
+      "thumbnail": "https://yt3.ggpht.com/FDfz6XK9PZJy9wM8X-1NzEaCfBRo17a0BeDfp6ci6ZkQNdRuXNsVsHzYn3ZJd1oh-k1U_GXV8J0=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCzEgofl9GaOW66DJmEvgIXQ",
+      "url": "https://www.youtube.com/channel/UCzEgofl9GaOW66DJmEvgIXQ",
+      "title": "렛츠키친 Let's Kitchen",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLTaRgSE3viBwlVIIYD7h44fTLtKT-wyBvBzeKME=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCjpBR0M-AadSsnBUZZkaXkA",
+      "url": "https://www.youtube.com/channel/UCjpBR0M-AadSsnBUZZkaXkA",
+      "title": "seoha오늘의 서하",
+      "thumbnail": "https://yt3.ggpht.com/GjN-nuNbViAnEJuqxJFbwA44BR9P82a_OIeITprQWyflfG6_iY1cbhV3ftPtu4wuVfSs4PyujA=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UC_4Dx2XX_Ufwv-6mHt310-Q",
+      "url": "https://www.youtube.com/channel/UC_4Dx2XX_Ufwv-6mHt310-Q",
+      "title": "BE:Happy",
+      "thumbnail": "https://yt3.ggpht.com/ktTbWEN51OOPoTnfQcvK7q9gIhivlNVxuQ-DTWmdgLDpg4MNABhDxYIWhZ6MScgPD46Pbc8-1Q=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCYo5wuzNmJ3wrAvWSkYex_w",
+      "url": "https://www.youtube.com/channel/UCYo5wuzNmJ3wrAvWSkYex_w",
+      "title": "효녀HYONYEO",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLSzOjYNE8MVPxfqgf2pzuC8X7bhWrs8xUpZthwvKA=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UC4Dq5HS5W2twgQTFEHvyX6w",
+      "url": "https://www.youtube.com/channel/UC4Dq5HS5W2twgQTFEHvyX6w",
+      "title": "여긴누구나는어디",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLR0RmwX8DR6O3Y1mLclEmRGiVsMf4FmZOb_6HIE=s88-c-k-c0x00ffffff-no-rj"
+    }
+  ]
+}

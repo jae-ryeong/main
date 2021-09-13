@@ -1,0 +1,72 @@
+{
+  "videos": [
+    {
+      "query": "오징어 볶음",
+      "url": "https://www.youtube.com/watch?v=UTitHlFZi7Y",
+      "channelId": "UCUUvRbclub_aoeVlxN5EZGg",
+      "title": "첫번째 요리 오징어볶음 맛있게 하는법",
+      "thumbnail": "https://i.ytimg.com/vi/UTitHlFZi7Y/default.jpg"
+    },
+    {
+      "query": "오징어 볶음",
+      "url": "https://www.youtube.com/watch?v=5_EQo9tNvHU",
+      "channelId": "UCqUpOzKALY3CqRD89VIlwGg",
+      "title": "매콤단짠 밥도둑 오징어볶음",
+      "thumbnail": "https://i.ytimg.com/vi/5_EQo9tNvHU/default.jpg"
+    },
+    {
+      "query": "오징어 볶음",
+      "url": "https://www.youtube.com/watch?v=GOVQF4koo6Y",
+      "channelId": "UCg1TvzcGRzQym5mlZZH8lhQ",
+      "title": "오징어볶음 먹으면서 2천가즈아",
+      "thumbnail": "https://i.ytimg.com/vi/GOVQF4koo6Y/default.jpg"
+    },
+    {
+      "query": "만개의 레시피",
+      "url": "https://www.youtube.com/watch?v=zyzvmpuGmJQ",
+      "channelId": "UCKA_6r3CWC76x_EaFO6jsPA",
+      "title": "오이고추의 변신은 무죄 고추파퍼베이컨말이 | Bacon wrapped pepper popper",
+      "thumbnail": "https://i.ytimg.com/vi/zyzvmpuGmJQ/default.jpg"
+    },
+    {
+      "query": "만개의 레시피",
+      "url": "https://www.youtube.com/watch?v=2YHRX8hqRlU",
+      "channelId": "UCKA_6r3CWC76x_EaFO6jsPA",
+      "title": "간단하게 만드는 오믈렛컵&피자컵 | Omelet cup & pizza cup",
+      "thumbnail": "https://i.ytimg.com/vi/2YHRX8hqRlU/default.jpg"
+    },
+    {
+      "query": "만개의 레시피",
+      "url": "https://www.youtube.com/watch?v=LRbdIHRhhC8",
+      "channelId": "UCKA_6r3CWC76x_EaFO6jsPA",
+      "title": "이제 초코볼도 내가 원하는 사이즈로! | Big chocolate ball",
+      "thumbnail": "https://i.ytimg.com/vi/LRbdIHRhhC8/default.jpg"
+    }
+  ],
+  "channels": [
+    {
+      "id": "UCUUvRbclub_aoeVlxN5EZGg",
+      "url": "https://www.youtube.com/channel/UCUUvRbclub_aoeVlxN5EZGg",
+      "title": "영화로운부엌",
+      "thumbnail": "https://yt3.ggpht.com/IsriFdDPjCKuI8HK1eUOc5KcfXIXKy5nbSLLpOipQs5xavYhIoN255zKs5iL6sCy1XeyhdLhWZk=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCqUpOzKALY3CqRD89VIlwGg",
+      "url": "https://www.youtube.com/channel/UCqUpOzKALY3CqRD89VIlwGg",
+      "title": "요리니스트",
+      "thumbnail": "https://yt3.ggpht.com/W9sddx_EBAyKbanu3bIx4dLQg6GArKd5BnCfyp729ixmwH0RHp7eX0twFs4v6gB4E4GadGtx4og=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCg1TvzcGRzQym5mlZZH8lhQ",
+      "url": "https://www.youtube.com/channel/UCg1TvzcGRzQym5mlZZH8lhQ",
+      "title": "갈때까지간놈",
+      "thumbnail": "https://yt3.ggpht.com/cgJAt5cFePVcqZi4nawVtCxftfjRQ9mmnJ_uFFnUUR8WrgpQOEr_N9Fpmz-4opaD2nXWTrIK=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCKA_6r3CWC76x_EaFO6jsPA",
+      "url": "https://www.youtube.com/channel/UCKA_6r3CWC76x_EaFO6jsPA",
+      "title": "만개의레시피 10K Recipe",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLSPSKqFNqDj0r2CGJ5lcjqbjaDgw_hwqJH35XusPg=s88-c-k-c0x00ffffff-no-rj"
+    }
+  ]
+}

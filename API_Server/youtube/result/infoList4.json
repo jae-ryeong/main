@@ -1,0 +1,84 @@
+{
+  "videos": [
+    {
+      "query": "야채 주스",
+      "url": "https://www.youtube.com/watch?v=JZNUg0eKOSw",
+      "channelId": "UCxLbelgYEEb33n1ntClWWGw",
+      "title": "야채주스 먹을래?",
+      "thumbnail": "https://i.ytimg.com/vi/JZNUg0eKOSw/default.jpg"
+    },
+    {
+      "query": "야채 주스",
+      "url": "https://www.youtube.com/watch?v=yuNZX7gQUiU",
+      "channelId": "UCNL9dSARMORI7vadB7iQaPw",
+      "title": "야채주스~아주 짧아요!!",
+      "thumbnail": "https://i.ytimg.com/vi/yuNZX7gQUiU/default.jpg"
+    },
+    {
+      "query": "야채 주스",
+      "url": "https://www.youtube.com/watch?v=niC1J5gcikw",
+      "channelId": "UCOY7TJLOBE_mII9dfldSuUA",
+      "title": "과일 및 야채 주스 추출기 저소음 모터 주스 컵 청소 브러시 주방 도구 HWC 슬로우 쥬서 콜드 프레스 기계",
+      "thumbnail": "https://i.ytimg.com/vi/niC1J5gcikw/default.jpg"
+    },
+    {
+      "query": "견과류",
+      "url": "https://www.youtube.com/watch?v=r8WP3ygaykM",
+      "channelId": "UCx4KvlznXVmh1rnCACxtnjA",
+      "title": "건강한 견과류와 상콤한 베리가 가득, 신발원 월병 mooncake #Shorts",
+      "thumbnail": "https://i.ytimg.com/vi/r8WP3ygaykM/default.jpg"
+    },
+    {
+      "query": "견과류",
+      "url": "https://www.youtube.com/watch?v=glx66RdyXC0",
+      "channelId": "UCs7_DmeDzs0C8HkwucWRNTA",
+      "title": "Amazing Jungle Nuts Harvesting - Amazon Nuts processing in Factory",
+      "thumbnail": "https://i.ytimg.com/vi/glx66RdyXC0/default.jpg"
+    },
+    {
+      "query": "견과류",
+      "url": "https://www.youtube.com/watch?v=5vVMRnGK5bU",
+      "channelId": "UCUsfRCHj5U1wAJEJiQpPLPw",
+      "title": "다이어트 중 견과류 먹어야 할까, 먹지 말아야 할까?",
+      "thumbnail": "https://i.ytimg.com/vi/5vVMRnGK5bU/default.jpg"
+    }
+  ],
+  "channels": [
+    {
+      "id": "UCOY7TJLOBE_mII9dfldSuUA",
+      "url": "https://www.youtube.com/channel/UCOY7TJLOBE_mII9dfldSuUA",
+      "title": "KotoSRGatou",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLRxQZR2dH4PJxLmcsa7iS0iCLQf3i2KKiguTv9q-WSRFWWaNrKVSrw0RQhmIIam=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCxLbelgYEEb33n1ntClWWGw",
+      "url": "https://www.youtube.com/channel/UCxLbelgYEEb33n1ntClWWGw",
+      "title": "행복한 berry٩ ˊᗜˋ",
+      "thumbnail": "https://yt3.ggpht.com/HJ94TJN9fMoToCgWLe7OhmXTp9b6E-_uTEKTm7jZaNYOgkMf9177vlkNeeEecGSBMLj5Pq5Uusw=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCNL9dSARMORI7vadB7iQaPw",
+      "url": "https://www.youtube.com/channel/UCNL9dSARMORI7vadB7iQaPw",
+      "title": "예쁘링💍",
+      "thumbnail": "https://yt3.ggpht.com/VXxHrd0yZ-k1okQ4xG6vBC-f4knwJGIN3y7F4JcEZkCzW5tctkiSBQRgK_udaPCHb0UN6Fvunw=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCs7_DmeDzs0C8HkwucWRNTA",
+      "url": "https://www.youtube.com/channel/UCs7_DmeDzs0C8HkwucWRNTA",
+      "title": "Noal Farm",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLQZ0YR_SCN9F89iRqX9MzbJhSpFTEvdryWsmuw4=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCx4KvlznXVmh1rnCACxtnjA",
+      "url": "https://www.youtube.com/channel/UCx4KvlznXVmh1rnCACxtnjA",
+      "title": "신발원TV shinfayuenTV",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLRSsPIkuUJB5qUOLFYhBvsjrRcko1phAMt6deKi6w=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCUsfRCHj5U1wAJEJiQpPLPw",
+      "url": "https://www.youtube.com/channel/UCUsfRCHj5U1wAJEJiQpPLPw",
+      "title": "제이제이살롱드핏",
+      "thumbnail": "https://yt3.ggpht.com/P8UQTJJNMbXW1oIP343_y1V0vJjyATZV0Elws4S8VEO1HKvUsiQsYJp1qMxPICqJd0G9LVKI=s88-c-k-c0x00ffffff-no-rj"
+    }
+  ]
+}
