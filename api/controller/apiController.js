@@ -77,7 +77,7 @@ module.exports = {
   
         objs.push({id, url, title, thumbnail});
       })
-      console.log(objs.length);
+      
       return objs;
     } catch (err) {
       console.error(`Error in channels:\n${err.message}`)
