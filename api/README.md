@@ -1,12 +1,24 @@
 # **유튜브 동영상 데이터 정보 요청 API**
 
 
-## **API 작성자**
+## **설명**
+[**`Blog`**]()  
+**`이진형`**(bya2, byaa1972@gmail.com)
+
+## **고려 사항**
 ```
-이진형(bya2, byaa1972@gmail.com)
+스코프 범위 고려해서 코드 작성,
+
+데이터 베이스 동작 최소화,
+
+코드는 최대한 간결하게,
+
+가독성을 위해 변수, 함수 이름에 규칙성 부여,
+
+기능 별로 함수 분리,
 ```
 
-## **Plan**
+## **개발 계획**
 ```
 1. 시간 별 자동 실행 (연계)
    - Linux
@@ -23,24 +35,60 @@
 (완료) 비디오, 채널 정보 요청.
 ```
 
-## **Progress**
+## **진행 상황**
 
-'검색된 비디오 및 채널 정보' 요청
+### **화면**
+
+#### **`터미널`**
+
+`결과`(자세한 내용은 밑에 실행 결과 참조)
+
+![image](https://user-images.githubusercontent.com/61080445/133105463-45d51997-054a-475a-b3fe-7b2b3e4174f4.png)
+
+![image](https://user-images.githubusercontent.com/61080445/133105281-fc314fb9-cdd5-4d1b-b09b-b2844da1977b.png)
+
+`중복 시`
+![image](https://user-images.githubusercontent.com/61080445/133105672-f072b544-7069-4049-b4e4-cd544931dc53.png)
+
+#### **`MongoDB Compass`**
+
+### **실행**
+
+`- Content`
 ```
-./src/apiController
-./src/apiController/index.js (실행)
-./src/apiController.getQueries (입력)
-./src/apiController/infoList.json (결과)
+0. 검색어 정리
+1. 유튜브 API를 이용하여 검색어를 통해 검색 결과 요청
+2. 검색된 비디오 및 채널 정보 요청
+3. 데이터베이스에 정보 저장
 ```
+
+`- Command`
 ```sh
-Mohaemookji/main> npm run api
-```
-```js
-// 결과
-
+$ npm run api
 ```
 
-## **TEST**
+`- Files & Functions`
+```
+./db.js
+./models/
+./api/controller/apiController
+./api/youtube/index.js (실행)
+```
+
+[`- Result0↓`](blob/main/api/youtube/result/infoList0.json),
+[`Result1↓`](blob/main/api/youtube/result/infoList1.json),
+[`Result2↓`](blob/main/api/youtube/result/infoList2.json),
+[`Result3↓`](blob/main/api/youtube/result/infoList3.json),
+[`Result4↓`](blob/main/api/youtube/result/infoList4.json)
+```
+./api/youtube/result/infoList0.json
+./api/youtube/result/infoList1.json
+./api/youtube/result/infoList2.json
+./api/youtube/result/infoList3.json
+./api/youtube/result/infoList4.json
+```
+
+#### **TEST**
 '검색된 비디오 및 채널 정보' 요청
 ```
 ./src/apiController
