@@ -113,14 +113,14 @@ async function fnRequest (_youtube) {
 
     videos.forEach((el, j) => {
       const vDoc = new vModels[i](el);
-      vDoc.save(err => err ? console.error(err) : process.stdout.write(`${j} `));
+      vDoc.save(err => err ? console.error(err.message) : process.stdout.write(`${j} `));
     });
 
     process.stdout.write('\n');
 
     channels.forEach((el, j) => {
       const cDoc = new cModel(el);
-      cDoc.save(err => err ? console.error(err) : process.stdout.write(`${j} `));
+      cDoc.save(err => err ? console.error(err.message) : process.stdout.write(`${j} `));
     });
   }
 })();
