@@ -1,4 +1,4 @@
-# **유튜브 동영상 데이터 정보 요청 API**
+# **유튜브 동영상 및 채널 정보 요청 API**
 
 
 ## **설명**
@@ -51,6 +51,28 @@
 ![image](https://user-images.githubusercontent.com/61080445/133105672-f072b544-7069-4049-b4e4-cd544931dc53.png)
 
 #### **`MongoDB Compass`**
+
+`Collection`
+![image](https://user-images.githubusercontent.com/61080445/133109438-4fb22c84-ac0e-436c-bd28-aa8ba73d84fe.png)
+
+`Documents`  
+Channel
+![image](https://user-images.githubusercontent.com/61080445/133109655-1783465d-b882-4dc5-93df-fa5fd930becf.png)
+
+Diet
+![image](https://user-images.githubusercontent.com/61080445/133109736-c1b0e1d1-967d-4f97-8862-856d11140ab8.png)
+
+Meal
+![image](https://user-images.githubusercontent.com/61080445/133109844-b1ce35f8-be37-416a-87d6-c9dd107283bc.png)
+
+Snack
+![image](https://user-images.githubusercontent.com/61080445/133110108-51c5e868-9136-4470-814a-02e9608a7359.png)
+
+Sports
+![image](https://user-images.githubusercontent.com/61080445/133110221-cc35ec16-9e5f-419b-bdd6-b147016c9203.png)
+
+Wellbeing
+![image](https://user-images.githubusercontent.com/61080445/133110366-702847a8-b723-42c1-a069-b88aa8d50627.png)
 
 ### **실행**
 
