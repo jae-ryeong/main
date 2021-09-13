@@ -98,11 +98,16 @@ $ npm run api
 ./api/youtube/index.js (실행)
 ```
 
-[`- Result0↓`](blob/main/api/youtube/result/infoList0.json),
-[`Result1↓`](blob/main/api/youtube/result/infoList1.json),
-[`Result2↓`](blob/main/api/youtube/result/infoList2.json),
-[`Result3↓`](blob/main/api/youtube/result/infoList3.json),
-[`Result4↓`](blob/main/api/youtube/result/infoList4.json)
+[`- Queries↓`](https://github.com/KNUT-Mohaemookji/mohaemookji/blob/main/api/youtube/result/cookingElements.json)
+```
+./api/youtube/result/cookingElements.json
+```
+
+[`- Result0↓`](https://github.com/KNUT-Mohaemookji/mohaemookji/blob/main/api/youtube/result/infoList0.json),
+[`Result1↓`](https://github.com/KNUT-Mohaemookji/mohaemookji/blob/main/api/youtube/result/infoList1.json),
+[`Result2↓`](https://github.com/KNUT-Mohaemookji/mohaemookji/blob/main/api/youtube/result/infoList2.json),
+[`Result3↓`](https://github.com/KNUT-Mohaemookji/mohaemookji/blob/main/api/youtube/result/infoList3.json),
+[`Result4↓`](https://github.com/KNUT-Mohaemookji/mohaemookji/blob/main/api/youtube/result/infoList4.json)
 ```
 ./api/youtube/result/infoList0.json
 ./api/youtube/result/infoList1.json
