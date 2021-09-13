@@ -110,8 +110,8 @@ $ npm run api
 ./api/youtube/result/infoList4.json
 ```
 
-#### **TEST**
-'검색된 비디오 및 채널 정보' 요청
+#### **테스트**
+`'검색된 비디오 및 채널 정보' 요청`
 ```
 ./src/apiController
 ./src/apiController/index.js (실행)
@@ -143,7 +143,7 @@ channels:
 ]
 ```
 
-'검색어' 통합 및 중복 제거
+`'검색어' 통합 및 중복 제거`
 ```
 ./src/apiController.getQueries(list)
 ./src/TEST/index.js (실행)
