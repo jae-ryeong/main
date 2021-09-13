@@ -1,6 +1,27 @@
 {
   "videos": [
     {
+      "query": "볶음",
+      "url": "https://www.youtube.com/watch?v=j01MLG8_lmg",
+      "channelId": "UCflzC_xexrk306RhRgUzq3A",
+      "title": "Mukbang 컬러보틀캔디 젤리  Fire Spicy Noodle 불닭볶음면 FOOD CHALLENGE 짜장 BBororo TTeokbokki 컬러먹방 챌린지 Chocolate",
+      "thumbnail": "https://i.ytimg.com/vi/j01MLG8_lmg/default_live.jpg"
+    },
+    {
+      "query": "볶음",
+      "url": "https://www.youtube.com/watch?v=fZWYa45NhP0",
+      "channelId": "UCRdqFoTqXc7RJKVTnLkvaug",
+      "title": "아이들이 젤 좋아하는 어묵볶음🍢 자꾸자꾸 손이가는 밥도둑 ep1",
+      "thumbnail": "https://i.ytimg.com/vi/fZWYa45NhP0/default.jpg"
+    },
+    {
+      "query": "볶음",
+      "url": "https://www.youtube.com/watch?v=hlUMdsGcCYM",
+      "channelId": "UC1lhfen7Gq-yDoNYD2Dj-_w",
+      "title": "SUB) 자취생 브이로그 l 핫한🔥신라면 볶음면 더 맛있게 끓여 먹기 l 쇼파 있는데 또 사서 텅장되버린 자취생 VLOG",
+      "thumbnail": "https://i.ytimg.com/vi/hlUMdsGcCYM/default.jpg"
+    },
+    {
       "query": "오징어 볶음",
       "url": "https://www.youtube.com/watch?v=UTitHlFZi7Y",
       "channelId": "UCUUvRbclub_aoeVlxN5EZGg",
@@ -20,30 +41,27 @@
       "channelId": "UCg1TvzcGRzQym5mlZZH8lhQ",
       "title": "오징어볶음 먹으면서 2천가즈아",
       "thumbnail": "https://i.ytimg.com/vi/GOVQF4koo6Y/default.jpg"
-    },
-    {
-      "query": "만개의 레시피",
-      "url": "https://www.youtube.com/watch?v=zyzvmpuGmJQ",
-      "channelId": "UCKA_6r3CWC76x_EaFO6jsPA",
-      "title": "오이고추의 변신은 무죄 고추파퍼베이컨말이 | Bacon wrapped pepper popper",
-      "thumbnail": "https://i.ytimg.com/vi/zyzvmpuGmJQ/default.jpg"
-    },
-    {
-      "query": "만개의 레시피",
-      "url": "https://www.youtube.com/watch?v=2YHRX8hqRlU",
-      "channelId": "UCKA_6r3CWC76x_EaFO6jsPA",
-      "title": "간단하게 만드는 오믈렛컵&피자컵 | Omelet cup & pizza cup",
-      "thumbnail": "https://i.ytimg.com/vi/2YHRX8hqRlU/default.jpg"
-    },
-    {
-      "query": "만개의 레시피",
-      "url": "https://www.youtube.com/watch?v=LRbdIHRhhC8",
-      "channelId": "UCKA_6r3CWC76x_EaFO6jsPA",
-      "title": "이제 초코볼도 내가 원하는 사이즈로! | Big chocolate ball",
-      "thumbnail": "https://i.ytimg.com/vi/LRbdIHRhhC8/default.jpg"
     }
   ],
   "channels": [
+    {
+      "id": "UCflzC_xexrk306RhRgUzq3A",
+      "url": "https://www.youtube.com/channel/UCflzC_xexrk306RhRgUzq3A",
+      "title": "MUKKABI먹깨비",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLR5GxMfAEQeeHuxP2O3hfbPn8rjstJuXLTBYGg0=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UCRdqFoTqXc7RJKVTnLkvaug",
+      "url": "https://www.youtube.com/channel/UCRdqFoTqXc7RJKVTnLkvaug",
+      "title": "행가주 : 행복이 가득한 주방",
+      "thumbnail": "https://yt3.ggpht.com/LNOXnm07IGqRQZ9afqaDTxZqPExdhCfE1_BClgLrEbnjWkaEjR5Yu2AtV2WLeHITkvqxMYpWoaY=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "UC1lhfen7Gq-yDoNYD2Dj-_w",
+      "url": "https://www.youtube.com/channel/UC1lhfen7Gq-yDoNYD2Dj-_w",
+      "title": "Mayroom 메이Vlog",
+      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLTfbdd5fc_V7KIb4fHj4OLAEcb9Tr5wgQ5SFn4n=s88-c-k-c0x00ffffff-no-rj"
+    },
     {
       "id": "UCUUvRbclub_aoeVlxN5EZGg",
       "url": "https://www.youtube.com/channel/UCUUvRbclub_aoeVlxN5EZGg",
@@ -61,12 +79,6 @@
       "url": "https://www.youtube.com/channel/UCg1TvzcGRzQym5mlZZH8lhQ",
       "title": "갈때까지간놈",
       "thumbnail": "https://yt3.ggpht.com/cgJAt5cFePVcqZi4nawVtCxftfjRQ9mmnJ_uFFnUUR8WrgpQOEr_N9Fpmz-4opaD2nXWTrIK=s88-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "id": "UCKA_6r3CWC76x_EaFO6jsPA",
-      "url": "https://www.youtube.com/channel/UCKA_6r3CWC76x_EaFO6jsPA",
-      "title": "만개의레시피 10K Recipe",
-      "thumbnail": "https://yt3.ggpht.com/ytc/AKedOLSPSKqFNqDj0r2CGJ5lcjqbjaDgw_hwqJH35XusPg=s88-c-k-c0x00ffffff-no-rj"
     }
   ]
 }
