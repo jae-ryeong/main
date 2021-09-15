@@ -3,12 +3,12 @@ const express = require('express')
 const app = express()
 const fs = require('fs')
 const db = require('./db_connection')
-const serverOption = {
-    key: fs.readFileSync('/usr/mohaemookji/private.key'),
-    cert: fs.readFileSync('/usr/mohaemookji/certificate.crt'),
-}
+// const serverOption = {
+//     key: fs.readFileSync('/usr/mohaemookji/private.key'),
+//     cert: fs.readFileSync('/usr/mohaemookji/certificate.crt'),
+// }
 
-https.createServer(serverOption, app).listen(17260, () => {
+https.createServer(app).listen(17260, () => {
     console.log(`Server Running`)
 
     app.use(express.static('Pages'))
