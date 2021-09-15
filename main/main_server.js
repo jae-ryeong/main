@@ -4,7 +4,7 @@ const app = express()
 const fs = require('fs')
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://localhost:27017/mohaemookji', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://10.0.0.13:24', { useNewUrlParser: true })
 const db = mongoose.connection
 
 db.on('error', err => console.error(`Error on connection:\n${err.message}`));
@@ -19,16 +19,16 @@ const Data_Schema = new mongoose.Schema({
 const Noodle_Model = mongoose.model('noodle', Data_Schema)
 
 // [edit] for linux
-const serverOption = {
-    key: fs.readFileSync('/usr/mohaemookji/private.key'),
-    cert: fs.readFileSync('/usr/mohaemookji/certificate.crt'),
-}
+// const serverOption = {
+//     key: fs.readFileSync('/usr/mohaemookji/private.key'),
+//     cert: fs.readFileSync('/usr/mohaemookji/certificate.crt'),
+// }
 
 // [edit] for windows
-// const serverOption = {
-//     key: fs.readFileSync('D:/mh-certi/private.key'),
-//     cert: fs.readFileSync('D:/mh-certi/certificate.crt'),
-// }
+const serverOption = {
+    key: fs.readFileSync('D:/mh-certi/private.key'),
+    cert: fs.readFileSync('D:/mh-certi/certificate.crt'),
+}
 
 https.createServer(serverOption ,app).listen(17260, () => {
     console.log(`Server Running`)
