@@ -3,14 +3,20 @@ const express = require('express')
 const app = express()
 const fs = require('fs')
 const db = require('./db_connection')
+global.dummy = ''
+
 // const serverOption = {
 //     key: fs.readFileSync('/usr/mohaemookji/private.key'),
 //     cert: fs.readFileSync('/usr/mohaemookji/certificate.crt'),
 // }
 
-https.createServer(app).listen(17260, () => {
-    console.log(`Server Running`)
+const serverOption = {
+    key: fs.readFileSync('D:/mh-certi/private.key'),
+    cert: fs.readFileSync('D:/mh-certi/certificate.crt'),
+}
 
+https.createServer(serverOption ,app).listen(17260, () => {
+    console.log(`Server Running`)
     app.use(express.static('Pages'))
 
     app.get('/', (req, res) => {
@@ -28,25 +34,22 @@ https.createServer(app).listen(17260, () => {
     })
 
     app.get('/add_data', (req, res) => {
-        for (var i=0; i<8; i++){
-            const title_lnk = Math.random().toString(36).slice(2)
-            const thumbnail_lnk = Math.random().toString(36).slice(2)
-            const link_lnk = Math.random().toString(36).slice(2)
+        db.add_data()
+        res.send('add_data!!!', )
+    })
 
-            db.create(title_lnk, thumbnail_lnk, link_lnk);
-            console.log(`add_data ${i}`)
-        }
+    app.get('/find_all_data', (req, res) => {
+        var dummy = db.find_data()
+        res.send(`find_all_data = ${dummy}`)
     })
 
     app.get('/delete_data', (req, res) => {
         db.delete_all()
-    })
-
-    app.get('/find_all_data', (req, res) => {
-        db.find()
+        res.send('delete_all!!!')
     })
 
     app.get('/random_select', (req, res) => {
         db.random_select()
+        res.send('random_select!!!')
     })
 })
