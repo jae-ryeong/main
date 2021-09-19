@@ -4,7 +4,7 @@ const app = express()
 const fs = require('fs')
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://mh-db-server:27017', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://db:27017', { useNewUrlParser: true })
 const db = mongoose.connection
 
 db.on('error', err => console.error(`Error on connection:\n${err.message}`));
