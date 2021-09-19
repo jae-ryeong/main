@@ -91,8 +91,8 @@ https.createServer(serverOption ,app).listen(17260, () => {
                     }
                     else {
                         console.log(`\nduple!! ${i}\n\n`)
+                        duple.pop()
                         i--
-                        if (i<0) break
                     }
                 }
             }
