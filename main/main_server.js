@@ -61,13 +61,17 @@ https.createServer(serverOption ,app).listen(17260, () => {
     })
 
     app.get('/find_all_data', (req, res) => {
-        let dummy = Noodle_Model.find((err, datas) => {
-            if (err) throw err
-            else {
-                let param = datas.map(x => ({title : x.title, thumbnail : x.thumbnail, link: x.link}))
-                res.send(`find_all_data = ${JSON.stringify(param)}`)
-            }
-        })
+        try {
+            let dummy = Noodle_Model.find((err, datas) => {
+                if (err) throw err
+                else {
+                    let param = datas.map(x => ({title : x.title, thumbnail : x.thumbnail, link: x.link}))
+                    res.send(`find_all_data = ${JSON.stringify(param)}`)
+                }
+            })
+        } catch (error) {
+            res.send('do not find data!!')
+        }
     })
 
     app.get('/delete_data', (req, res) => {
@@ -76,28 +80,32 @@ https.createServer(serverOption ,app).listen(17260, () => {
     })
 
     app.get('/random_select', (req, res) => {
-        const duple = []
-        const DB_length = Noodle_Model.find((err,datas) => {
-            if (err) throw err
-            else {
-                for (var i=0; i<9; i++){
-                    const random_index = Math.floor(Math.random()*datas.length);
-                    if (duple.includes(random_index) == false){
-                        console.log(i+1,'번 영상\n',
-                            'title :', datas[random_index].title, 
-                            '\nthumbnail :', datas[random_index].thumbnail, 
-                            '\nlink :', datas[random_index].link,'\n')
-                        duple.push(random_index)
-                    }
-                    else {
-                        console.log(`\nduple!! ${i}\n\n`)
-                        duple.pop()
-                        i--
+        try {
+            const duple = []
+            const DB_length = Noodle_Model.find((err,datas) => {
+                if (err) throw err
+                else {
+                    for (var i=0; i<9; i++){
+                        const random_index = Math.floor(Math.random()*datas.length);
+                        if (duple.includes(random_index) == false){
+                            console.log(i+1,'번 영상\n',
+                                'title :', datas[random_index].title, 
+                                '\nthumbnail :', datas[random_index].thumbnail, 
+                                '\nlink :', datas[random_index].link,'\n')
+                            duple.push(random_index)
+                        }
+                        else {
+                            console.log(`\nduple!! ${i}\n\n`)
+                            duple.pop()
+                            i--
+                        }
                     }
                 }
-            }
-            console.log(duple)
-            res.send(`random_select!!! ${JSON.stringify(duple)}`)
-        })
+                console.log(duple)
+                res.send(`random_select!!! ${JSON.stringify(duple)}`)
+            })
+        } catch (error) {
+            res.send('do not find random data!!')
+        }
     })
 })
