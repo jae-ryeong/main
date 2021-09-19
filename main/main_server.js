@@ -90,7 +90,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
                         duple.push(random_index)
                     }
                     else {
-                        console.log('\nduple!!\n\n')
+                        console.log(`\nduple!! ${i}\n\n`)
                         i--
                         if (i<0) break
                     }
