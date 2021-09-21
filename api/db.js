@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // 데이터 베이스 연결
-mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://db:27106/mohaemookji', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://db:27261/mohaemookji', { useNewUrlParser: true, useUnifiedTopology: true })
 
 // 이벤트 이미터 생성
 const db = mongoose.connection
