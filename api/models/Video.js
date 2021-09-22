@@ -10,6 +10,11 @@ module.exports = mongoose.model('Video', new mongoose.Schema({
     type: String,
     required: true,
   },
+  id: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   url: {
     type: String,
     required: true,
