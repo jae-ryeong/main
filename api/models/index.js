@@ -1,9 +1,10 @@
 module.exports = {
+  video: {
+    Meal: require('./Meal'),
+    Snack: require('./Snack'),
+    Sports: require('./Sports'),
+    Diet: require('./Diet'),
+    Wellbeing: require('./Wellbeing'),
+  },
   Channel: require('./Channel'),
-  Diet: require('./Diet'),
-  Meal: require('./Meal'),
-  Snack: require('./Snack'),
-  Sports: require('./Sports'),
-  Wellbeing: require('./Wellbeing'),
-  Video: require('./Video'), // using test purpose
 }
