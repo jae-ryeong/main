@@ -40,15 +40,15 @@ module.exports = {
       const objs = [];
 
       items.map(item => {
-        const { id, snippet, statistics } = item;
+        const { id, snippet } = item;
         const url = `https://www.youtube.com/watch?v=${id}`;
   
         const { channelId, title, thumbnails } = snippet;
         const thumbnail = thumbnails.default.url;
   
-        objs.push({ query: _q, url, channelId, title, thumbnail });
-      })
-      console.log(objs.length);
+        objs.push({ query: _q, id, url, channelId, title, thumbnail });
+      });
+
       return objs;
     } catch (err) {
       console.error(`Error in videoData:\n${err.message}`);
