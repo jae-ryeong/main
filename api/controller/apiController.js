@@ -17,12 +17,12 @@ const responseHandle = response => {
 }
 
 module.exports = {
-  searchQuery: async (youtube, q, topicId=null) => {
-    options.search.q = q;
-    options.search.topicId = topicId;
+  fnSearchQuery: async (_youtube, _q, _topicId=null) => {
+    options.search.q = _q;
+    options.search.topicId = _topicId;
 
     try {
-      const response = await youtube.search.list(options.search);
+      const response = await _youtube.search.list(options.search);
       const items = responseHandle(response);
       return items;
     } catch (err) {
@@ -30,11 +30,11 @@ module.exports = {
     }
   },
 
-  videoData: async (youtube, query, _ids) => {
-    options.videos.id = _ids;
+  fnVideoData: async (_youtube, _q, _vIds) => {
+    options.videos.id = _vIds;
 
     try {
-      const response = await youtube.videos.list(options.videos);
+      const response = await _youtube.videos.list(options.videos);
       const items = responseHandle(response);
 
       const objs = [];
@@ -43,12 +43,10 @@ module.exports = {
         const { id, snippet, statistics } = item;
         const url = `https://www.youtube.com/watch?v=${id}`;
   
-        const { channelId, title, description, thumbnails } = snippet;
+        const { channelId, title, thumbnails } = snippet;
         const thumbnail = thumbnails.default.url;
   
-        const { viewCount, likeCount, commentCount } = statistics;
-  
-        objs.push({ query, url, channelId, title, thumbnail });
+        objs.push({ query: _q, url, channelId, title, thumbnail });
       })
       console.log(objs.length);
       return objs;
@@ -57,23 +55,21 @@ module.exports = {
     }
   },
 
-  channelData: async (youtube, _ids) => {
+  fnChannelData: async (_youtube, _ids) => {
     options.channels.id = _ids
 
     try {
-      const response = await youtube.channels.list(options.channels);
+      const response = await _youtube.channels.list(options.channels);
       const items = responseHandle(response);
 
       const objs = [];
 
       items.map(item => {
-        const { id, snippet, statistics } = item;
+        const { id, snippet } = item;
         const url = `https://www.youtube.com/channel/${id}`;
   
         const { title, thumbnails } = snippet;
         const thumbnail = thumbnails.default.url;
-  
-        const { viewCount, commentCount, subscriberCount, videoCount } = statistics;
   
         objs.push({id, url, title, thumbnail});
       })
@@ -84,7 +80,7 @@ module.exports = {
     }
   },
 
-  searchChannels: async youtube => {
+  fnSearchChannels: async youtube => {
     options.searchChannels.categoryId = ''
 
     try {
@@ -94,5 +90,5 @@ module.exports = {
     } catch (err) {
       console.error(`Error in searchChannels:\n${err.message}`)
     }
-  }
+  },
 }
