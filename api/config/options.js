@@ -18,7 +18,8 @@ module.exports = {
     part: 'snippet, statistics',
     // id: 'GqxqRe6gPio, M5fDS__v1Z8', // 테스트를 위한 기본 query
     // maxResults: 5,
-    fields: 'items(id, snippet(channelId, title, description, thumbnails), statistics(viewCount, likeCount, commentCount))',
+    fields: 'items(id, snippet(channelId, title, thumbnails))',
+    // fields: 'items(id, snippet(channelId, title, description, thumbnails), statistics(viewCount, likeCount, commentCount))',
   },
 
   channels: {
