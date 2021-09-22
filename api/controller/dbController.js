@@ -4,13 +4,15 @@ const dbController = {
   vModels: Object.values(models.video),
   cModel: models.Channel,
 
-  fnSaveVideos: async function (_nArrVideos) {
+  fnSaveVideos: async function (_nArrObjVData) {
     try {
       process.stdout.write('Saved video index: '); // Temp
-      for (const arrVideos of _nArrVideos) {
-        await Promise.all(_arrVideos.map((el, i) => {
-          const videoDoc = new this.vModels(el);
-          videoDoc.save(err => err ? console.error(err.message) : process.stdout.write(`${i} `));
+      const nArrObjLen = _nArrObjVData.length;
+      for (let i=0; i<nArrObjLen; ++i) {
+        const arrObjVData = _nArrObjVData[i];
+        await Promise.all(arrObjVData.map((obj, j) => {
+          const videoDoc = new this.vModels[i](obj);
+          videoDoc.save(err => err ? console.error(err.message) : process.stdout.write(`${j} `));
         }));
       }
     } catch (err) {
@@ -18,11 +20,11 @@ const dbController = {
     }
   },
 
-  fnSaveChannels: async function (_arrChnnaels) {
+  fnSaveChannels: async function (_arrObjCData) {
     try {
       process.stdout.write('Saved channel index: '); // Temp
-      await Promise.all(_arrChannels.map((el, i) => {
-        const channelDoc = new this.cModel(el);
+      await Promise.all(_arrObjCData.map((obj, i) => {
+        const channelDoc = new this.cModel(obj);
         channelDoc.save(err => err ? console.error(err.message) : process.stdout.write(`${i} `));
       }));
     } catch (err) {
