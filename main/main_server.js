@@ -7,8 +7,8 @@ const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://db:27017/mohaemookji', { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 
-db.on('error', err => console.error(`Error on connection:\n${err.message}`));
-db.once('open', () => console.log('Database connected.'));
+db.on('error', err => console.error(`Error on connection:\n${err.message}`))
+db.once('open', () => console.log('Database connected.'))
 
 const Data_Schema = new mongoose.Schema({
     title : {type : String, required: true},
@@ -75,7 +75,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
     })
 
     app.get('/delete_data', (req, res) => {
-        Noodle_Model.deleteMany({}, (err) => { if (err) throw err });
+        Noodle_Model.deleteMany({}, (err) => { if (err) throw err })
         res.send('delete_all!!!')
     })
 
@@ -86,7 +86,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
                 if (err) throw err
                 else {
                     for (var i=0; i<9; i++){
-                        const random_index = Math.floor(Math.random()*datas.length);
+                        const random_index = Math.floor(Math.random()*datas.length)
                         if (duple.includes(random_index) == false){
                             console.log(i+1,'번 영상\n',
                                 'title :', datas[random_index].title, 
