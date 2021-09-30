@@ -76,7 +76,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
 
     app.get('/delete_data', (req, res) => {
         Noodle_Model.deleteMany({}, (err) => { if (err) throw err })
-        res.send('delete_all!!!')
+        res.send('delete_all!!!!')
     })
 
     app.get('/random_select', (req, res) => {
