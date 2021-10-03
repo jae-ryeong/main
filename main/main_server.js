@@ -105,7 +105,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
                 res.send(`random_select!!! ${JSON.stringify(duple)}`)
             })
         } catch (error) {
-            res.send('do not find random data!!')
+            res.send('do not find random data!!!')
         }
     })
 })
