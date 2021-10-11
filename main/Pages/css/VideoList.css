@@ -135,35 +135,38 @@ section .foods{
 /* 썸네일 div */
 section .Container{
     position: relative;
-    height: 1200px; margin-top: 100px;
-    margin: auto;
+    width: auto; height: 1200px; margin-top: 100px;
+    padding-right: 100px; padding-left: 100px;
+    
     justify-content: center;
-    text-align: center;
+     /* text-align: center; */ 
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
+    
 }
 .Video{
     text-align: center;
-    margin-right: 150px;
-    margin-top: 70px;
-    width: 200px; height: 100px;
+    margin-left: 60px; margin-right: 60px;
+    
+    width: 360px; height: 250px;
     box-sizing:border-box;
 }
 .thumbnail{
-    position: relative;
+    /* position: relative; */
+    margin-top: 100;
 }
 .thumbnail img{
-    position: relative;
-    z-index: 1;
-    width: 300px;
+    /* position: relative;
+    z-index: 1; */
+    width: 360px; height: 202px;
     border-radius: 10px 10px;
-    cursor:pointer;
+    cursor:pointer; 
 }
 .Title{
-    width: 150%;
-    font-size: 15px;
-    text-align: center;
+    font-size: 16px;
+    /* width: 150%;
+    text-align: center; */
 }
 /* 영상 정보 */
 .backImg{
@@ -173,8 +176,8 @@ section .Container{
     opacity: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
-    width: 150%;
-    height: 200px;
+    width: 360px;
+    height: 202px;
     transition: .3s;
 }
 .backImg .text{
@@ -186,6 +189,7 @@ section .Container{
 .backImg:hover{
     opacity: 1;
 }
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
