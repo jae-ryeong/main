@@ -20,8 +20,8 @@ const Noodle_Model = mongoose.model('noodle', Data_Schema)
 
 // [edit] for linux
 const serverOption = {
-    key: fs.readFileSync('/usr/mohaemookji/private.key'),
-    cert: fs.readFileSync('/usr/mohaemookji/certificate.crt'),
+    key: fs.readFileSync('/usr/local/mh-ssl/private.key'),
+    cert: fs.readFileSync('/usr/local/mh-ssl/certificate.crt'),
 }
 
 // [edit] for windows
