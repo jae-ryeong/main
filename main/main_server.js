@@ -20,8 +20,8 @@ const Noodle_Model = mongoose.model('noodle', Data_Schema)
 
 // [edit] for linux
 const serverOption = {
-    key: fs.readFileSync('/usr/local/mh-ssl/private.key'),
-    cert: fs.readFileSync('/usr/local/mh-ssl/certificate.crt'),
+    key: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/private.key'),
+    cert: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/certificate.crt'),
 }
 
 // [edit] for windows
@@ -42,7 +42,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
     })
 
     app.get('/VideoList.html', (req, res) => {
-        fs.readFile('/usr/mohaemookji/main/Pages/html/VideoList.html', (err, data)=>{
+        fs.readFile('./Pages/html/VideoList.html', (err, data)=>{
         if (err) throw err
         res.end(data,'utf-8')
         })
