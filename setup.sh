@@ -5,5 +5,7 @@ docker build --tag 2mukee/mh_main_image:latest /var/lib/jenkins/workspace/mohaem
 docker build --tag 2mukee/mh_api_image:latest /var/lib/jenkins/workspace/mohaemookji/api && docker push 2mukee/mh_api_image:latest
 docker build --tag 2mukee/mh_db_image:latest /var/lib/jenkins/workspace/mohaemookji && docker push 2mukee/mh_db_image:latest
 docker stack rm mh-stack
-sleep 10s
+sleep 30s
 docker stack deploy -c /var/lib/jenkins/workspace/mohaemookji/mh-compose.yml mh-stack
+sleep 20s
+docker service rm mh-stack_api

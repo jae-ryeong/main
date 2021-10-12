@@ -8,9 +8,6 @@ const models = require('../models');
 const apiController = require('../controller/apiController');
 const dbController = require('../controller/dbController');
 
-db.on('error', err => console.error(`Error on connection:\n${err.message}`))
-db.once('open', () => console.log('Database connected.'))
-
 const fnIntergration = (_nObjArrEls) => {
   try {
     const objArrEls = Object.values(_nObjArrEls).reduce((obj, t) => {
