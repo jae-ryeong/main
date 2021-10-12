@@ -4,4 +4,5 @@ bash /var/lib/jenkins/workspace/login.sh
 docker build --tag 2mukee/mh_main_image:latest /var/lib/jenkins/workspace/mohaemookji/main && docker push 2mukee/mh_main_image:latest
 docker build --tag 2mukee/mh_api_image:latest /var/lib/jenkins/workspace/mohaemookji/api && docker push 2mukee/mh_api_image:latest
 docker build --tag 2mukee/mh_db_image:latest /var/lib/jenkins/workspace/mohaemookji && docker push 2mukee/mh_db_image:latest
+docker stack rm mh-stack
 docker stack deploy -c /var/lib/jenkins/workspace/mohaemookji/mh-compose.yml mh-stack
