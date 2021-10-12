@@ -24,4 +24,4 @@ services:
   environment:
    - TZ=Asia/Seoul
   env_file:
-   - ./.env
+   - ./api/mh.env
