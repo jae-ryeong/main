@@ -1,8 +1,7 @@
 # Main Container
 FROM node:14.17.6 AS mh-main-server
 ENV DEBCONF_NOWARNINGS yes
-COPY main /usr/local/
-COPY mh-ssl /usr/local/
+COPY . /usr/local/
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install vim mongodb
 RUN mkdir -p /data/db
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime

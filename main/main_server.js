@@ -35,7 +35,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
     app.use(express.static('Pages'))
 
     app.get('/', (req, res) => {
-        fs.readFile('/usr/mohaemookji/main/Pages/html/main.html', (err, data)=>{
+        fs.readFile('./Pages/html/main.html', (err, data)=>{
         if (err) throw err
         res.end(data,'utf-8')
         })

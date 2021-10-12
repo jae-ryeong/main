@@ -1,7 +1,7 @@
 # API Container
 FROM node:14.17.6 AS mh-api-image
 ENV DEBCONF_NOWARNINGS yes
-COPY api /usr/local/
+COPY . /usr/local/
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install vim mongodb openssh-server psmisc
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 RUN mkdir -p /data/db
