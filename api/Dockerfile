@@ -7,4 +7,4 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 RUN mkdir -p /data/db
 WORKDIR /usr/local/api
 RUN npm install -g npm && npm -y install
-ENTRYPOINT ["node", "/usr/local/api/youtube/index.js"]
+ENTRYPOINT ["node", "/usr/local/youtube/index.js"]
