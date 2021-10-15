@@ -5,5 +5,5 @@ docker build --tag 2mukee/mh_main_deploy /var/lib/jenkins/workspace/mohaemookji/
 docker build --tag 2mukee/mh_api_deploy /var/lib/jenkins/workspace/mohaemookji/api
 docker build --tag 2mukee/mh_db_deploy /var/lib/jenkins/workspace/mohaemookji
 docker stack rm mh-stack
-sleep 10s
+sleep 15s
 docker stack deploy -c /var/lib/jenkins/workspace/mohaemookji/mh-compose.yml mh-stack
