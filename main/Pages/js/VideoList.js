@@ -65,7 +65,7 @@ function change_img(number, img_address){   // 썸네일 이미지 변경
         document.getElementsByClassName("img")[6].src = img_address;
     }else if(number == 8){
         document.getElementsByClassName("img")[7].src = img_address;
-    }else if(number == 9){
+    }else if(number === 9){
         document.getElementsByClassName("img")[8].src = img_address;
     }
 }

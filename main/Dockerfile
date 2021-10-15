@@ -1,10 +1,6 @@
 # Main Container
-FROM node:14.17.6 AS mh-main-server
-ENV DEBCONF_NOWARNINGS yes
-RUN mkdir /usr/local/mohaemookji
+FROM 2mukee/mh_main_image:latest AS mh-main-server
 COPY . /usr/local/mohaemookji
-RUN apt-get -y update && apt-get -y upgrade && apt-get -y install vim mongodb
-RUN mkdir -p /data/db
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 WORKDIR /usr/local/mohaemookji
 RUN npm install -g npm && npm -y install

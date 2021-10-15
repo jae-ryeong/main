@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
  main:
-  image: 2mukee/mh_main_image:latest
+  image: 2mukee/mh_main_deploy
   ports:
    - 443:17260
   depends_on:
@@ -11,14 +11,14 @@ services:
    - TZ=Asia/Seoul
 
  db:
-  image: 2mukee/mh_db_image:latest
+  image: 2mukee/mh_db_deploy
   volumes:
    - /home/mh-dev/data:/data/db
   environment:
    - TZ=Asia/Seoul
 
  api:
-  image: 2mukee/mh_api_image:latest
+  image: 2mukee/mh_api_deploy
   depends_on:
    - main
   environment:
