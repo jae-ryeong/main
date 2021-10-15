@@ -7,4 +7,4 @@ docker build --tag 2mukee/mh_db_deploy /var/lib/jenkins/workspace/mohaemookji
 docker stack rm mh-stack
 sleep 15s
 docker stack deploy -c /var/lib/jenkins/workspace/mohaemookji/mh-compose.yml mh-stack
-docker image prune
+docker image prune -f
