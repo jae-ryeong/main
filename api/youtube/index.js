@@ -63,6 +63,7 @@ const fnReqSearchData = async (_youtube, _arrQuery, _vModel) => {
       const q = _arrQuery[i];
       const arrItem = await apiController.fnSearchQuery(_youtube, q);
       const arrILen = arrItem.length;
+      if (arrILen === 0) return;
       const arrVId = [];
       for (let j=0; j<arrILen; ++j) {
         const id = arrItem[j].id;
@@ -160,16 +161,14 @@ const fnRequest = async () => {
       arrQuery = arrQuery.slice(0, 2);
 
       const arrObjSData = await fnReqSearchData(youtube, arrQuery, vModels[i]);
-      fs.writeFileSync(path.join(__dirname, `result/arrObjSData${i}.json`), JSON.stringify(arrObjSData));
+      if (arrObjSData === undefined && typeof arrObjSData === undefined) return;
+
       const arrObjVData = await fnReqVideoData(youtube, arrObjSData);
-      fs.writeFileSync(path.join(__dirname, `result/arrObjVData${i}.json`), JSON.stringify(arrObjVData));
 
       nArrObjVData.push(arrObjVData);
     }
-    fs.writeFileSync(path.join(__dirname, `result/nArrObjVData.json`), JSON.stringify(nArrObjVData));
     const arrCId = fnExtractChannelId(nArrObjVData);
     const arrObjCData = await fnReqChannelData(youtube, arrCId);
-    fs.writeFileSync(path.join(__dirname, `result/arrObjCData.json`), JSON.stringify(arrObjCData));
 
     await dbController.fnSaveVideos(nArrObjVData);
     await dbController.fnSaveChannels(arrObjCData);
