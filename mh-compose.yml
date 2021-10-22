@@ -3,6 +3,7 @@ version: '3.8'
 services:
  main:
   image: 2mukee/mh_main_deploy
+  replicas: 5
   ports:
    - 443:17260
   depends_on:
@@ -12,6 +13,7 @@ services:
 
  db:
   image: 2mukee/mh_db_deploy
+  replicas: 3
   volumes:
    - /home/mh-dev/data:/data/db
   environment:
@@ -19,6 +21,7 @@ services:
 
  api:
   image: 2mukee/mh_api_deploy
+  replicas: 3
   depends_on:
    - main
   environment:
