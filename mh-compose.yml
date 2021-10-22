@@ -3,28 +3,49 @@ version: '3.8'
 services:
  main:
   image: 2mukee/mh_main_deploy
-  replicas: 5
   ports:
    - 443:17260
   depends_on:
    - db
   environment:
    - TZ=Asia/Seoul
+  deploy:
+   mode: replicated
+   replicas: 5
+   updeate_config: 
+    parallelism: 1
+    order: start-first
+    delay: 10s
+    failure_action: rollback
 
  db:
   image: 2mukee/mh_db_deploy
-  replicas: 3
   volumes:
    - /home/mh-dev/data:/data/db
   environment:
    - TZ=Asia/Seoul
+  deploy:
+   mode: replicated
+   replicas: 5
+   updeate_config: 
+    parallelism: 1
+    order: start-first
+    delay: 10s
+    failure_action: rollback
 
  api:
   image: 2mukee/mh_api_deploy
-  replicas: 3
   depends_on:
    - main
   environment:
    - TZ=Asia/Seoul
   env_file:
    - ./api/mh.env
+  deploy:
+   mode: replicated
+   replicas: 5
+   updeate_config: 
+    parallelism: 1
+    order: start-first
+    delay: 10s
+    failure_action: rollback
