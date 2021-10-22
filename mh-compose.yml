@@ -19,9 +19,6 @@ services:
    - /home/mh-dev/data:/data/db
   environment:
    - TZ=Asia/Seoul
-  deploy:
-   mode: replicated
-   replicas: 5
 
  api:
   image: 2mukee/mh_api_deploy
