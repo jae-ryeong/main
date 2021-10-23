@@ -50,7 +50,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
             add_link.save()
             console.log(`add_data ${i}`)
         }
-        res.send('add_data for test before API server update')
+        res.send('add_data for test before API server update!!')
     })
 
     app.get('/find_all_data', (req, res) => {
