@@ -1,5 +1,5 @@
 # Main Container
-FROM node:14.17.6 AS mh-main-server
+FROM node:14.17.6
 COPY . /usr/local/mohaemookji
 WORKDIR /usr/local/mohaemookji
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
