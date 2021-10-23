@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
  main:
-  image: 2mukee/mh_main_deploy
+  image: 2mukee/mh_main_deploy:latest
   ports:
    - 443:17260
   depends_on:
@@ -19,14 +19,14 @@ services:
     failure_action: rollback
 
  db:
-  image: 2mukee/mh_db_deploy
+  image: 2mukee/mh_db_deploy:latest
   volumes:
    - /home/mh-dev/data:/data/db
   environment:
    - TZ=Asia/Seoul
 
  api:
-  image: 2mukee/mh_api_deploy
+  image: 2mukee/mh_api_deploy:latest
   depends_on:
    - main
   environment:
