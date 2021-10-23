@@ -15,7 +15,7 @@ services:
    update_config:
     parallelism: 5
     delay: 10s
-    order: stop-first
+    order: start-first
     failure_action: rollback
 
  db:
@@ -39,5 +39,5 @@ services:
    update_config:
     parallelism: 5
     delay: 10s
-    order: stop-first
+    order: start-first
     failure_action: rollback
