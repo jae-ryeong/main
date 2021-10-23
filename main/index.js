@@ -18,17 +18,10 @@ const Data_Schema = new mongoose.Schema({
 
 const Noodle_Model = mongoose.model('noodle', Data_Schema)
 
-// [edit] for linux
 const serverOption = {
     key: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/private.key'),
     cert: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/certificate.crt'),
 }
-
-// [edit] for windows
-// const serverOption = {
-//     key: fs.readFileSync('D:/mh-certi/private.key'),
-//     cert: fs.readFileSync('D:/mh-certi/certificate.crt'),
-// }
 
 https.createServer(serverOption ,app).listen(17260, () => {
     console.log(`Server Running`)
