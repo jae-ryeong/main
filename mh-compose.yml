@@ -12,6 +12,11 @@ services:
   deploy:
    mode: replicated
    replicas: 5
+   update_config:
+    parallelism: 5
+    delay: 10s
+    order: stop-first
+    failure_action: rollback
 
  db:
   image: 2mukee/mh_db_deploy
@@ -31,3 +36,8 @@ services:
   deploy:
    mode: replicated
    replicas: 5
+   update_config:
+    parallelism: 5
+    delay: 10s
+    order: stop-first
+    failure_action: rollback
