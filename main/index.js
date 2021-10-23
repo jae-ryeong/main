@@ -57,7 +57,7 @@ https.createServer(serverOption ,app).listen(17260, () => {
             add_link.save()
             console.log(`add_data ${i}`)
         }
-        res.send('add_data for test')
+        res.send('add_data for test!!')
     })
 
     app.get('/find_all_data', (req, res) => {
