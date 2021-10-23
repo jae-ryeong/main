@@ -20,6 +20,8 @@ services:
 
  db:
   image: 2mukee/mh_db_deploy
+  environment:
+   - TZ=Asia/Seoul
   volumes:
    - /home/mh-dev/data:/data/db
   environment:
