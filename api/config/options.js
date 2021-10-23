@@ -1,6 +1,9 @@
-const arrQueueTokens = [process.env.YOUTUBE_TOKEN, process.env.YOUTUBE_TOKEN1, process.env.YOUTUBE_TOKEN2, process.env.YOUTUBE_TOKEN3];
-arrQueueTokens.length = arrQueueTokens.findIndex(e => e === undefined);
-const YOUTUBE_TOKEN = arrQueueTokens[(new Date().getDate()) % arrQueueTokens.length];
+const fnExtractToken = () => {
+  const arrTokens = process.env.YOUTUBE_TOKEN.split(' ');
+  return arrTokens[(new Date().getDate()) % arrTokens.length];
+};
+
+const YOUTUBE_TOKEN = fnExtractToken();
 
 module.exports = {
   search: {
