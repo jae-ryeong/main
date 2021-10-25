@@ -1,7 +1,13 @@
-require('dotenv').config();
 const google = require('googleapis').google;
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config({
+  path: path.resolve(
+    process.cwd(),
+    'api',
+    process.env.NODE_ENV == 'production' ? '.env' : 'mh.env'
+  ),
+});
 
 require('../db');
 const models = require('../models');
