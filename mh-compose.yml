@@ -37,9 +37,9 @@ services:
    - ./api/mh.env
   deploy:
    mode: replicated
-   replicas: 5
+   replicas: 2
    update_config:
-    parallelism: 5
+    parallelism: 2
     delay: 10s
     order: start-first
     failure_action: rollback
