@@ -1,13 +1,14 @@
-const google = require('googleapis').google;
+// Mode
+const NODE_ENV = process.env.NODE_ENV;
+const isProd = NODE_ENV === 'production' ? true : false;
+
+// Modules
+const { google } = require('googleapis');
+
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config({
-  path: path.resolve(
-    process.cwd(),
-    'api',
-    process.env.NODE_ENV == 'production' ? '.env' : 'mh.env'
-  ),
-});
+const appRoot = require('app-root-path');
+require('dotenv').config({ path: path.resolve(`${appRoot}`, isProd ? '.env' : 'mh.env')});
 
 require('../db');
 const models = require('../models');
@@ -47,14 +48,13 @@ const fnGetQueries = () => {
 };
 
 
-const fnDoShuffle = (_arr) => {
-  try {
-    for (let i=_arr.length-1, arr=_arr; i>0; --i) {
-      const j = Math.floor(Math.random() * (i+1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    } 
-  } catch (err) {
-    console.error(`Error in fnDoShuffle:\n${err}`);
+const fnDoShuffle = cList => {
+  let j;
+
+  for (let i=cList.length-1; i>0; --i)
+  {
+    j = Math.floor(Math.random() * (i+1));
+    [cList[i], cList[j]] = [cList[j], cList[i]];
   }
 };
 
@@ -149,6 +149,14 @@ const fnReqChannelData = async (_youtube, _arrCId) => {
   } catch (err) {
     console.error(`Error in fnReqChannelData:\n${err}`);
   }
+}
+
+
+function fnRunService ()
+{
+  const service = google.youtube('v3');
+
+  const nArrQuery = Object.values()
 }
 
 
