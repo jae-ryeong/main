@@ -1,94 +1,71 @@
-const fs = require('fs');
+"use strict";
 
-const options = require("../config/options");
+const apiOpts = require("../config/options");
 
-const responseHandle = response => {
-  try {
-    const items = response.data.items || [];
+async function fnReqData(_method, _opts)
+{
+  const response = await _method.list(_opts);
+  const items = fnHandleResponse(response);
+  return items;
+}
 
-    if (items == null || items.length === 0) {
-      return console.log('Not found.');
-    }
+function fnHandleResponse(response)
+{
+  const items = response.data.items || [];
+  if (items == null || items.length === 0) return new Error('No items.\n');
+  return items;
+};
+
+const apiCtrls = {
+  fnReqSearchList: async function(_service, _q, topicId=null)
+  {
+    apiOpts.search.q = _q;
+    apiOpts.search.topicId = _topicId;
+
+    const items = await fnReqData(_service.search, apiOpts.search);
 
     return items;
-  } catch (err) {
-    console.error(`Error in responseHandle:\n${err.message}`);
-  }
-}
-
-module.exports = {
-  fnSearchQuery: async (_youtube, _q, _topicId=null) => {
-    options.search.q = _q;
-    options.search.topicId = _topicId;
-
-    try {
-      const response = await _youtube.search.list(options.search);
-      const items = responseHandle(response);
-      return items;
-    } catch (err) {
-      console.error(`Error in searchQuery:\n${err.message}`);
-    }
   },
+  fnReqVideosData: async function(_service, _q, _vIds)
+  {
+    apiOpts.videos.id = _vIds;
 
-  fnVideoData: async (_youtube, _q, _vIds) => {
-    options.videos.id = _vIds;
+    const items = await fnReqData(_service.videos, apiOpts.videos);
 
-    try {
-      const response = await _youtube.videos.list(options.videos);
-      const items = responseHandle(response);
+    const objs = [];
 
-      const objs = [];
+    items.map(item => {
+      const { id, snippet } = item;
+      const { channelId, title, thumbnails } = snippet;
 
-      items.map(item => {
-        const { id, snippet } = item;
-        const url = `https://www.youtube.com/watch?v=${id}`;
-  
-        const { channelId, title, thumbnails } = snippet;
-        const thumbnail = thumbnails.default.url;
-  
-        objs.push({ query: _q, id, url, channelId, title, thumbnail });
-      });
+      const url = `https://www.youtube.com/watch?v=${id}`;
+      const thumbnail = thumbnails.default.url;
 
-      return objs;
-    } catch (err) {
-      console.error(`Error in videoData:\n${err.message}`);
-    }
+      objs.push({ query: _q, id, url, channelId, title, thumbnail });
+    });
+
+    return objs;
   },
+  fnReqChannelsData: async function(_service, _cIds)
+  {
+    apiOpts.channels.id = _cIds;
 
-  fnChannelData: async (_youtube, _ids) => {
-    options.channels.id = _ids
+    const items = await fnReqData(_service.channels, apiOpts.channels);
 
-    try {
-      const response = await _youtube.channels.list(options.channels);
-      const items = responseHandle(response);
+    const objs = [];
 
-      const objs = [];
+    items.map(item => {
+      const { id, snippet } = item;
+      const { title, thumbnails } = snippet;
 
-      items.map(item => {
-        const { id, snippet } = item;
-        const url = `https://www.youtube.com/channel/${id}`;
-  
-        const { title, thumbnails } = snippet;
-        const thumbnail = thumbnails.default.url;
-  
-        objs.push({id, url, title, thumbnail});
-      })
-      
-      return objs;
-    } catch (err) {
-      console.error(`Error in channels:\n${err.message}`)
-    }
+      const url = `https://www.youtube.com/channel/${id}`;
+      const thumbnail = thumbnails.default.url;
+
+      objs.push({id, url, title, thumbnail});
+    });
+
+    return objs;
   },
+};
 
-  fnSearchChannels: async youtube => {
-    options.searchChannels.categoryId = ''
-
-    try {
-      const response = await youtube.channels.list(options.searchChannels);
-      const items = responseHandle(response);
-      return items;
-    } catch (err) {
-      console.error(`Error in searchChannels:\n${err.message}`)
-    }
-  },
-}
+module.exports.apiCtrls = apiCtrls;
