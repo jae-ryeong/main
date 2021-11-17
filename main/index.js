@@ -1,11 +1,10 @@
+const fs = require('fs');
 const https = require('https');
 const express = require('express');
 const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const fs = require('fs');
-
 const port = 17260;
 
 // edit : mongoose connect and error check
