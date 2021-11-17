@@ -1,5 +1,4 @@
 const https = require('https');
-const http = require('http');
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -24,33 +23,23 @@ const Noodle_Model = mongoose.model('noodle', Data_Schema);
 
 // SSL authentication
 const serverOption = {
-    // key: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/private.key'),
-    // cert: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/certificate.crt'),
+    key: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/private.key'),
+    cert: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/certificate.crt'),
 }
 
 // server on
-http.createServer(serverOption ,app).listen(port, () => {
+https.createServer(serverOption ,app).listen(port, () => {
     console.log(`Server Running at ${port}`);
 
     app.use(bodyParser.json());
     app.use(express.static(path.join(__dirname, './mh-frontend/dist')));
 
+    // main page response
     app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, './mh-frontend/dist/index.html'));
     });
 
-    app.get('/add_data', (req, res) => {
-        for (var i=0; i<8; i++){
-            const title_lnk = Math.random().toString(36).slice(2);
-            const thumbnail_lnk = Math.random().toString(36).slice(2);
-            const link_lnk = Math.random().toString(36).slice(2);
-            const add_link = new Noodle_Model({title: title_lnk, thumbnail: thumbnail_lnk, link: link_lnk});
-            add_link.save();
-            console.log(`add_data ${i}`);
-        }
-        res.send('add_data for test before API server update');
-    });
-
+    // find all data in mongoose 
     app.get('/find_all_data', (req, res) => {
         try {
             let dummy = Noodle_Model.find((err, datas) => {
@@ -65,11 +54,13 @@ http.createServer(serverOption ,app).listen(port, () => {
         }
     });
 
+    // delete all data on DB
     app.get('/delete_data', (req, res) => {
         Noodle_Model.deleteMany({}, (err) => { if (err) throw err });
         res.send('delete_all!!!!!');
     });
 
+    // random select data on DB
     app.get('/random_select', (req, res) => {
         try {
             const duple = [];
