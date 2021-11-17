@@ -2,6 +2,7 @@ const https = require('https');
 const express = require('express');
 const path = require('path');
 const app = express();
+const fs = require('fs');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const port = 17260;
@@ -22,15 +23,15 @@ const Noodle_Model = mongoose.model('noodle', Data_Schema);
 
 // SSL authentication
 const serverOption = {
-    // __dirname = The directory path currently running
-    key: path.join(__dirname, './mh-ssl/private.key'),
-    cert: path.join(__dirname, './mh-ssl/certificate.crt'),
+    key: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/private.key'),
+    cert: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/certificate.crt'),
 }
 
 // server on
 https.createServer(serverOption, app).listen(port, () => {
     console.log(`Server Running at ${port}`);
 
+    // __dirname = The directory path currently running
     app.use(bodyParser.json());
     app.use(express.static(path.join(__dirname, './mh-frontend/dist')));
 
