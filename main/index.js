@@ -1,4 +1,3 @@
-const fs = require('fs');
 const https = require('https');
 const express = require('express');
 const path = require('path');
@@ -23,8 +22,8 @@ const Noodle_Model = mongoose.model('noodle', Data_Schema);
 
 // SSL authentication
 const serverOption = {
-    key: fs.readFileSync(path.join(__dirname, '/usr/local/mohaemookji/mh-ssl/private.key')),
-    cert: fs.readFileSync(path.join(__dirname, '/usr/local/mohaemookji/mh-ssl/certificate.crt')),
+    key: path.join(__dirname, '/usr/local/mohaemookji/mh-ssl/private.key'),
+    cert: path.join(__dirname, '/usr/local/mohaemookji/mh-ssl/certificate.crt'),
 }
 
 // server on
