@@ -29,7 +29,7 @@ const serverOption = {
 }
 
 // server on
-https.createServer(serverOption ,app).listen(port, () => {
+https.createServer(serverOption, app).listen(port, () => {
     console.log(`Server Running at ${port}`);
 
     app.use(bodyParser.json());
