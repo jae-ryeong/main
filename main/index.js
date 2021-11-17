@@ -22,8 +22,9 @@ const Noodle_Model = mongoose.model('noodle', Data_Schema);
 
 // SSL authentication
 const serverOption = {
-    key: path.join(__dirname, '/usr/local/mohaemookji/mh-ssl/private.key'),
-    cert: path.join(__dirname, '/usr/local/mohaemookji/mh-ssl/certificate.crt'),
+    // __dirname = The directory path currently running
+    key: path.join(__dirname, './mh-ssl/private.key'),
+    cert: path.join(__dirname, './mh-ssl/certificate.crt'),
 }
 
 // server on
