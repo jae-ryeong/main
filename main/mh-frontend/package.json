@@ -1,11 +1,12 @@
 {
-  "name": "mohaemookgi_vue",
+  "name": "mh-frontend",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "jgy4419 <jgy_98@naver.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "serve": "vue-cli-service serve --port=17260",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
