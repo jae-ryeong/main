@@ -3,11 +3,8 @@
             <header>
                 <div class="inner">
                     <b-nav tabs justified class="menus">
-                        <b-nav-item class="menu">전체</b-nav-item>
-                        <b-nav-item class="menu">끼니</b-nav-item>
-                        <b-nav-item class="menu">다이어트</b-nav-item>
-                        <b-nav-item class="menu">운동</b-nav-item>
-                        <b-nav-item class="menu">간식</b-nav-item>
+                        <b-nav-item v-for="menuList in menu"
+                        :key="menuList" class="menu">{{menuList}}</b-nav-item>
                     </b-nav>
                 </div>
             </header>
@@ -16,11 +13,12 @@
                     <div class="viderList">
                         <!--json 파일의 개수만큼 영상 틀 생김.-->
                         <div class="videoInformations"
-                        v-for="movieCount, i in movieLength"
-                        :key="i"  @click="watchVideo(e)">
+                        v-for="movieCount, i in 10"
+                        :key="i" >
                             <div class="video" id="video">
                                 <div class="videoInner">
-                                    <img id="videoImg" class = "videoImg" :src="videoImg[i]" alt="이미지 없음."/>
+                                    <img id="videoImg" class = "videoImg" :src="videoImg[i]" alt="이미지 없음."
+                                    @click="watchVideo()"/>
                                     {{i}}
                                     <div class="videoInformation">
                                         <div class="videoTitle">
@@ -35,15 +33,13 @@
                         </div>
                     </div>
                     <!--영상 누르면 화면 어두워지고 동영상 나오도록 하기-->
-                    <div class="movieBox"/>
+                    <div class="movieBox" @click="movieDown()"/>
                     <div class="movie">
                         <!-- <video controls autoplay muted src="https://www.youtube.com/embed/kfGi3rTct8c">
                         </video> -->
                         <iframe  frameborder="0"></iframe>
                     </div>
-                    <button class="movieDown">
-                        영상 끄기
-                    </button>
+                    <h2 class="movieDown" @click="movieDown()">x</h2>
                 </div>
             </section>
             <!-- <Footer/> -->
@@ -65,6 +61,7 @@ export default {
                     href: '/'
                 }
             ],
+            menu: ["전체", "끼니", "다이어트", "운동", "간식"], // 메뉴 리스트
             movieLength: data.length,
             videoImg: [],
             videoUser: [],
@@ -100,18 +97,21 @@ export default {
             }
         
         },
-        watchVideo(e){
-            const movieBox = document.querySelector('.movieBox');
-            const movie = document.querySelector('.movie');
-            const movieDowm = document.querySelector('.movieDown');
+        watchVideo(){
+            let movieBox = document.querySelector('.movieBox');
+            let movie = document.querySelector('.movie');
+            let movieDowm = document.querySelector('.movieDown');
             movieBox.style.display = "block";
             movie.style.display = "block";
             movieDowm.style.display = "block";
-            movieDowm.addEventListener('click', function(){
-                movieBox.style.display = "none";
-                movie.style.display = "none";
-                movieDowm.style.display = "none";
-            })
+        },
+        movieDown(){
+            let movieBox = document.querySelector('.movieBox');
+            let movie = document.querySelector('.movie');
+            let movieDowm = document.querySelector('.movieDown');
+            movieBox.style.display = "none";
+            movie.style.display = "none";
+            movieDowm.style.display = "none";
         },
         mainLink(){
             this.$router.push({
@@ -138,11 +138,10 @@ export default {
                 this.video.push(a.url);
             })
         },
+        // 이미지 클릭 시 유튜브 영상 보이게 하기
         watch(){
-            // 이미지 클릭 시 유튜브 영상 보이게 하기
             const videoImg = document.querySelectorAll('.videoImg');
             const movieLink = document.querySelector('.movie iframe');
-            const movieLength = this.movieLength;
             const video = this.video;
             for(let i in video){
                 videoImg[i].addEventListener('click', function(){
@@ -221,6 +220,7 @@ export default {
         width: 295px;
         height: 200px;
         border-radius: 10px;
+        cursor: pointer;
     }
     .videoInformations{
         width: 700px;
@@ -236,7 +236,6 @@ export default {
         height: 200px;
         border: 3px solid rgb(205, 203, 203);
         border-radius: 10px;
-        cursor: pointer;
     }
     .videoInner{
         position: absolute;
@@ -319,12 +318,14 @@ export default {
         z-index: 10;
     }
     .movieDown{
-        position: absolute;
+        position: fixed;
         width: 80px;
         height: 50px;
-        top : 50px;
-        right: 10px;
+        color: #fff;
+        top : 150px;
+        right: 250px;
         border-radius: 10px;
+        cursor: pointer;
         display: none;
     }
 </style>
