@@ -112,16 +112,6 @@ export default {
                 movie.style.display = "none";
                 movieDowm.style.display = "none";
             })
-            const videoImg = document.querySelectorAll('.videoImg');
-            const movieLink = document.querySelector('.movie iframe');
-            const movieLength = this.movieLength;
-            const video = this.video;
-            // 영상 이미지 클릭하면 해당 이미지 관련 영상 띄우기 (코드 개선하기)
-            for(let i in video){
-                videoImg[i].addEventListener('click', function(){
-                    movieLink.src = video[i];
-                })
-            }
         },
         mainLink(){
             this.$router.push({
@@ -149,7 +139,16 @@ export default {
             })
         },
         watch(){
-            
+            // 이미지 클릭 시 유튜브 영상 보이게 하기
+            const videoImg = document.querySelectorAll('.videoImg');
+            const movieLink = document.querySelector('.movie iframe');
+            const movieLength = this.movieLength;
+            const video = this.video;
+            for(let i in video){
+                videoImg[i].addEventListener('click', function(){
+                    movieLink.src = video[i];
+                })
+            }
         },
         // 영상 이미지 가져오기 (높은 해상도로) 코드 개선하기.
         replaceDiffSizeImage(src, size = 700){
