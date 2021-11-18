@@ -1,4 +1,4 @@
-const KEY = require('../jobs/key');
+const KEY = require('../jobs/token');
 
 const apiOpts = {
   search: {

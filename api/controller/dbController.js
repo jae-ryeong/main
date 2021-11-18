@@ -1,10 +1,11 @@
 const models = require('../models');
 
-const dbController = {
+const dbCtrls = {
   vModels: Object.values(models.video),
   cModel: models.Channel,
 
-  fnSaveVideos: async function (_nArrObjVData) {
+  fnSaveVideos: async function (_nArrObjVData)
+  {
     try {
       process.stdout.write('Saved video index: '); // Temp
       const nArrObjLen = _nArrObjVData.length;
@@ -19,8 +20,8 @@ const dbController = {
       console.error(`Error in dbc.fnSaveVideos:\n${err}`);
     }
   },
-
-  fnSaveChannels: async function (_arrObjCData) {
+  fnSaveChannels: async function (_arrObjCData)
+  {
     try {
       process.stdout.write('Saved channel index: '); // Temp
       await Promise.all(_arrObjCData.map((obj, i) => {
@@ -33,4 +34,4 @@ const dbController = {
   },
 }
 
-module.exports = dbController;
+module.exports = dbCtrls;
