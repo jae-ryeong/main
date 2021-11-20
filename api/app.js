@@ -1,26 +1,64 @@
-// Mode
-const NODE_ENV = process.env.NODE_ENV;
-const isProd = NODE_ENV === 'production' ? true : false;
+const env = process.env.NODE_ENV;
+const envFile = env === 'production' ? '.env' : 'mh.env';
 
-// Modules
+
 const { google } = require('googleapis');
 
 const fs = require('fs');
 const path = require('path');
 const appRoot = require('app-root-path');
-require('dotenv').config({ path: path.resolve(`${appRoot}`, isProd ? '.env' : 'mh.env')});
+require('dotenv').config({ path: path.resolve(`${appRoot}`, envFile)});
 
 
-const obj = {
-  a: 1,
-  b: 2,
-  c: 3,
+const VideoModels = require('./models/Videos');
+const ChannelModel = require('./models/Channel');
+
+
+const app = async function(_q)
+{
+  const service = google.youtube('v3');
 };
 
-const tmp = require('./tmp');
 
-const a = new Map(Object.entries(tmp));
+function fnGetQueries()
+{
+  if (env === 'production') {
 
-console.log(a);
+  } else {
+    const tmpList = require('./tmp-list.json');
+    return fnTransformStructure(tmpList);
+  }
+}
 
-fs.writeFileSync(`${__dirname}/tmp-list.json`, JSON.stringify(tmp));
+function fnTransformStructure(_nObjArr)
+{
+  try {
+    const objArr = Object.values(_nObjArr).reduce((obj, t) => {
+      for (const k of Object.keys(t)) {
+        if (obj[k]) obj[k].push(...t[k]);
+        else obj[k] = [...t[k]];
+      }
+      return obj;
+    }, {});
+
+    for (const k of Object.keys(objArr)) {
+      const s = new Set(objArr[k]);
+      objArr[k] = [...s];
+    }
+
+    return objArr;
+  } catch (err) {
+    console.error(`${err.message}:\n${__filename}`);
+  }
+}
+
+function fnDoShuffle(cList)
+{
+  let j;
+
+  for (let i=cList.length-1; i>0; --i)
+  {
+    j = Math.floor(Math.random() * (i+1));
+    [cList[i], cList[j]] = [cList[j], cList[i]];
+  }
+};

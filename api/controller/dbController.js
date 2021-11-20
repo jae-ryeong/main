@@ -1,7 +1,7 @@
 const models = require('../models');
 
 const dbCtrls = {
-  vModels: Object.values(models.video),
+  vModels: Object.values(models.Videos),
   cModel: models.Channel,
 
   fnSaveVideos: async function (_nArrObjVData)
@@ -16,6 +16,11 @@ const dbCtrls = {
           videoDoc.save(err => err ? console.error(err.message) : process.stdout.write(`${j} `));
         }));
       }
+      console.log(1);
+      console.log(1);
+      console.log(1);
+      console.log(1);
+      console.log(1);
     } catch (err) {
       console.error(`Error in dbc.fnSaveVideos:\n${err}`);
     }

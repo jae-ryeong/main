@@ -1,4 +1,4 @@
-const KEY = require('../jobs/token');
+const KEY = require('../jobs/token')();
 
 const apiOpts = {
   search: {
@@ -9,7 +9,7 @@ const apiOpts = {
     type           : 'video',
     videoEmbeddable: 'true',
     videoSyndicated: 'true',
-    fields         : 'item(id)',
+    fields         : 'items(id)',
   },
   videos: {
     key            : KEY,
@@ -30,4 +30,4 @@ const apiOpts = {
   }
 };
 
-module.exports.apiOpts = apiOpts;
+module.exports = apiOpts;

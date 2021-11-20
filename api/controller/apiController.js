@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const apiOpts = require("../config/options");
 
@@ -20,10 +20,9 @@ const apiCtrls = {
   fnReqSearchList: async function(_service, _q, topicId=null)
   {
     apiOpts.search.q = _q;
-    apiOpts.search.topicId = _topicId;
+    // apiOpts.search.topicId = _topicId;
 
     const items = await fnReqData(_service.search, apiOpts.search);
-
     return items;
   },
   fnReqVideosData: async function(_service, _q, _vIds)
@@ -68,4 +67,4 @@ const apiCtrls = {
   },
 };
 
-module.exports.apiCtrls = apiCtrls;
+module.exports = apiCtrls;
