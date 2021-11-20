@@ -1,13 +1,22 @@
 const mongoose = require('mongoose');
 
-// 데이터 베이스 연결
-mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://db:27017/mohaemookji', { useNewUrlParser: true, useUnifiedTopology: true })
 
-// 이벤트 이미터 생성
-const db = mongoose.connection
+const STR_DB_CONN_URL = process.env.MONGODB_CONNECTION || 'mongodb://db:27017/mohaemookji';
 
-// 에러, 연결 시 처리
-db.on('error', err => console.error(`Error on connection:\n${err.message}`));
-db.once('open', () => console.log('Database connected.'));
+
+const connOpts = {
+  useNewUrlParser   : true,
+  useUnifiedTopology: true,
+};
+
+mongoose.connect(STR_DB_CONN_URL, connOpts);
+const db = mongoose.connection;
+
+db.once('error', err => {
+  console.error(err.message);
+  process.exit(1);
+});
+db.once('open', () => console.log(`${STR_DB_CONN_URL} ok!`));
+
 
 module.exports = db;

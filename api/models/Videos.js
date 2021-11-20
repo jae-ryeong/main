@@ -1,6 +1,8 @@
+'use strict';
+
 const mongoose = require('mongoose');
 
-module.exports = mongoose.model('Sports', new mongoose.Schema({
+const VideoSchema = new mongoose.Schema({
   query: {
     type: String,
     required: true,
@@ -26,4 +28,17 @@ module.exports = mongoose.model('Sports', new mongoose.Schema({
   thumbnail: {
     type: String,
   },
-}));
+});
+
+
+module.exports = {
+  Meal: mongoose.model('Meal', VideoSchema),
+
+  Snack: mongoose.model('Snack', VideoSchema),
+
+  Sport: mongoose.model('Sport', VideoSchema),
+
+  Diet: mongoose.model('Diet', VideoSchema),
+
+  Wellbeing: mongoose.model('Wellbeing', VideoSchema),
+};

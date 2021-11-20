@@ -1,6 +1,6 @@
 // Mode
-const NODE_ENV = process.env.NODE_ENV;
-const isProd = NODE_ENV === 'production' ? true : false;
+const env = process.env.NODE_ENV;
+const envFile = env === 'production' ? '.env' : 'mh.env';
 
 // Modules
 const { google } = require('googleapis');
@@ -8,57 +8,17 @@ const { google } = require('googleapis');
 const fs = require('fs');
 const path = require('path');
 const appRoot = require('app-root-path');
-require('dotenv').config({ path: path.resolve(`${appRoot}`, isProd ? '.env' : 'mh.env')});
+require('dotenv').config({ path: path.resolve(`${appRoot}`, envFile)});
 
-require('../db');
+// Loads
+const db = require('../db');
 const models = require('../models');
-const apiController = require('../controller/apiController');
-const dbController = require('../controller/dbController');
-
-const fnIntergration = (_nObjArrEls) => {
-  try {
-    const objArrEls = Object.values(_nObjArrEls).reduce((obj, t) => {
-      for (const k of Object.keys(t)) {
-        if (obj[k]) obj[k].push(...t[k]);
-        else obj[k] = [...t[k]];
-      }
-      return obj;
-    }, {});
-
-    for (const k of Object.keys(objArrEls)) {
-      const s = new Set(objArrEls[k]);
-      objArrEls[k] = [...s];
-    }
-
-    return objArrEls;
-  } catch (err) {
-    console.error(`Error in fnIntergration:\n${err}`);
-  }
-};
+const apiCtrl = require('../controller/apiController');
+const dbCtrl = require('../controller/dbController');
+const queryJob = require('../jobs/query');
 
 
-const fnGetQueries = () => {
-  try {
-    const nObjArrEls = require('./tmp');
-
-    return fnIntergration(nObjArrEls);
-  } catch (err) {
-    console.error(`Error in fnGetQueries:\n${err}`);
-  }
-};
-
-
-const fnDoShuffle = cList => {
-  let j;
-
-  for (let i=cList.length-1; i>0; --i)
-  {
-    j = Math.floor(Math.random() * (i+1));
-    [cList[i], cList[j]] = [cList[j], cList[i]];
-  }
-};
-
-
+// Business logic
 const fnReqSearchData = async (_youtube, _arrQuery, _vModel) => {
   try {
     const arrQLen = _arrQuery.length;
@@ -67,7 +27,12 @@ const fnReqSearchData = async (_youtube, _arrQuery, _vModel) => {
 
     for (let i=0; i<arrQLen; ++i) {
       const q = _arrQuery[i];
-      const arrItem = await apiController.fnSearchQuery(_youtube, q);
+      const arrItem = await apiCtrl.fnReqSearchList(_youtube, q);
+      console.log(2);
+      console.log(2);
+      console.log(2);
+      console.log(2);
+      console.log(2);
       const arrILen = arrItem.length;
       if (arrILen === 0) return;
       const arrVId = [];
@@ -102,7 +67,7 @@ const fnReqSearchData = async (_youtube, _arrQuery, _vModel) => {
 const fnReqVideoData = async (_youtube, _arrObjSData) => {
   try {
     const nArrObjResVData = await Promise.all(_arrObjSData.map(async obj => {
-      const arrObjResVData = await apiController.fnVideoData(_youtube, obj.reqQ, obj.resIds);
+      const arrObjResVData = await apiCtrl.fnReqVideosData(_youtube, obj.reqQ, obj.resIds);
       return arrObjResVData;
     }));
 
@@ -144,7 +109,7 @@ const fnReqChannelData = async (_youtube, _arrCId) => {
 
     if (strCIds === '') return null;
 
-    const arrObjCData = await apiController.fnChannelData(_youtube, strCIds);
+    const arrObjCData = await apiCtrl.fnReqChannelsData(_youtube, strCIds);
     return arrObjCData;
   } catch (err) {
     console.error(`Error in fnReqChannelData:\n${err}`);
@@ -152,43 +117,49 @@ const fnReqChannelData = async (_youtube, _arrCId) => {
 }
 
 
-function fnRunService ()
-{
-  const service = google.youtube('v3');
-
-  const nArrQuery = Object.values()
-}
-
-
 const fnRequest = async () => {
   try {
     const youtube = google.youtube('v3');
 
-    const nArrQuery = Object.values(fnGetQueries());
-    const nArrQLen = nArrQuery.length;
+    // 검색어 로드
+    let qList = queryJob.fnGetQueries();
 
+    const nArrQ = Object.values(qList);
+    const nArrQLen = nArrQ.length;
+
+    // 비디오 주제 별 모델을 배열 형태로 로드
+    const videoModels = Object.values(models.Videos);
+
+    // 검색어 주제 별로 로직 동작
     const nArrObjVData = [];
-    const vModels = Object.values(models.video);
+
     for (let i=0; i<nArrQLen; ++i) {
-      let arrQuery = nArrQuery[i];
-      fnDoShuffle(arrQuery);
+      let arrQuery = nArrQ[i];
+      queryJob.fnShuffleData(arrQuery);
       arrQuery = arrQuery.slice(0, 2);
 
-      const arrObjSData = await fnReqSearchData(youtube, arrQuery, vModels[i]);
-      if (arrObjSData === undefined && typeof arrObjSData === undefined) return;
+      const arrObjSData = await fnReqSearchData(youtube, arrQuery, videoModels[i]); // 검색 데이터 요청
+      if (arrObjSData === undefined && typeof arrObjSData === undefined) {
+        console.log('No data.');
+        process.exit(0);
+      };
 
-      const arrObjVData = await fnReqVideoData(youtube, arrObjSData);
+      const arrObjVData = await fnReqVideoData(youtube, arrObjSData); // 비디오 데이터 요청
 
       nArrObjVData.push(arrObjVData);
     }
-    const arrCId = fnExtractChannelId(nArrObjVData);
-    const arrObjCData = await fnReqChannelData(youtube, arrCId);
 
-    await dbController.fnSaveVideos(nArrObjVData);
-    await dbController.fnSaveChannels(arrObjCData);
+    const arrCId = fnExtractChannelId(nArrObjVData); // 채널 아이디 추출
+    const arrObjCData = await fnReqChannelData(youtube, arrCId); // 채널 데이터 요청
+
+    await dbCtrl.fnSaveVideos(nArrObjVData);
+    await dbCtrl.fnSaveChannels(arrObjCData);
 
   } catch (err) {
     console.error(`Error in fnRequest:\n${err}`);
+    if (db) {
+      db.close();
+    }
   }
 };
 
